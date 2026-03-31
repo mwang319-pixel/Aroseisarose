@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-03-31 AI Builders 日报</title>
+  <style>
+    :root {
+      --page-bg: #f2efe8;
+      --paper-bg: rgba(255, 252, 247, 0.95);
+      --ink-main: #211d1b;
+      --ink-subtle: #645b56;
+      --line-soft: rgba(78, 63, 54, 0.12);
+      --accent-red: #af4e3f;
+      --accent-blue: #1f536f;
+      --accent-gold: #b89455;
+      --shadow-soft: 0 24px 70px rgba(66, 53, 45, 0.10);
+      --radius-lg: 30px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(175, 78, 63, 0.12), transparent 26%),
+        radial-gradient(circle at top right, rgba(31, 83, 111, 0.12), transparent 28%),
+        linear-gradient(180deg, #ece7de 0%, #f6f3ed 42%, #f2efe8 100%);
+      color: var(--ink-main);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent-blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 48px 20px 96px;
+    }
+    .sheet {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(78, 63, 54, 0.08);
+      border-radius: var(--radius-lg);
+      background: var(--paper-bg);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(10px);
+    }
+    .sheet::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 12px;
+      background: linear-gradient(90deg, var(--accent-red), var(--accent-gold), var(--accent-blue));
+    }
+    .hero {
+      padding: 42px 38px 28px;
+      background:
+        linear-gradient(135deg, rgba(255, 244, 240, 0.95), rgba(245, 248, 246, 0.92)),
+        linear-gradient(120deg, rgba(175, 78, 63, 0.04), rgba(31, 83, 111, 0.05));
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(175, 78, 63, 0.10);
+      color: #874033;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      margin: 18px 0 12px;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "Noto Serif SC", serif;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.08;
+      letter-spacing: 0.01em;
+    }
+    .hero p {
+      margin: 0;
+      max-width: 760px;
+      color: var(--ink-subtle);
+      font-size: 16px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(78, 63, 54, 0.10);
+      background: rgba(255, 255, 255, 0.58);
+      color: #4e433d;
+      font-size: 13px;
+    }
+    .content { padding: 10px 38px 42px; }
+    .summary-card {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(31, 83, 111, 0.07), rgba(175, 78, 63, 0.04));
+      border: 1px solid rgba(31, 83, 111, 0.08);
+    }
+    h2, h3 {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "Noto Serif SC", serif;
+      color: #251f1d;
+      letter-spacing: 0.01em;
+    }
+    h2 {
+      margin: 34px 0 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line-soft);
+      font-size: 28px;
+    }
+    h3 { margin: 24px 0 10px; font-size: 20px; }
+    p, li { font-size: 15px; color: var(--ink-main); }
+    ul, ol { margin: 12px 0; padding-left: 22px; }
+    li { margin: 10px 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .card {
+      padding: 18px 18px 16px;
+      border-radius: 22px;
+      border: 1px solid rgba(78, 63, 54, 0.10);
+      background: rgba(255, 255, 255, 0.72);
+    }
+    .card-title {
+      margin: 0 0 8px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #2d2724;
+    }
+    .watchlist-item {
+      margin: 0 0 16px;
+      padding: 0 0 16px;
+      border-bottom: 1px solid rgba(78, 63, 54, 0.08);
+    }
+    .watchlist-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+    .label {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(175, 78, 63, 0.10);
+      color: #874033;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .footer {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-soft);
+      color: var(--ink-subtle);
+      font-size: 13px;
+    }
+    @media (max-width: 760px) {
+      .page { padding: 24px 14px 60px; }
+      .hero, .content { padding-left: 20px; padding-right: 20px; }
+      .grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="sheet">
+      <section class="hero">
+        <div class="kicker">AI Builders Daily Brief</div>
+        <h1>2026-03-31 AI Builders 日报</h1>
+        <p>这是一份面向管理层与团队负责人的可分享版摘要。今天的核心主题是 agent 正在把企业关注点从“会不会用 AI”推进到“如何重构 workflow、治理风险并保住产品质量”。</p>
+        <div class="meta">
+          <div class="pill">分类：AI_Builders</div>
+          <div class="pill">输出形式：Shareable HTML</div>
+          <div class="pill">来源：Follow Builders skill</div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="summary-card">
+          <strong>今日一句话：</strong>
+          agent 已经不只是写代码的工具，而是在逼企业重新定义 workflow、工程护栏、人才价值和产品质量标准。
+        </div>
+
+        <h2>今日关键结论</h2>
+        <ol>
+          <li><strong>企业里的新高价值岗位，会是“把 workflow 改造成 agent-ready 的人”。</strong> Aaron Levie 指出，企业想真正吃到 agent 红利，必须有人去整理非结构化数据、重写流程、连接系统并定义审核节点。<br><a href="https://x.com/levie/status/2038816649927913834">来源链接</a></li>
+          <li><strong>AI-native 工程组织已经进入“如何负责任地用 agent”的阶段。</strong> Guillermo Rauch 强调，Vercel 现在让 agents 完成大部分 coding，但在 mission-critical infrastructure 上，vibing 不是工程方法，安全、耐久性和可用性必须优先。<br><a href="https://x.com/rauchg/status/2038759092442050651">来源链接</a></li>
+          <li><strong>企业级 AI coding 正在继续向更高委托度推进。</strong> Claude Code Auto mode 面向 Enterprise plan 和 API 用户开放，同时产品套件支持 GitHub Enterprise Server，说明 Anthropic 正在更深地进入企业开发环境。<br><a href="https://x.com/claudeai/status/2038693742094246032">来源链接 1</a> / <a href="https://x.com/_catwu/status/2038723796178526712">来源链接 2</a></li>
+          <li><strong>供应链安全会成为 AI-native 开发的基础门槛。</strong> Karpathy 借 npm axios 供应链攻击提醒大家，未锁版本依赖仍然是大规模、随机扩散的脆弱点，默认机制必须调整。<br><a href="https://x.com/karpathy/status/2038849654423798197">来源链接</a></li>
+          <li><strong>团队的短板往往不是缺能力，而是没吃透已有能力。</strong> Swyx 指出，很多团队在追问新的 AI 功能时，其实现成能力已经存在，只是没被认真理解和产品化。<br><a href="https://x.com/swyx/status/2038768899915915417">来源链接</a></li>
+          <li><strong>软件制造速度越快，taste 和 care 越值钱。</strong> Ryo Lu 提醒大家，agent 会让“能用但没灵魂”的 slop 爆炸式增长，因此产品审美、细节执念和体验温度会更稀缺。<br><a href="https://x.com/ryolu_/status/2038841219556724924">来源链接</a></li>
+          <li><strong>Agent 正开始进入团队协作系统的执行层。</strong> Zara Zhang 展示了接入聊天、会议、日历、文档和表格后，agent 能直接跨系统执行 to-dos，而不只是生成总结。<br><a href="https://x.com/zarazhangrui/status/2038771778802331817">来源链接</a></li>
+        </ol>
+
+        <h2>企业管理 / 人才趋势洞察</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-title">岗位视角 01</div>
+            <p>企业会出现一批真正稀缺的 AI workflow architect，他们懂业务流程、数据结构、系统接口和 human-in-the-loop 设计。</p>
+          </div>
+          <div class="card">
+            <div class="card-title">组织视角 02</div>
+            <p>中层管理者会成为 agent 时代的放大器或瓶颈。会拆任务、设边界、做验收的人，能把 agent 并行度真正转成组织效率。</p>
+          </div>
+          <div class="card">
+            <div class="card-title">工程视角 03</div>
+            <p>工程质量标准必须重写。速度不再是问题，默认安全、默认可靠和默认审查才是新阶段的硬门槛。</p>
+          </div>
+          <div class="card">
+            <div class="card-title">人才视角 04</div>
+            <p>人才稀缺性正从执行技能转向判断、审美与表达。未来会更奖励既懂效率也懂“软件灵魂感”的人。</p>
+          </div>
+        </div>
+
+        <h2>今日 Watchlist</h2>
+        <div class="watchlist-item">
+          <span class="label">Enterprise</span>
+          <h3>Aaron Levie / Box</h3>
+          <p>今天他把“agent 时代企业岗位重构”讲得非常具体，值得持续跟踪 workflow redesign 与 human-in-the-loop 模型。</p>
+          <p><a href="https://x.com/levie/status/2038816649927913834">https://x.com/levie/status/2038816649927913834</a></p>
+        </div>
+        <div class="watchlist-item">
+          <span class="label">Engineering</span>
+          <h3>Guillermo Rauch / Vercel</h3>
+          <p>Vercel 已明显进入 agent engineering governance 阶段，后续若公开更多内部规则会很有参考价值。</p>
+          <p><a href="https://x.com/rauchg/status/2038759092442050651">https://x.com/rauchg/status/2038759092442050651</a></p>
+        </div>
+        <div class="watchlist-item">
+          <span class="label">Security</span>
+          <h3>Andrej Karpathy</h3>
+          <p>继续关注他对 package manager 默认机制、依赖策略和 release-age constraints 的讨论。</p>
+          <p><a href="https://x.com/karpathy/status/2038849654423798197">https://x.com/karpathy/status/2038849654423798197</a></p>
+        </div>
+        <div class="watchlist-item">
+          <span class="label">Design</span>
+          <h3>Ryo Lu / Cursor</h3>
+          <p>他正在持续定义 agent 时代的软件审美和产品哲学，值得看 Cursor 怎么把这套理念变成产品语言。</p>
+          <p><a href="https://x.com/ryolu_/status/2038841219556724924">https://x.com/ryolu_/status/2038841219556724924</a></p>
+        </div>
+        <div class="watchlist-item">
+          <span class="label">Workflow</span>
+          <h3>Zara Zhang</h3>
+          <p>她展示的是 agent 真正进入协作系统执行层的实践，值得看这类 stack 是否迅速变成团队 SOP。</p>
+          <p><a href="https://x.com/zarazhangrui/status/2038771778802331817">https://x.com/zarazhangrui/status/2038771778802331817</a></p>
+        </div>
+
+        <h2>管理层 To-Do List</h2>
+        <ol>
+          <li><strong>把 AI workflow owner 明确到人。</strong> 不要只喊“全员用 AI”，而要明确谁负责本团队的流程重构、数据准备和验收机制。</li>
+          <li><strong>给 AI coding 制定一版最小安全规则。</strong> 至少覆盖依赖版本锁定、第三方包准入、自动模式使用范围和生产系统审查要求。</li>
+          <li><strong>梳理最适合 agent 化的知识工作。</strong> 优先挑高频、规则可描述、跨系统但风险可控的任务来试点。</li>
+          <li><strong>升级招聘标准。</strong> 除了执行效率，更明确考察判断力、跨职能沟通、结构化表达和产品审美。</li>
+          <li><strong>建立“产品不做成 slop”的内部共识。</strong> 速度可以更快，但体验温度、品牌个性和质量门槛不能被自动化吞掉。</li>
+        </ol>
+
+        <h2>可转发摘要</h2>
+        <p>今天 AI builder 圈传递出的关键信号很集中：agent 已经从“更强的 coding assistant”升级成“迫使企业重写 workflow 和治理规则的新基础设施”。一边是 Anthropic、Vercel 这样的团队把 agent 真正带进 enterprise coding 与生产工程；另一边是 Aaron Levie、Karpathy、Ryo Lu 分别从组织、系统安全和产品审美三个角度提醒大家，真正的壁垒不再只是会不会用 AI，而是能不能在更高速度下依然把流程、质量和人的价值重新定义好。</p>
+
+        <div class="footer">
+          <p>原始来源：Andrej Karpathy、Aaron Levie、Guillermo Rauch、Claude、Cat Wu、Swyx、Ryo Lu、Zara Zhang 的公开 X 帖文。</p>
+          <p>Generated through the Follow Builders skill: <a href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
