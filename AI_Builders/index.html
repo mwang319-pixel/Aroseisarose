@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Builders</title>
+  <style>
+    :root {
+      --bg: #f4f0e8;
+      --paper: rgba(255, 252, 247, 0.95);
+      --ink: #231f1d;
+      --subtle: #6b615a;
+      --line: rgba(90, 75, 66, 0.12);
+      --accent: #20526d;
+      --accent-2: #b44e3d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(180, 78, 61, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(32, 82, 109, 0.12), transparent 28%),
+        var(--bg);
+    }
+    main {
+      width: min(100%, 920px);
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    .sheet {
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(90, 75, 66, 0.08);
+      background: var(--paper);
+      box-shadow: 0 20px 60px rgba(58, 45, 38, 0.08);
+    }
+    .hero {
+      padding: 40px 32px 24px;
+      background: linear-gradient(135deg, rgba(240, 247, 250, 0.92), rgba(255, 244, 240, 0.92));
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(34px, 6vw, 54px);
+      line-height: 1.06;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", serif;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--subtle);
+      font-size: 16px;
+      line-height: 1.75;
+      max-width: 760px;
+    }
+    .section {
+      padding: 10px 32px 32px;
+    }
+    .report {
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.74);
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(32, 82, 109, 0.09);
+      color: #204d68;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .report h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", serif;
+    }
+    .meta {
+      margin: 0 0 10px;
+      color: var(--subtle);
+      font-size: 14px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .links a + a {
+      margin-left: 16px;
+    }
+    @media (max-width: 720px) {
+      .hero, .section { padding-left: 20px; padding-right: 20px; }
+      .links a {
+        display: block;
+        margin: 8px 0 0;
+      }
+      .links a + a { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="sheet">
+      <section class="hero">
+        <div class="eyebrow">AI Builders</div>
+        <h1>AI Builders 分类页</h1>
+        <p>这里收录面向管理层与团队负责人的 AI Builders 日报，重点覆盖 agent-native 基础设施、企业管理变化、人才趋势、builder watchlist 与执行 to-do。</p>
+      </section>
+      <section class="section">
+        <article class="report">
+          <div class="eyebrow">Latest Report</div>
+          <h2>2026-03-30 AI Builders 日报</h2>
+          <p class="meta">近 7 天有效更新摘要，聚焦 Aaron Levie、Swyx、Thariq、Amjad Masad、Guillermo Rauch 等 builder 的高信号观点。</p>
+          <div class="links">
+            <a href="./2026-03-30_AI_Builders_%E6%97%A5%E6%8A%A5.html">打开 HTML 版</a>
+            <a href="./2026-03-30_AI_Builders_%E6%97%A5%E6%8A%A5.md">查看 Markdown 版</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

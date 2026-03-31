@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arose is a rose</title>
+  <style>
+    :root {
+      --bg: #f5f1ea;
+      --paper: rgba(255, 251, 245, 0.94);
+      --ink: #221d1b;
+      --subtle: #6a615d;
+      --accent: #a64b3c;
+      --accent-2: #1f526f;
+      --line: rgba(90, 75, 66, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(166, 75, 60, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(31, 82, 111, 0.12), transparent 30%),
+        var(--bg);
+    }
+    main {
+      width: min(100%, 920px);
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    .sheet {
+      background: var(--paper);
+      border: 1px solid rgba(90, 75, 66, 0.08);
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(58, 45, 38, 0.08);
+      overflow: hidden;
+    }
+    .hero {
+      padding: 40px 32px 24px;
+      background: linear-gradient(135deg, rgba(255, 244, 240, 0.95), rgba(246, 247, 244, 0.92));
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(34px, 6vw, 60px);
+      line-height: 1.05;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", serif;
+    }
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--subtle);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .section {
+      padding: 10px 32px 32px;
+    }
+    .card {
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(166, 75, 60, 0.10);
+      color: #8a3f31;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .title {
+      margin: 0 0 8px;
+      font-size: 22px;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", serif;
+    }
+    .meta {
+      color: var(--subtle);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 720px) {
+      .hero, .section { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="sheet">
+      <section class="hero">
+        <div class="eyebrow">Arose Knowledge Hub</div>
+        <h1>Arose is a rose</h1>
+        <p>这是 Arose 的公开分享入口页。当前已收录 AI Builders 分类日报，可直接进入分类页查看最新内容。</p>
+      </section>
+      <section class="section">
+        <div class="card">
+          <div class="eyebrow">Slides</div>
+          <h2 class="title"><a href="./department-knowledge-base-launch/">部门知识库全员宣讲</a></h2>
+          <div class="meta">知识库搭建规范的全员宣讲 Slides，包含规则解读、互动问答与品牌化展示页面。</div>
+          <a href="./department-knowledge-base-launch/">打开知识库宣讲页</a>
+        </div>
+        <div class="card">
+          <div class="eyebrow">Daily Report</div>
+          <h2 class="title"><a href="./2026-03-30_beauty-trends_makeup-daily.html">2026-03-30 Beauty Trends</a></h2>
+          <div class="meta">今日生成的 Beauty Trends 页面，聚焦美妆行业趋势与彩妆类目信号。</div>
+          <a href="./2026-03-30_beauty-trends_makeup-daily.html">打开 Beauty Trends 分享页</a>
+        </div>
+        <div class="card">
+          <div class="eyebrow">Category</div>
+          <h2 class="title"><a href="./AI_Builders/">AI Builders</a></h2>
+          <div class="meta">聚焦 AI builders、企业管理、人才趋势与 agent-native 工作流信号。</div>
+          <a href="./AI_Builders/">进入 AI_Builders 分类页</a>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

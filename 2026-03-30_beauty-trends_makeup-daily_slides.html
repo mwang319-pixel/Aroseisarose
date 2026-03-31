@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年3月30日 美妆行业趋势日报｜彩妆类目 Slides</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* === THEME TOKENS === */
+    :root {
+      --bg-primary: #120f13;
+      --bg-secondary: #1c1620;
+      --panel-bg: rgba(29, 24, 32, 0.76);
+      --panel-strong: rgba(40, 31, 43, 0.88);
+      --line-soft: rgba(255, 240, 234, 0.10);
+      --text-primary: #f7efe9;
+      --text-secondary: #cdbeb8;
+      --text-muted: #998d89;
+      --accent-rose: #e7b4bf;
+      --accent-gold: #d7b782;
+      --accent-coral: #d98773;
+      --accent-sage: #96a88e;
+      --shadow-soft: 0 1.5rem 4rem rgba(0, 0, 0, 0.28);
+      --font-display: "Cormorant Garamond", serif;
+      --font-body: "Manrope", sans-serif;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --duration-normal: 0.8s;
+      --duration-fast: 0.4s;
+    }
+
+    /* === RESET === */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===========================================
+       VIEWPORT FITTING: MANDATORY BASE STYLES
+       Include this ENTIRE file in every presentation.
+       These styles ensure slides fit exactly in the viewport.
+       =========================================== */
+
+    /* 1. Lock html/body to viewport */
+    html, body {
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    html {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+    }
+
+    /* 2. Each slide = exact viewport height */
+    .slide {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh; /* Dynamic viewport height for mobile browsers */
+        overflow: hidden; /* CRITICAL: Prevent ANY overflow */
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* 3. Content container with flex for centering */
+    .slide-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 100%;
+        overflow: hidden; /* Double-protection against overflow */
+        padding: var(--slide-padding);
+    }
+
+    /* 4. ALL typography uses clamp() for responsive scaling */
+    :root {
+        /* Titles scale from mobile to desktop */
+        --title-size: clamp(1.5rem, 5vw, 4rem);
+        --h2-size: clamp(1.25rem, 3.5vw, 2.5rem);
+        --h3-size: clamp(1rem, 2.5vw, 1.75rem);
+
+        /* Body text */
+        --body-size: clamp(0.75rem, 1.5vw, 1.125rem);
+        --small-size: clamp(0.65rem, 1vw, 0.875rem);
+
+        /* Spacing scales with viewport */
+        --slide-padding: clamp(1rem, 4vw, 4rem);
+        --content-gap: clamp(0.5rem, 2vw, 2rem);
+        --element-gap: clamp(0.25rem, 1vw, 1rem);
+    }
+
+    /* 5. Cards/containers use viewport-relative max sizes */
+    .card, .container, .content-box {
+        max-width: min(90vw, 1000px);
+        max-height: min(80vh, 700px);
+    }
+
+    /* 6. Lists auto-scale with viewport */
+    .feature-list, .bullet-list {
+        gap: clamp(0.4rem, 1vh, 1rem);
+    }
+
+    .feature-list li, .bullet-list li {
+        font-size: var(--body-size);
+        line-height: 1.4;
+    }
+
+    /* 7. Grids adapt to available space */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: clamp(0.5rem, 1.5vw, 1rem);
+    }
+
+    /* 8. Images constrained to viewport */
+    img, .image-container {
+        max-width: 100%;
+        max-height: min(50vh, 400px);
+        object-fit: contain;
+    }
+
+    /* ===========================================
+       RESPONSIVE BREAKPOINTS
+       Aggressive scaling for smaller viewports
+       =========================================== */
+
+    /* Short viewports (< 700px height) */
+    @media (max-height: 700px) {
+        :root {
+            --slide-padding: clamp(0.75rem, 3vw, 2rem);
+            --content-gap: clamp(0.4rem, 1.5vw, 1rem);
+            --title-size: clamp(1.25rem, 4.5vw, 2.5rem);
+            --h2-size: clamp(1rem, 3vw, 1.75rem);
+        }
+    }
+
+    /* Very short viewports (< 600px height) */
+    @media (max-height: 600px) {
+        :root {
+            --slide-padding: clamp(0.5rem, 2.5vw, 1.5rem);
+            --content-gap: clamp(0.3rem, 1vw, 0.75rem);
+            --title-size: clamp(1.1rem, 4vw, 2rem);
+            --body-size: clamp(0.7rem, 1.2vw, 0.95rem);
+        }
+
+        /* Hide non-essential elements */
+        .nav-dots, .keyboard-hint, .decorative {
+            display: none;
+        }
+    }
+
+    /* Extremely short (landscape phones, < 500px height) */
+    @media (max-height: 500px) {
+        :root {
+            --slide-padding: clamp(0.4rem, 2vw, 1rem);
+            --title-size: clamp(1rem, 3.5vw, 1.5rem);
+            --h2-size: clamp(0.9rem, 2.5vw, 1.25rem);
+            --body-size: clamp(0.65rem, 1vw, 0.85rem);
+        }
+    }
+
+    /* Narrow viewports (< 600px width) */
+    @media (max-width: 600px) {
+        :root {
+            --title-size: clamp(1.25rem, 7vw, 2.5rem);
+        }
+
+        /* Stack grids vertically */
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* ===========================================
+       REDUCED MOTION
+       Respect user preferences
+       =========================================== */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.2s !important;
+        }
+
+        html {
+            scroll-behavior: auto;
+        }
+    }
+
+    /* === BASE LAYOUT === */
+    body {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(231, 180, 191, 0.18), transparent 22%),
+        radial-gradient(circle at 80% 18%, rgba(215, 183, 130, 0.12), transparent 18%),
+        radial-gradient(circle at 78% 72%, rgba(150, 168, 142, 0.10), transparent 24%),
+        linear-gradient(180deg, #130f12 0%, #1a1418 46%, #120f13 100%);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .progress-bar {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: clamp(0.2rem, 0.4vw, 0.35rem);
+      width: 100%;
+      transform-origin: left center;
+      transform: scaleX(0);
+      background: linear-gradient(90deg, var(--accent-rose), var(--accent-gold), var(--accent-coral));
+      z-index: 50;
+      box-shadow: 0 0 1.2rem rgba(231, 180, 191, 0.45);
+    }
+
+    .nav-dots {
+      position: fixed;
+      top: 50%;
+      right: clamp(0.55rem, 1.4vw, 1.25rem);
+      transform: translateY(-50%);
+      z-index: 40;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.35rem, 0.8vw, 0.65rem);
+      padding: clamp(0.45rem, 1vw, 0.8rem);
+      border-radius: 999px;
+      background: rgba(17, 14, 19, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-dot {
+      width: clamp(0.45rem, 0.9vw, 0.7rem);
+      height: clamp(0.45rem, 0.9vw, 0.7rem);
+      border-radius: 50%;
+      border: 1px solid rgba(255, 245, 240, 0.4);
+      background: transparent;
+      opacity: 0.45;
+      transition: transform var(--duration-fast) ease, background var(--duration-fast) ease, opacity var(--duration-fast) ease;
+      cursor: pointer;
+    }
+
+    .nav-dot.active {
+      opacity: 1;
+      background: linear-gradient(180deg, var(--accent-rose), var(--accent-gold));
+      transform: scale(1.18);
+    }
+
+    .slide::before,
+    .slide::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(clamp(1rem, 5vw, 5rem));
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .slide::before {
+      width: clamp(9rem, 24vw, 24rem);
+      height: clamp(9rem, 24vw, 24rem);
+      top: calc(-1 * clamp(3rem, 8vw, 7rem));
+      right: calc(-1 * clamp(2rem, 6vw, 5rem));
+      background: radial-gradient(circle, rgba(231, 180, 191, 0.24), rgba(231, 180, 191, 0));
+    }
+
+    .slide::after {
+      width: clamp(7rem, 18vw, 18rem);
+      height: clamp(7rem, 18vw, 18rem);
+      bottom: calc(-1 * clamp(2rem, 5vw, 4rem));
+      left: calc(-1 * clamp(1rem, 3vw, 3rem));
+      background: radial-gradient(circle, rgba(215, 183, 130, 0.18), rgba(215, 183, 130, 0));
+    }
+
+    .slide-shell {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--content-gap);
+      width: min(100%, 92rem);
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: clamp(0.35rem, 0.8vw, 0.55rem);
+      font-size: var(--small-size);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-gold);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: clamp(1.8rem, 4vw, 3.5rem);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(215, 183, 130, 0.9));
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: 0.95;
+      letter-spacing: 0.01em;
+    }
+
+    h1 {
+      font-size: clamp(2.9rem, 8vw, 6.6rem);
+    }
+
+    .hero-title {
+      font-size: clamp(2.35rem, 6.4vw, 5.15rem);
+      line-height: 0.9;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.1rem, 0.4vw, 0.3rem);
+      max-width: none;
+    }
+
+    .hero-title-line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    h2 {
+      font-size: var(--h2-size);
+    }
+
+    h3 {
+      font-size: var(--h3-size);
+    }
+
+    p, li {
+      font-size: var(--body-size);
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+
+    .meta-row,
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: clamp(0.45rem, 1vw, 0.8rem);
+    }
+
+    .meta-pill,
+    .stat-chip,
+    .signal-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: clamp(0.3rem, 0.7vw, 0.45rem);
+      padding: clamp(0.42rem, 0.9vw, 0.72rem) clamp(0.7rem, 1.5vw, 1rem);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 244, 239, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(14px);
+      font-size: var(--small-size);
+      color: var(--text-primary);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: end;
+      min-height: 0;
+      flex: 1;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.8rem, 1.8vw, 1.2rem);
+      max-width: min(100%, 44rem);
+    }
+
+    .hero-copy p {
+      max-width: 40rem;
+      font-size: clamp(0.92rem, 1.8vw, 1.28rem);
+    }
+
+    .hero-panel,
+    .content-panel,
+    .metric-card,
+    .brand-card,
+    .source-card {
+      border-radius: clamp(1rem, 2vw, 1.8rem);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+        var(--panel-bg);
+      border: 1px solid var(--line-soft);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-panel {
+      display: grid;
+      gap: clamp(0.7rem, 1.2vw, 1rem);
+      padding: clamp(1rem, 2vw, 1.4rem);
+      min-height: clamp(18rem, 40vh, 26rem);
+      align-content: space-between;
+      background:
+        radial-gradient(circle at top right, rgba(231, 180, 191, 0.2), transparent 30%),
+        linear-gradient(180deg, rgba(54, 39, 47, 0.95), rgba(24, 19, 29, 0.96));
+    }
+
+    .hero-number {
+      font-size: clamp(4rem, 13vw, 8.5rem);
+      line-height: 0.8;
+      color: rgba(247, 239, 233, 0.13);
+    }
+
+    .hero-panel p {
+      font-size: clamp(0.88rem, 1.5vw, 1.1rem);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: var(--content-gap);
+    }
+
+    .section-head p {
+      max-width: 34rem;
+    }
+
+    .lead-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(0.8rem, 1.4vw, 1rem);
+      min-height: 0;
+      flex: 1;
+    }
+
+    .content-panel {
+      padding: clamp(0.95rem, 1.8vw, 1.3rem);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.55rem, 1vw, 0.8rem);
+      min-height: 0;
+    }
+
+    .content-panel strong,
+    .metric-card strong,
+    .brand-card strong {
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    .panel-kicker {
+      font-size: var(--small-size);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-rose);
+    }
+
+    .bullet-list {
+      display: grid;
+      list-style: none;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 1.1em;
+    }
+
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 0.42em;
+      height: 0.42em;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent-rose), var(--accent-gold));
+      box-shadow: 0 0 0.8rem rgba(231, 180, 191, 0.35);
+    }
+
+    .signal-grid,
+    .product-grid,
+    .scenario-grid,
+    .implication-grid,
+    .source-grid {
+      display: grid;
+      gap: clamp(0.75rem, 1.3vw, 1rem);
+      min-height: 0;
+      flex: 1;
+    }
+
+    .signal-grid,
+    .product-grid,
+    .scenario-grid,
+    .implication-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .metric-card,
+    .brand-card,
+    .source-card {
+      padding: clamp(0.95rem, 1.6vw, 1.25rem);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.5rem, 1vw, 0.75rem);
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .metric-card h3,
+    .brand-card h3,
+    .source-card h3 {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      line-height: 1;
+    }
+
+    .metric-card p,
+    .brand-card p,
+    .source-card p {
+      font-size: clamp(0.76rem, 1.2vw, 0.96rem);
+      line-height: 1.45;
+    }
+
+    .metric-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: clamp(0.35rem, 0.8vw, 0.5rem);
+      margin-top: auto;
+    }
+
+    .lane-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(0.8rem, 1.4vw, 1rem);
+      min-height: 0;
+      flex: 1;
+    }
+
+    .lane-card {
+      padding: clamp(0.95rem, 1.6vw, 1.25rem);
+      border-radius: clamp(1rem, 2vw, 1.6rem);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.025));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.6rem, 1vw, 0.75rem);
+    }
+
+    .lane-card h3 {
+      font-size: clamp(1.45rem, 2.1vw, 1.95rem);
+    }
+
+    .lane-rank {
+      font-size: clamp(0.8rem, 1vw, 0.92rem);
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .impact-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(0.75rem, 1.3vw, 1rem);
+      min-height: 0;
+      flex: 1;
+    }
+
+    .impact-card {
+      padding: clamp(0.95rem, 1.6vw, 1.25rem);
+      border-radius: clamp(1rem, 2vw, 1.6rem);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.55rem, 1vw, 0.75rem);
+      overflow: hidden;
+    }
+
+    .impact-card[data-tone="good"] { box-shadow: inset 0 0 0 1px rgba(150, 168, 142, 0.22); }
+    .impact-card[data-tone="watch"] { box-shadow: inset 0 0 0 1px rgba(215, 183, 130, 0.22); }
+    .impact-card[data-tone="risk"] { box-shadow: inset 0 0 0 1px rgba(217, 135, 115, 0.22); }
+
+    .action-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(0.8rem, 1.4vw, 1rem);
+      min-height: 0;
+      flex: 1;
+    }
+
+    .action-card {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.55rem, 1vw, 0.75rem);
+      padding: clamp(1rem, 1.7vw, 1.35rem);
+      border-radius: clamp(1rem, 2vw, 1.6rem);
+      background:
+        radial-gradient(circle at top right, rgba(215, 183, 130, 0.12), transparent 30%),
+        linear-gradient(180deg, rgba(44, 34, 40, 0.96), rgba(24, 18, 29, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .action-index {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      color: rgba(231, 180, 191, 0.36);
+      line-height: 0.9;
+    }
+
+    .closing-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: clamp(1rem, 2vw, 2rem);
+      min-height: 0;
+      flex: 1;
+    }
+
+    .source-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-content: start;
+    }
+
+    .closing-panel {
+      padding: clamp(1rem, 2vw, 1.5rem);
+      border-radius: clamp(1rem, 2vw, 1.8rem);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(231, 180, 191, 0.18), transparent 24%),
+        linear-gradient(180deg, rgba(46, 36, 43, 0.95), rgba(24, 19, 29, 0.96));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: clamp(0.65rem, 1.2vw, 1rem);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .closing-panel h2 {
+      font-size: clamp(2.2rem, 4.2vw, 4rem);
+    }
+
+    .closing-panel p {
+      font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+      max-width: 28rem;
+    }
+
+    .footer-note {
+      font-size: var(--small-size);
+      color: var(--text-muted);
+    }
+
+    /* === ANIMATION SYSTEM === */
+    .reveal,
+    .reveal-left,
+    .reveal-scale,
+    .reveal-blur {
+      opacity: 0;
+      will-change: transform, opacity, filter;
+    }
+
+    .reveal {
+      transform: translateY(clamp(0.8rem, 2vw, 1.5rem));
+      transition: opacity var(--duration-normal) var(--ease-out-expo),
+        transform var(--duration-normal) var(--ease-out-expo);
+    }
+
+    .reveal-left {
+      transform: translateX(calc(-1 * clamp(1rem, 3vw, 2rem)));
+      transition: opacity var(--duration-normal) var(--ease-out-expo),
+        transform var(--duration-normal) var(--ease-out-expo);
+    }
+
+    .reveal-scale {
+      transform: scale(0.94);
+      transition: opacity var(--duration-normal) var(--ease-out-expo),
+        transform var(--duration-normal) var(--ease-out-expo);
+    }
+
+    .reveal-blur {
+      filter: blur(clamp(0.4rem, 1vw, 0.8rem));
+      transition: opacity 1s var(--ease-out-expo),
+        filter 1s var(--ease-out-expo);
+    }
+
+    .slide.visible .reveal,
+    .slide.visible .reveal-left,
+    .slide.visible .reveal-scale,
+    .slide.visible .reveal-blur {
+      opacity: 1;
+      transform: translateX(0) translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    .stagger-1 { transition-delay: 0.08s; }
+    .stagger-2 { transition-delay: 0.16s; }
+    .stagger-3 { transition-delay: 0.24s; }
+    .stagger-4 { transition-delay: 0.32s; }
+    .stagger-5 { transition-delay: 0.40s; }
+
+    .floaty {
+      animation: drift 9s ease-in-out infinite;
+    }
+
+    @keyframes drift {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(calc(-1 * clamp(0.4rem, 1vw, 0.85rem))); }
+    }
+
+    /* === RESPONSIVE ADJUSTMENTS === */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .closing-grid,
+      .lane-grid,
+      .impact-strip,
+      .action-list {
+        grid-template-columns: 1fr;
+      }
+
+      .lead-grid,
+      .signal-grid,
+      .product-grid,
+      .scenario-grid,
+      .implication-grid,
+      .source-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- === GLOBAL CHROME === -->
+  <div class="progress-bar" aria-hidden="true"></div>
+  <nav class="nav-dots" aria-label="Slides navigation"></nav>
+
+  <!-- === SLIDE 1: TITLE === -->
+  <section class="slide visible" data-title="封面">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="eyebrow reveal-left">Rose Beauty Intelligence Daily</div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="meta-row reveal stagger-1">
+              <span class="meta-pill">2026-03-30</span>
+              <span class="meta-pill">彩妆类目</span>
+              <span class="meta-pill">内部趋势日报</span>
+            </div>
+            <h1 class="hero-title reveal-blur stagger-2">
+              <span class="hero-title-line">彩妆回到</span>
+              <span class="hero-title-line">局部表达时代</span>
+            </h1>
+            <p class="reveal stagger-3">今天最强的信号不是“自然裸妆回归”，而是轻底肌之上，用唇、腮红和局部高光完成更可被看见的风格表达。</p>
+            <div class="pill-row reveal stagger-4">
+              <span class="signal-chip">唇部创新加速</span>
+              <span class="signal-chip">水彩腮红升温</span>
+              <span class="signal-chip">包装即产品</span>
+            </div>
+          </div>
+          <aside class="hero-panel reveal-scale stagger-4 floaty">
+            <div class="hero-number">03</div>
+            <div>
+              <div class="panel-kicker">Daily Signal</div>
+              <h3>今天该看什么</h3>
+            </div>
+            <p>Sephora 上新、Allure / BeautyMatter 趋势、千瓜彩妆榜单共同收敛到同一个结论：唇部是 2026 上半年最明确的彩妆机会入口。</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SLIDE 2: EXECUTIVE SUMMARY === -->
+  <section class="slide" data-title="核心结论">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal-left">Executive Pulse</div>
+            <h2 class="reveal stagger-1">4 条今天必须带走的判断</h2>
+          </div>
+          <p class="reveal stagger-2">这不是一轮单点爆品热度，而是趋势媒体、上新货架与国内种草结构同时指向的结构性变化。</p>
+        </div>
+        <div class="lead-grid">
+          <article class="content-panel reveal-scale stagger-1">
+            <div class="panel-kicker">01</div>
+            <h3>唇部是增长中枢</h3>
+            <ul class="bullet-list">
+              <li>从“单纯润”转向“功能 + 情绪 + 形态”的复合创新。</li>
+              <li>染唇、丰唇、去角质润唇、光泽棒都在同日上新中出现。</li>
+              <li>更适合高频复购的小体积产品切入。</li>
+            </ul>
+          </article>
+          <article class="content-panel reveal-scale stagger-2">
+            <div class="panel-kicker">02</div>
+            <h3>春季主线是局部表达</h3>
+            <ul class="bullet-list">
+              <li>真实肌肤底上做局部高光、柔雾唇、水彩腮红。</li>
+              <li>“轻底 + 局部色彩”比“全脸重修饰”更有效率。</li>
+              <li>套组与内容都要围绕局部记忆点来设计。</li>
+            </ul>
+          </article>
+          <article class="content-panel reveal-scale stagger-3">
+            <div class="panel-kicker">03</div>
+            <h3>国内热度三线并行</h3>
+            <ul class="bullet-list">
+              <li>奢品大牌、专业彩妆、国货性价比同步升温。</li>
+              <li>市场并不是单一价格带驱动。</li>
+              <li>妆效可视化能力重新成为内容穿透核心。</li>
+            </ul>
+          </article>
+          <article class="content-panel reveal-scale stagger-4">
+            <div class="panel-kicker">04</div>
+            <h3>包装开始成为创新本体</h3>
+            <ul class="bullet-list">
+              <li>Refillable、可收藏、可展示，正在替代纯配方叙事。</li>
+              <li>彩妆差异化从“成分”转向“使用仪式感”。</li>
+              <li>唇部与腮红最适合承接这一变化。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SLIDE 3: TREND SIGNALS === -->
+  <section class="slide" data-title="全球信号">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal-left">Global Signals</div>
+            <h2 class="reveal stagger-1">全球趋势信号已经清晰收敛</h2>
+          </div>
+          <p class="reveal stagger-2">今天最强的不是某一个单品，而是几条彼此互相强化的趋势线正在同时上升。</p>
+        </div>
+        <div class="signal-grid">
+          <article class="metric-card reveal stagger-1">
+            <div class="panel-kicker">Strong</div>
+            <h3>Expressive Color Comeback</h3>
+            <p>2026 开始从 clean-girl 饱和阶段转向更可被看见的色彩与个人风格，彩妆重新承担“表达”功能。</p>
+            <div class="metric-footer">
+              <span class="stat-chip">趋势阶段：加速</span>
+              <span class="stat-chip">启发：轻门槛风格型产品</span>
+            </div>
+          </article>
+          <article class="metric-card reveal stagger-2">
+            <div class="panel-kicker">Strong</div>
+            <h3>Blurred / Soft Lip</h3>
+            <p>模糊边界、轻着色、舒适持色正在从 editorial 走向零售货架，是唇妆更新最明确的答案。</p>
+            <div class="metric-footer">
+              <span class="stat-chip">趋势阶段：加速</span>
+              <span class="stat-chip">启发：唇泥 / 染唇 / 雾感润唇</span>
+            </div>
+          </article>
+          <article class="metric-card reveal stagger-3">
+            <div class="panel-kicker">Medium</div>
+            <h3>Watercolor Blush</h3>
+            <p>春季情绪型妆容正在从眼妆扩散到腮红与唇色联动，核心不是显色参数，而是扩散感与情绪色块。</p>
+            <div class="metric-footer">
+              <span class="stat-chip">趋势阶段：加速</span>
+              <span class="stat-chip">启发：腮红从提气色升级</span>
+            </div>
+          </article>
+          <article class="metric-card reveal stagger-4">
+            <div class="panel-kicker">Medium</div>
+            <h3>Refillable Packaging</h3>
+            <p>彩妆包装正在从 ESG 话题进入真实商业策略，礼盒、限定壳、补充芯会直接影响溢价与复购。</p>
+            <div class="metric-footer">
+              <span class="stat-chip">趋势阶段：升温</span>
+              <span class="stat-chip">启发：包装即差异化</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SLIDE 4: PRODUCT WATCHLIST === -->
+  <section class="slide" data-title="全球新品">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal-left">New Releases</div>
+            <h2 class="reveal stagger-1">全球新品集中验证“唇部优先”</h2>
+          </div>
+          <p class="reveal stagger-2">Sephora 当天可见样本里，多个品牌同时从不同角度押注唇部，说明并非偶发上新，而是赛道扩张。</p>
+        </div>
+        <div class="product-grid">
+          <article class="metric-card reveal stagger-1">
+            <div class="panel-kicker">Watchlist</div>
+            <h3>rhode</h3>
+            <p><strong>Peptide Lip Boost Plumping Lip Mask</strong><br>即时丰唇 + 长期柔软感，把护唇重新做成彩妆入口。</p>
+            <div class="metric-footer">
+              <span class="stat-chip">关键词：丰唇</span>
+              <span class="stat-chip">关键词：护彩一体</span>
+            </div>
+          </article>
+          <article class="metric-card reveal stagger-2">
+            <div class="panel-kicker">Watchlist</div>
+            <h3>Summer Fridays</h3>
+            <p><strong>Flushed Lip Stain</strong><br>12 小时长效、轻薄不转移，几乎正中“模糊唇 + 轻感持色”主趋势。</p>
+            <div class="metric-footer">
+              <span class="stat-chip">关键词：染唇</span>
+              <span class="stat-chip">关键词：柔雾长效</span>
+            </div>
+          </article>
+          <article class="metric-card reveal stagger-3">
+            <div class="panel-kicker">Watchlist</div>
+            <h3>EADEM</h3>
+            <p><strong>Le Chouchou Lip Balm</strong><br>AHA + peptide + 微着色，把功能型润唇推进到更高频的护理彩妆场景。</p>
+            <div class="metric-footer">
+              <span class="stat-chip">关键词：去角质</span>
+              <span class="stat-chip">关键词：日常高频</span>
+            </div>
+          </article>
+          <article class="metric-card reveal stagger-4">
+            <div class="panel-kicker">Observe</div>
+            <h3>Fenty / Sephora Collection</h3>
+            <p>高光泽唇棒、彩色眼线、迷你唇线笔说明货架仍在支持“局部焦点”和低门槛试错。</p>
+            <div class="metric-footer">
+              <span class="stat-chip">关键词：光泽棒</span>
+              <span class="stat-chip">关键词：mini format</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SLIDE 5: CHINA HEAT === -->
+  <section class="slide" data-title="国内热度">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal-left">China Heat</div>
+            <h2 class="reveal stagger-1">国内彩妆热度重新分成三条主赛道</h2>
+          </div>
+          <p class="reveal stagger-2">千瓜彩妆周榜说明，用户并没有只往“平价爆品”迁移，而是在三个不同价值带同时活跃。</p>
+        </div>
+        <div class="lane-grid">
+          <article class="lane-card reveal-scale stagger-1">
+            <div class="lane-rank">Lane 01</div>
+            <h3>奢品大牌</h3>
+            <ul class="bullet-list">
+              <li>香奈儿排名第 1，互动量 785,985。</li>
+              <li>迪奥、圣罗兰、汤姆·福特仍维持前列。</li>
+              <li>用户愿意为“高级感可识别”买单。</li>
+            </ul>
+          </article>
+          <article class="lane-card reveal-scale stagger-2">
+            <div class="lane-rank">Lane 02</div>
+            <h3>专业彩妆</h3>
+            <ul class="bullet-list">
+              <li>毛戈平排名第 2，互动量 457,955。</li>
+              <li>专业背书 + 可视化妆效在内容平台穿透力更强。</li>
+              <li>“看得见差异”的表达重新变重要。</li>
+            </ul>
+          </article>
+          <article class="lane-card reveal-scale stagger-3">
+            <div class="lane-rank">Lane 03</div>
+            <h3>高性价比国货</h3>
+            <ul class="bullet-list">
+              <li>蜜丝婷、魅可、橘朵持续活跃。</li>
+              <li>消费者仍然追逐“价格不高但妆效清晰”。</li>
+              <li>即时满足型单品仍有内容爆发力。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SLIDE 6: SCENES === -->
+  <section class="slide" data-title="热点场景">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal-left">Scene Language</div>
+            <h2 class="reveal stagger-1">内容场景正在从“色号”改写为“状态”</h2>
+          </div>
+          <p class="reveal stagger-2">公开内容信号里，用户语言已经从产品参数转向妆感、情绪与低门槛上脸结果。</p>
+        </div>
+        <div class="scenario-grid">
+          <article class="brand-card reveal stagger-1">
+            <div class="panel-kicker">持续升温</div>
+            <h3>春日粉彩通勤妆</h3>
+            <p>关键词是“黄皮安全区、淡而不寡、状态很好”，核心不是多显色，而是看起来更轻更有气色。</p>
+          </article>
+          <article class="brand-card reveal stagger-2">
+            <div class="panel-kicker">持续升温</div>
+            <h3>柔雾唇 / 模糊唇</h3>
+            <p>用户不想油亮也不想厚重，更想要“像天生唇色更好看”的咬唇感和雾而不干。</p>
+          </article>
+          <article class="brand-card reveal stagger-3">
+            <div class="panel-kicker">升温</div>
+            <h3>水彩腮红</h3>
+            <p>重点是晕染边界、容错率和新手友好，妆效要像云一样扩散，而不是重色块压脸。</p>
+          </article>
+          <article class="brand-card reveal stagger-4">
+            <div class="panel-kicker">升温</div>
+            <h3>局部高光感妆容</h3>
+            <p>全脸淡，但必须有一个记忆点。单品的任务是服务“焦点”，而不是增加复杂步骤。</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SLIDE 7: WATCHLIST === -->
+  <section class="slide" data-title="Watchlist">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal-left">Direction Shift</div>
+            <h2 class="reveal stagger-1">watchlist 需要立刻调整的方向</h2>
+          </div>
+          <p class="reveal stagger-2">不是简单地“多看几个唇部新品”，而是重排优先级：新增、增强、减弱三类方向已经非常明确。</p>
+        </div>
+        <div class="impact-strip">
+          <article class="impact-card reveal-scale stagger-1" data-tone="good">
+            <div class="panel-kicker">新增</div>
+            <h3>功能型唇彩妆</h3>
+            <ul class="bullet-list">
+              <li>建议建立染唇 / 丰唇 / 去角质润唇 / 光泽棒四象限。</li>
+              <li>以“彩妆化护理”作为新赛道入口。</li>
+            </ul>
+          </article>
+          <article class="impact-card reveal-scale stagger-2" data-tone="watch">
+            <div class="panel-kicker">增强</div>
+            <h3>柔雾唇 + 水彩腮红</h3>
+            <ul class="bullet-list">
+              <li>海外趋势、春季妆容和国内内容都在同向验证。</li>
+              <li>适合优先测试唇腮联动套组与内容脚本。</li>
+            </ul>
+          </article>
+          <article class="impact-card reveal-scale stagger-3" data-tone="risk">
+            <div class="panel-kicker">减弱</div>
+            <h3>重全脸修饰叙事</h3>
+            <ul class="bullet-list">
+              <li>当前内容注意力已经转向真实底肌上的局部焦点。</li>
+              <li>“大而全妆容盘”优先级应主动下调。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SLIDE 8: SKU IMPACT === -->
+  <section class="slide" data-title="产品库影响">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal-left">Portfolio Impact</div>
+            <h2 class="reveal stagger-1">对玫瑰产品库的直接影响</h2>
+          </div>
+          <p class="reveal stagger-2">可以把今天的结论直接映射到 SKU 判断上，而不是停留在“内容灵感”层面。</p>
+        </div>
+        <div class="implication-grid">
+          <article class="brand-card reveal stagger-1">
+            <div class="panel-kicker">利好方向</div>
+            <h3>唇部创新带</h3>
+            <p>优先筛选具有护理感、但仍明确属于彩妆语境的唇泥、染唇、丰唇唇膜与功能型润唇产品。</p>
+          </article>
+          <article class="brand-card reveal stagger-2">
+            <div class="panel-kicker">利好方向</div>
+            <h3>低饱和腮红</h3>
+            <p>优先看扩散性、上脸容错率与黄皮适配，直播表达应从“色号参数”转向“脸颊情绪变化”。</p>
+          </article>
+          <article class="brand-card reveal stagger-3">
+            <div class="panel-kicker">利空方向</div>
+            <h3>基础底妆</h3>
+            <p>无明显肤感或妆效差异的粉底 / 气垫优先级下降，只适合作为配套，而非当前主推主角。</p>
+          </article>
+          <article class="brand-card reveal stagger-4">
+            <div class="panel-kicker">继续观察</div>
+            <h3>男士彩妆</h3>
+            <p>虽然公开行业信号在增长，但对现阶段并非最优先主线，更适合先做低成本内容测试。</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SLIDE 9: ACTIONS === -->
+  <section class="slide" data-title="建议动作">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal-left">Action Board</div>
+            <h2 class="reveal stagger-1">今天就应该启动的 3 个动作</h2>
+          </div>
+          <p class="reveal stagger-2">这些动作都是低延迟、能直接吃到 2026 春季窗口的优先项。</p>
+        </div>
+        <div class="action-list">
+          <article class="action-card reveal-scale stagger-1">
+            <div class="action-index">01</div>
+            <h3>建唇部创新 watchlist</h3>
+            <p><strong>Owner：</strong>选品负责人 + 产品负责人</p>
+            <p><strong>Why now：</strong>实时上新已经足够说明唇部是最热入口。</p>
+            <p><strong>Risk if late：</strong>错过 2026 上半年最明确的小品类机会。</p>
+          </article>
+          <article class="action-card reveal-scale stagger-2">
+            <div class="action-index">02</div>
+            <h3>测试“柔雾唇 + 水彩腮红”脚本</h3>
+            <p><strong>Owner：</strong>内容负责人</p>
+            <p><strong>Why now：</strong>趋势正在春季加速窗口，适合用低成本内容先占位。</p>
+            <p><strong>Risk if late：</strong>错过抢占春季审美心智的时间差。</p>
+          </article>
+          <article class="action-card reveal-scale stagger-3">
+            <div class="action-index">03</div>
+            <h3>评估礼盒 / 补充芯方案</h3>
+            <p><strong>Owner：</strong>产品负责人 + 供应链</p>
+            <p><strong>Why now：</strong>包装正在从附加值变成产品差异化本体。</p>
+            <p><strong>Risk if late：</strong>错过“可收藏、可展示、可复购”的高毛利空间。</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SLIDE 10: SOURCES & CLOSE === -->
+  <section class="slide" data-title="来源与结尾">
+    <div class="slide-content">
+      <div class="slide-shell">
+        <div class="closing-grid">
+          <aside class="closing-panel reveal-left stagger-1">
+            <div>
+              <div class="eyebrow">Final Take</div>
+              <h2>一句话结尾</h2>
+            </div>
+            <p>如果今天只追一个方向，就追“有护理感的唇部彩妆”；如果今天只做一组内容，就做“柔雾唇 + 水彩腮红”的局部表达组合。</p>
+            <div class="pill-row">
+              <span class="signal-chip">Arrow / Space 切页</span>
+              <span class="signal-chip">滚轮 / 触控支持</span>
+              <span class="signal-chip">Nav Dots 快速跳转</span>
+            </div>
+            <div class="footer-note">数据基于 2026 年 3 月 30 日日报整理，来源含 Sephora、Allure、BeautyMatter、CosmeticsDesign、千瓜等公开信号。</div>
+          </aside>
+          <div class="source-grid">
+            <article class="source-card reveal stagger-1">
+              <div class="panel-kicker">Trend Media</div>
+              <h3>Allure</h3>
+              <p>Spring Makeup Trends 2026<br>Makeup Trends 2026<br>Blurred Lips</p>
+            </article>
+            <article class="source-card reveal stagger-2">
+              <div class="panel-kicker">Industry</div>
+              <h3>BeautyMatter</h3>
+              <p>The Makeup Trends Set to Define 2026<br>Beauty Retail Watch<br>Packaging Trends</p>
+            </article>
+            <article class="source-card reveal stagger-3">
+              <div class="panel-kicker">Retail</div>
+              <h3>Sephora</h3>
+              <p>rhode / Summer Fridays / EADEM / Fenty / Sephora Collection 新品页面与 New Releases。</p>
+            </article>
+            <article class="source-card reveal stagger-4">
+              <div class="panel-kicker">China Signal</div>
+              <h3>千瓜 / 抖音公开内容</h3>
+              <p>彩妆品牌种草周榜与花知晓内容带，共同补强国内热度与场景判断。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    /* === PRESENTATION CONTROLLER === */
+    class SlidePresentation {
+      constructor() {
+        this.slides = Array.from(document.querySelectorAll('.slide'));
+        this.progressBar = document.querySelector('.progress-bar');
+        this.nav = document.querySelector('.nav-dots');
+        this.currentSlide = 0;
+        this.isAnimating = false;
+        this.touchStartY = 0;
+        this.touchDeltaY = 0;
+        this.buildNavDots();
+        this.setupIntersectionObserver();
+        this.setupKeyboardNav();
+        this.setupWheelNav();
+        this.setupTouchNav();
+        this.updateProgress();
+        this.updateActiveDot(0);
+        window.addEventListener('scroll', () => this.updateProgress(), { passive: true });
+        window.addEventListener('resize', () => this.updateProgress());
+      }
+
+      buildNavDots() {
+        this.slides.forEach((slide, index) => {
+          const dot = document.createElement('button');
+          dot.className = 'nav-dot';
+          dot.type = 'button';
+          dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+          dot.title = slide.dataset.title || `Slide ${index + 1}`;
+          dot.addEventListener('click', () => this.goToSlide(index));
+          this.nav.appendChild(dot);
+        });
+        this.navDots = Array.from(this.nav.querySelectorAll('.nav-dot'));
+      }
+
+      setupIntersectionObserver() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              const index = this.slides.indexOf(entry.target);
+              this.currentSlide = index;
+              this.updateActiveDot(index);
+            }
+          });
+        }, {
+          threshold: 0.6
+        });
+
+        this.slides.forEach((slide) => observer.observe(slide));
+      }
+
+      setupKeyboardNav() {
+        window.addEventListener('keydown', (event) => {
+          const nextKeys = ['ArrowDown', 'ArrowRight', 'PageDown', ' '];
+          const prevKeys = ['ArrowUp', 'ArrowLeft', 'PageUp'];
+          if (nextKeys.includes(event.key)) {
+            event.preventDefault();
+            this.goToSlide(Math.min(this.currentSlide + 1, this.slides.length - 1));
+          } else if (prevKeys.includes(event.key)) {
+            event.preventDefault();
+            this.goToSlide(Math.max(this.currentSlide - 1, 0));
+          } else if (event.key === 'Home') {
+            this.goToSlide(0);
+          } else if (event.key === 'End') {
+            this.goToSlide(this.slides.length - 1);
+          }
+        });
+      }
+
+      setupWheelNav() {
+        let wheelTimeout = null;
+        window.addEventListener('wheel', (event) => {
+          if (this.isAnimating) return;
+          if (Math.abs(event.deltaY) < 25) return;
+          clearTimeout(wheelTimeout);
+          wheelTimeout = setTimeout(() => {
+            if (event.deltaY > 0) {
+              this.goToSlide(Math.min(this.currentSlide + 1, this.slides.length - 1));
+            } else {
+              this.goToSlide(Math.max(this.currentSlide - 1, 0));
+            }
+          }, 35);
+        }, { passive: true });
+      }
+
+      setupTouchNav() {
+        window.addEventListener('touchstart', (event) => {
+          this.touchStartY = event.touches[0].clientY;
+        }, { passive: true });
+
+        window.addEventListener('touchmove', (event) => {
+          this.touchDeltaY = event.touches[0].clientY - this.touchStartY;
+        }, { passive: true });
+
+        window.addEventListener('touchend', () => {
+          if (Math.abs(this.touchDeltaY) < 50) return;
+          if (this.touchDeltaY < 0) {
+            this.goToSlide(Math.min(this.currentSlide + 1, this.slides.length - 1));
+          } else {
+            this.goToSlide(Math.max(this.currentSlide - 1, 0));
+          }
+          this.touchDeltaY = 0;
+        }, { passive: true });
+      }
+
+      updateProgress() {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+        this.progressBar.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
+      }
+
+      updateActiveDot(index) {
+        if (!this.navDots) return;
+        this.navDots.forEach((dot, dotIndex) => {
+          dot.classList.toggle('active', dotIndex === index);
+        });
+      }
+
+      goToSlide(index) {
+        if (index < 0 || index >= this.slides.length) return;
+        this.isAnimating = true;
+        this.currentSlide = index;
+        this.updateActiveDot(index);
+        this.slides[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.setTimeout(() => {
+          this.isAnimating = false;
+        }, 700);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      new SlidePresentation();
+    });
+  </script>
+</body>
+</html>

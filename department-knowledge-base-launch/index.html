@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>部门知识库全员宣讲</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* === THEME === */
+        :root {
+            --bg-primary: #f4efe7;
+            --bg-secondary: #fbf8f3;
+            --ink: #1c2d2a;
+            --muted: #53635f;
+            --accent: #db5c38;
+            --accent-soft: rgba(219, 92, 56, 0.14);
+            --forest: #20493f;
+            --gold: #c68d2d;
+            --line: rgba(28, 45, 42, 0.12);
+            --shadow: 0 24px 80px rgba(45, 34, 20, 0.12);
+            --font-display: "Noto Serif SC", serif;
+            --font-body: "Outfit", "PingFang SC", "Microsoft YaHei", sans-serif;
+            --title-size: clamp(2rem, 5.6vw, 4.8rem);
+            --subtitle-size: clamp(0.95rem, 1.5vw, 1.25rem);
+            --body-size: clamp(0.8rem, 1.3vw, 1.05rem);
+            --small-size: clamp(0.72rem, 1vw, 0.9rem);
+            --h2-size: clamp(1.5rem, 3vw, 2.8rem);
+            --h3-size: clamp(1rem, 1.8vw, 1.4rem);
+            --slide-padding: clamp(1.2rem, 4vw, 3.8rem);
+            --content-gap: clamp(0.8rem, 2vw, 1.6rem);
+            --element-gap: clamp(0.45rem, 1vw, 0.9rem);
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration-normal: 0.6s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===========================================
+           VIEWPORT FITTING: MANDATORY BASE STYLES
+           Include this ENTIRE file in every presentation.
+           These styles ensure slides fit exactly in the viewport.
+           =========================================== */
+
+        /* 1. Lock html/body to viewport */
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* 2. Each slide = exact viewport height */
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh; /* Dynamic viewport height for mobile browsers */
+            overflow: hidden; /* CRITICAL: Prevent ANY overflow */
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* 3. Content container with flex for centering */
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 100%;
+            overflow: hidden; /* Double-protection against overflow */
+            padding: var(--slide-padding);
+        }
+
+        /* 4. ALL typography uses clamp() for responsive scaling */
+        :root {
+            /* Titles scale from mobile to desktop */
+            --title-size: clamp(1.5rem, 5vw, 4rem);
+            --h2-size: clamp(1.25rem, 3.5vw, 2.5rem);
+            --h3-size: clamp(1rem, 2.5vw, 1.75rem);
+
+            /* Body text */
+            --body-size: clamp(0.75rem, 1.5vw, 1.125rem);
+            --small-size: clamp(0.65rem, 1vw, 0.875rem);
+
+            /* Spacing scales with viewport */
+            --slide-padding: clamp(1rem, 4vw, 4rem);
+            --content-gap: clamp(0.5rem, 2vw, 2rem);
+            --element-gap: clamp(0.25rem, 1vw, 1rem);
+        }
+
+        /* 5. Cards/containers use viewport-relative max sizes */
+        .card, .container, .content-box {
+            max-width: min(90vw, 1000px);
+            max-height: min(80vh, 700px);
+        }
+
+        /* 6. Lists auto-scale with viewport */
+        .feature-list, .bullet-list {
+            gap: clamp(0.4rem, 1vh, 1rem);
+        }
+
+        .feature-list li, .bullet-list li {
+            font-size: var(--body-size);
+            line-height: 1.4;
+        }
+
+        /* 7. Grids adapt to available space */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+            gap: clamp(0.5rem, 1.5vw, 1rem);
+        }
+
+        /* 8. Images constrained to viewport */
+        img, .image-container {
+            max-width: 100%;
+            max-height: min(50vh, 400px);
+            object-fit: contain;
+        }
+
+        /* ===========================================
+           RESPONSIVE BREAKPOINTS
+           Aggressive scaling for smaller viewports
+           =========================================== */
+
+        /* Short viewports (< 700px height) */
+        @media (max-height: 700px) {
+            :root {
+                --slide-padding: clamp(0.75rem, 3vw, 2rem);
+                --content-gap: clamp(0.4rem, 1.5vw, 1rem);
+                --title-size: clamp(1.25rem, 4.5vw, 2.5rem);
+                --h2-size: clamp(1rem, 3vw, 1.75rem);
+            }
+        }
+
+        /* Very short viewports (< 600px height) */
+        @media (max-height: 600px) {
+            :root {
+                --slide-padding: clamp(0.5rem, 2.5vw, 1.5rem);
+                --content-gap: clamp(0.3rem, 1vw, 0.75rem);
+                --title-size: clamp(1.1rem, 4vw, 2rem);
+                --body-size: clamp(0.7rem, 1.2vw, 0.95rem);
+            }
+
+            /* Hide non-essential elements */
+            .nav-dots, .keyboard-hint, .decorative {
+                display: none;
+            }
+        }
+
+        /* Extremely short (landscape phones, < 500px height) */
+        @media (max-height: 500px) {
+            :root {
+                --slide-padding: clamp(0.4rem, 2vw, 1rem);
+                --title-size: clamp(1rem, 3.5vw, 1.5rem);
+                --h2-size: clamp(0.9rem, 2.5vw, 1.25rem);
+                --body-size: clamp(0.65rem, 1vw, 0.85rem);
+            }
+        }
+
+        /* Narrow viewports (< 600px width) */
+        @media (max-width: 600px) {
+            :root {
+                --title-size: clamp(1.25rem, 7vw, 2.5rem);
+            }
+
+            /* Stack grids vertically */
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===========================================
+           REDUCED MOTION
+           Respect user preferences
+           =========================================== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* === GLOBAL STYLES === */
+        body {
+            font-family: var(--font-body);
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(198, 141, 45, 0.12), transparent 30%),
+                radial-gradient(circle at 80% 20%, rgba(32, 73, 63, 0.08), transparent 28%),
+                linear-gradient(135deg, #f5efe5 0%, #f7f2ea 45%, #efe4d6 100%);
+        }
+
+        .slide:not(.title-slide) {
+            background:
+                linear-gradient(180deg, rgba(255, 247, 243, 0.84), rgba(251, 245, 240, 0.92)),
+                radial-gradient(circle at top left, rgba(221, 178, 182, 0.18), transparent 28%),
+                radial-gradient(circle at 88% 18%, rgba(234, 205, 210, 0.22), transparent 22%),
+                linear-gradient(135deg, #f9f3ee 0%, #f6eee8 48%, #f1e6dc 100%);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            width: 0;
+            z-index: 1000;
+            transition: width 0.35s var(--ease-out-expo);
+        }
+
+        .nav-dots {
+            position: fixed;
+            right: clamp(0.8rem, 2vw, 1.6rem);
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            z-index: 1000;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(28, 45, 42, 0.25);
+            background: rgba(255, 255, 255, 0.45);
+            cursor: pointer;
+            transition: transform 0.25s ease, background 0.25s ease;
+        }
+
+        .nav-dot.active {
+            background: var(--accent);
+            transform: scale(1.2);
+            border-color: var(--accent);
+        }
+
+        .slide::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(28, 45, 42, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(28, 45, 42, 0.035) 1px, transparent 1px);
+            background-size: 42px 42px;
+            pointer-events: none;
+        }
+
+        .slide::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 15% 18%, rgba(255,255,255,0.65), transparent 18%),
+                radial-gradient(circle at 85% 80%, rgba(219, 92, 56, 0.10), transparent 22%);
+            pointer-events: none;
+        }
+
+        .slide:not(.title-slide)::after {
+            background:
+                radial-gradient(circle at 15% 18%, rgba(255,255,255,0.78), transparent 18%),
+                radial-gradient(circle at 82% 78%, rgba(214, 167, 176, 0.16), transparent 20%),
+                radial-gradient(circle at 76% 14%, rgba(255, 235, 238, 0.46), transparent 16%);
+        }
+
+        .slide-shell {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            gap: var(--content-gap);
+            width: min(1180px, 100%);
+            margin: 0 auto;
+            height: 100%;
+            max-height: 100%;
+        }
+
+        .eyebrow {
+            font-size: var(--small-size);
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--forest);
+            font-weight: 700;
+        }
+
+        h1, h2 {
+            font-family: var(--font-display);
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+        }
+
+        h1 {
+            font-size: var(--title-size);
+            max-width: 12ch;
+        }
+
+        h2 {
+            font-size: var(--h2-size);
+            max-width: 14ch;
+        }
+
+        p, li, button {
+            font-size: var(--body-size);
+            line-height: 1.5;
+        }
+
+        .lead {
+            color: var(--muted);
+            max-width: 58ch;
+        }
+
+        .title-slide .slide-shell {
+            grid-template-columns: 1fr;
+            align-items: stretch;
+        }
+
+        .title-card,
+        .content-box,
+        .question-card,
+        .rule-box,
+        .cta-box,
+        .timeline-box {
+            background: rgba(255, 252, 246, 0.76);
+            border: 1px solid rgba(255, 255, 255, 0.75);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+            border-radius: 28px;
+        }
+
+        .slide:not(.title-slide) .content-box,
+        .slide:not(.title-slide) .question-card,
+        .slide:not(.title-slide) .rule-box,
+        .slide:not(.title-slide) .cta-box,
+        .slide:not(.title-slide) .timeline-box,
+        .slide:not(.title-slide) .framework-card {
+            background: rgba(255, 250, 246, 0.8);
+            border-color: rgba(219, 194, 196, 0.38);
+            box-shadow: 0 22px 56px rgba(104, 76, 69, 0.1);
+        }
+
+        .title-card {
+            padding: clamp(1.6rem, 3.2vw, 2.8rem);
+            display: grid;
+            gap: 1.1rem;
+            min-height: min(82vh, 760px);
+            background:
+                linear-gradient(180deg, rgba(255, 250, 244, 0.84), rgba(255, 251, 247, 0.90)),
+                url("./assets/image1.jpeg") center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(255, 250, 244, 0.82) 10%, rgba(255, 247, 240, 0.74) 45%, rgba(255, 250, 246, 0.90) 100%);
+            pointer-events: none;
+        }
+
+        .title-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .brand-lockup {
+            display: grid;
+            gap: 0.5rem;
+            justify-items: end;
+            text-align: right;
+        }
+
+        .brand-lockup img {
+            width: clamp(180px, 22vw, 340px);
+            height: auto;
+            max-height: none;
+            object-fit: contain;
+        }
+
+        .cover-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            align-items: center;
+        }
+
+        .meta-chip {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 0.45rem 0.85rem;
+            font-size: var(--small-size);
+            background: rgba(255,255,255,0.72);
+            border: 1px solid rgba(28,45,42,0.1);
+            color: var(--forest);
+            font-weight: 600;
+        }
+
+        .cover-title {
+            display: grid;
+            gap: 0.75rem;
+            margin-top: auto;
+            max-width: min(720px, 100%);
+        }
+
+        .cover-title h1 {
+            max-width: 10ch;
+        }
+
+        .cover-subtitle {
+            color: var(--muted);
+            max-width: 42ch;
+            font-size: var(--subtitle-size);
+        }
+
+        .cover-bottom {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            align-items: end;
+            margin-top: auto;
+        }
+
+        .cover-note {
+            display: grid;
+            gap: 0.45rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid rgba(28,45,42,0.12);
+            max-width: 44ch;
+        }
+
+        .hero-panel {
+            align-self: stretch;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 1rem;
+            padding: clamp(1rem, 2vw, 1.8rem);
+            border-radius: 28px;
+            background: linear-gradient(155deg, rgba(32, 73, 63, 0.92), rgba(28, 45, 42, 0.92));
+            color: #f8f2e8;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-panel::before {
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(219, 92, 56, 0.35), transparent 65%);
+            top: calc(-1 * clamp(2rem, 6vw, 4rem));
+            right: calc(-1 * clamp(2rem, 6vw, 4rem));
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+        }
+
+        .stat {
+            padding: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 18px;
+            background: rgba(255,255,255,0.06);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: clamp(1.1rem, 2vw, 1.6rem);
+            margin-bottom: 0.2rem;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: clamp(1rem, 2vw, 1.5rem);
+            align-items: stretch;
+        }
+
+        .content-box,
+        .timeline-box,
+        .cta-box {
+            padding: clamp(1rem, 2vw, 1.5rem);
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .mini-list {
+            display: grid;
+            gap: 0.55rem;
+            list-style: none;
+        }
+
+        .mini-list li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.6rem;
+            align-items: start;
+        }
+
+        .mini-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+        .interaction-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .question-card {
+            padding: 1rem;
+            display: grid;
+            gap: 0.75rem;
+            align-content: start;
+        }
+
+        .question-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: var(--small-size);
+            font-weight: 700;
+            color: #7e4b52;
+        }
+
+        .answer {
+            border-top: 1px solid rgba(126, 75, 82, 0.14);
+            padding-top: 0.75rem;
+            color: var(--muted);
+            display: none;
+        }
+
+        .question-card.open .answer {
+            display: block;
+            animation: fadeUp 0.35s ease forwards;
+        }
+
+        .toggle-answer {
+            appearance: none;
+            border: none;
+            border-radius: 999px;
+            padding: 0.72rem 1rem;
+            font-weight: 600;
+            color: #fffaf2;
+            background: linear-gradient(135deg, #db8f99, #c96d79);
+            cursor: pointer;
+            justify-self: start;
+            box-shadow: 0 10px 30px rgba(201, 109, 121, 0.24);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .toggle-answer:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 36px rgba(201, 109, 121, 0.3);
+        }
+
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.9rem;
+        }
+
+        .framework-card {
+            padding: 1rem;
+            border-radius: 22px;
+            background: rgba(255,255,255,0.55);
+            border: 1px solid rgba(219, 194, 196, 0.38);
+            display: grid;
+            gap: 0.55rem;
+        }
+
+        .framework-card strong {
+            font-size: var(--h3-size);
+            color: var(--forest);
+        }
+
+        .compact-success {
+            gap: 0.7rem;
+            padding: 0.9rem 1rem;
+        }
+
+        .compact-success .framework-grid {
+            gap: 0.7rem;
+        }
+
+        .compact-success .framework-card {
+            padding: 0.85rem 0.95rem;
+            gap: 0.35rem;
+            border-radius: 18px;
+        }
+
+        .compact-success .framework-card p {
+            line-height: 1.35;
+        }
+
+        .slide:nth-of-type(2) .slide-shell {
+            gap: 0.8rem;
+        }
+
+        .slide:nth-of-type(2) .two-column {
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: stretch;
+        }
+
+        .slide:nth-of-type(2) .content-box,
+        .slide:nth-of-type(2) .question-card,
+        .slide:nth-of-type(2) .timeline-box {
+            padding: 0.95rem;
+        }
+
+        .slide:nth-of-type(2) .question-card {
+            gap: 0.6rem;
+        }
+
+        .slide:nth-of-type(2) .mini-list {
+            gap: 0.45rem;
+        }
+
+        .slide:nth-of-type(2) .toggle-answer {
+            padding: 0.62rem 0.92rem;
+        }
+
+        .example-board {
+            padding: 0.95rem;
+            display: grid;
+            gap: 0.8rem;
+            background: linear-gradient(180deg, rgba(255, 249, 247, 0.92), rgba(252, 245, 242, 0.84));
+            border: 1px solid rgba(219, 194, 196, 0.45);
+            box-shadow: 0 24px 58px rgba(133, 98, 104, 0.12);
+        }
+
+        .example-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 0.8rem;
+            align-items: center;
+        }
+
+        .example-thumb {
+            width: 56px;
+            height: 56px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(235, 212, 216, 0.95), rgba(222, 184, 191, 0.92));
+            display: grid;
+            place-items: center;
+            color: #8c5a62;
+            font-size: 1.2rem;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+        }
+
+        .example-title {
+            display: grid;
+            gap: 0.1rem;
+        }
+
+        .example-title strong {
+            font-size: clamp(1rem, 1.6vw, 1.28rem);
+            color: var(--ink);
+        }
+
+        .example-title span,
+        .example-members,
+        .example-date {
+            font-size: var(--small-size);
+            color: var(--muted);
+        }
+
+        .example-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.42rem 0.7rem;
+            border-radius: 999px;
+            background: rgba(235, 212, 216, 0.46);
+            border: 1px solid rgba(214, 167, 176, 0.32);
+            color: #8c5a62;
+            font-size: var(--small-size);
+            font-weight: 600;
+        }
+
+        .example-tabs {
+            display: flex;
+            gap: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(126, 75, 82, 0.12);
+        }
+
+        .example-tab {
+            position: relative;
+            font-size: var(--small-size);
+            color: var(--muted);
+            padding-bottom: 0.4rem;
+        }
+
+        .example-tab.active {
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        .example-tab.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -0.55rem;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #db8f99, #c96d79);
+        }
+
+        .example-list {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .example-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0.7rem;
+            align-items: center;
+            padding: 0.56rem 0.2rem;
+            border-bottom: 1px dashed rgba(126, 75, 82, 0.14);
+        }
+
+        .example-row:last-child {
+            border-bottom: none;
+        }
+
+        .example-item {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            min-width: 0;
+        }
+
+        .folder-icon {
+            width: 18px;
+            height: 14px;
+            border-radius: 4px;
+            background: linear-gradient(180deg, #e6b8c0, #d998a5);
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .folder-icon::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 3px;
+            left: 2px;
+            top: -2px;
+            border-radius: 3px 3px 0 0;
+            background: #edc8cf;
+        }
+
+        .doc-icon {
+            width: 14px;
+            height: 18px;
+            border-radius: 4px;
+            background: linear-gradient(180deg, #f0d8dc, #e8c5cb);
+            position: relative;
+            flex: 0 0 auto;
+            border: 1px solid rgba(126, 75, 82, 0.14);
+        }
+
+        .doc-icon::before {
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 4px;
+            width: 8px;
+            height: 1px;
+            background: rgba(126, 75, 82, 0.36);
+            box-shadow: 0 3px 0 rgba(126, 75, 82, 0.26), 0 6px 0 rgba(126, 75, 82, 0.18);
+        }
+
+        .example-name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .example-name.level-1 { padding-left: 0.3rem; }
+        .example-name.level-2 { padding-left: 1.2rem; }
+
+        .rule-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.9rem;
+        }
+
+        .rule-box {
+            padding: 1rem;
+            display: grid;
+            gap: 0.55rem;
+        }
+
+        .rule-box strong {
+            color: var(--forest);
+            font-size: var(--h3-size);
+        }
+
+        .timeline {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .timeline-step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.8rem;
+            align-items: start;
+        }
+
+        .step-no {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 999px;
+            background: var(--forest);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: var(--small-size);
+            font-weight: 700;
+        }
+
+        .cta-band {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            align-items: center;
+            padding: 1rem 1.2rem;
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(230, 192, 198, 0.26), rgba(214, 167, 176, 0.18));
+            border: 1px solid rgba(214, 167, 176, 0.28);
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 0.4rem 0.8rem;
+            font-size: var(--small-size);
+            color: #7e4b52;
+            background: rgba(233, 212, 216, 0.52);
+            border: 1px solid rgba(214, 167, 176, 0.28);
+        }
+
+        .keyboard-hint {
+            position: fixed;
+            left: clamp(0.8rem, 2vw, 1.4rem);
+            bottom: clamp(0.8rem, 2vw, 1.2rem);
+            z-index: 1000;
+            font-size: var(--small-size);
+            color: var(--muted);
+            background: rgba(255,255,255,0.72);
+            border: 1px solid rgba(255,255,255,0.85);
+            padding: 0.6rem 0.9rem;
+            border-radius: 999px;
+            box-shadow: 0 10px 28px rgba(26, 25, 21, 0.08);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity var(--duration-normal) var(--ease-out-expo),
+                        transform var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .slide.visible .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal:nth-child(1) { transition-delay: 0.05s; }
+        .reveal:nth-child(2) { transition-delay: 0.12s; }
+        .reveal:nth-child(3) { transition-delay: 0.2s; }
+        .reveal:nth-child(4) { transition-delay: 0.28s; }
+        .reveal:nth-child(5) { transition-delay: 0.36s; }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .title-slide .slide-shell,
+            .two-column,
+            .interaction-grid,
+            .framework-grid,
+            .rule-grid,
+            .cta-band {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .cover-topbar,
+            .cover-bottom {
+                grid-template-columns: 1fr;
+                display: grid;
+            }
+
+            .brand-lockup {
+                justify-items: start;
+                text-align: left;
+            }
+
+            .example-header,
+            .example-row {
+                grid-template-columns: 1fr;
+            }
+
+            h1, h2 {
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <nav class="nav-dots" id="navDots" aria-label="Slide navigation"></nav>
+    <div class="keyboard-hint">空格 / ↓ 下一页，↑ 返回，点击按钮查看补充说明</div>
+
+    <!-- === SLIDE 1 === -->
+    <section class="slide title-slide">
+        <div class="slide-content">
+            <div class="slide-shell">
+                <div class="title-card">
+                    <div class="cover-topbar reveal">
+                        <div class="cover-meta">
+                            <span class="meta-chip">部门知识库规范发布</span>
+                            <span class="meta-chip">All Hands</span>
+                            <span class="meta-chip">2026.03</span>
+                        </div>
+                        <div class="brand-lockup">
+                            <img src="./assets/image2.png" alt="aroseisarose">
+                            <div class="eyebrow" style="letter-spacing:0.12em;">SAFE · PURE · FORMULA</div>
+                        </div>
+                    </div>
+                    <div class="cover-title reveal">
+                        <h1>部门知识库搭建规范指引</h1>
+                        <p class="cover-subtitle">全员宣讲与规则解读</p>
+                    </div>
+                    <div class="cover-bottom reveal">
+                        <div class="cover-note">
+                            <div class="pill">发布重点</div>
+                            <p>统一规则、统一结构、统一质量标准，让知识真正成为可复用、可传承、可调用的组织资产。</p>
+                        </div>
+                        <button class="toggle-answer" data-target="answer-intro">展开</button>
+                    </div>
+                    <div class="answer" id="answer-intro">
+                        本次发布聚焦 4 个核心问题: 为什么要建、知识放什么、什么样算合格、大家接下来怎么做。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SLIDE 2 === -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-shell">
+                <div class="eyebrow reveal">Part 1 / Why</div>
+                <h2 class="reveal">为什么要建部门知识库</h2>
+                <p class="lead reveal">不是为了多写文档，而是为了让经验可复用、标准可传承、组织能更快接力。</p>
+                <div class="two-column">
+                    <div class="content-box reveal">
+                        <strong style="font-size:var(--h3-size); color:var(--forest);">三个目标</strong>
+                        <ul class="mini-list">
+                            <li>沉淀组织记忆，减少经验断层</li>
+                            <li>统一业务标准，减少版本不一致</li>
+                            <li>支撑复盘和决策，形成持续复用</li>
+                        </ul>
+                        <div class="question-card">
+                            <div class="question-label">问题 1</div>
+                            <strong>成功的知识库，第一眼看什么？</strong>
+                            <button class="toggle-answer" data-target="why-1">展开</button>
+                            <div class="answer" id="why-1">不是看文件数量，而是看新人能不能用、老人能不能省时间、组织能不能稳定补位。</div>
+                        </div>
+                    </div>
+                    <div class="timeline-box example-board reveal">
+                        <div class="example-header">
+                            <div class="example-thumb">知</div>
+                            <div class="example-title">
+                                <strong>玫瑰 HR 部门知识沉淀</strong>
+                                <span>目录清晰、责任明确、更新可追踪</span>
+                            </div>
+                            <div class="example-status">示例视图</div>
+                        </div>
+                        <div class="example-tabs">
+                            <div class="example-tab">动态</div>
+                            <div class="example-tab active">目录</div>
+                            <div class="example-tab">设置</div>
+                        </div>
+                        <div class="example-list">
+                            <div class="example-row">
+                                <div class="example-item">
+                                    <span class="doc-icon"></span>
+                                    <span class="example-name">知识库使用手册（必读）</span>
+                                </div>
+                                <span class="example-date">2025-07-15</span>
+                            </div>
+                            <div class="example-row">
+                                <div class="example-item">
+                                    <span class="folder-icon"></span>
+                                    <span class="example-name level-1">01-制度规则</span>
+                                </div>
+                                <span class="example-date">2025-07-15</span>
+                            </div>
+                            <div class="example-row">
+                                <div class="example-item">
+                                    <span class="folder-icon"></span>
+                                    <span class="example-name level-2">项目管理 / SSC / 行政福利</span>
+                                </div>
+                                <span class="example-date">2026-03-24</span>
+                            </div>
+                            <div class="example-row">
+                                <div class="example-item">
+                                    <span class="folder-icon"></span>
+                                    <span class="example-name level-1">02-工具流程</span>
+                                </div>
+                                <span class="example-date">2026-03-04</span>
+                            </div>
+                            <div class="example-row">
+                                <div class="example-item">
+                                    <span class="folder-icon"></span>
+                                    <span class="example-name level-2">模板指引 / 招聘配置 / 培训文化</span>
+                                </div>
+                                <span class="example-date">2025-07-08</span>
+                            </div>
+                            <div class="example-row">
+                                <div class="example-item">
+                                    <span class="folder-icon"></span>
+                                    <span class="example-name level-1">03-经验案例</span>
+                                </div>
+                                <span class="example-date">2026-03-04</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SLIDE 3 === -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-shell">
+                <div class="eyebrow reveal">Part 2 / What</div>
+                <h2 class="reveal">知识库里到底放什么</h2>
+                <p class="lead reveal">所有内容都尽量归入三大类，这样大家在上传、查找、维护时都不会迷路。</p>
+                <div class="framework-grid reveal">
+                    <div class="framework-card">
+                        <div class="pill">规则</div>
+                        <strong>制度规则</strong>
+                        <p>部门职责、岗位说明、流程制度、审批规范、对外协作规范</p>
+                    </div>
+                    <div class="framework-card">
+                        <div class="pill">方法</div>
+                        <strong>方法工具</strong>
+                        <p>SOP、操作指南、数据分析模板、工具与资源库</p>
+                    </div>
+                    <div class="framework-card">
+                        <div class="pill">经验</div>
+                        <strong>经验案例</strong>
+                        <p>项目复盘、案例拆解、危机处理经验、常见问题 FAQ</p>
+                    </div>
+                </div>
+                <div class="two-column">
+                    <div class="content-box reveal">
+                        <strong style="font-size:var(--h3-size); color:var(--forest);">现场互动</strong>
+                        <p>请大家想一想: 你手上最近一份最常用的文档，应该放进哪一类？</p>
+                        <ul class="mini-list">
+                            <li>告诉大家边界和要求的，归“规则”</li>
+                            <li>教大家具体怎么做的，归“方法”</li>
+                            <li>记录做成或做砸原因的，归“经验”</li>
+                        </ul>
+                    </div>
+                    <div class="question-card reveal">
+                        <div class="question-label">提问</div>
+                        <strong>为什么我们不建议无限细分很多体系？</strong>
+                        <button class="toggle-answer" data-target="what-1">展开</button>
+                        <div class="answer" id="what-1">分类一旦过多，大家会先困在“放哪儿”而不是“先沉淀”。三大类足够稳定，也更适合后续检索和 AI 调用。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SLIDE 4 === -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-shell">
+                <div class="eyebrow reveal">Part 3 / Quality</div>
+                <h2 class="reveal">什么样的内容才算合格</h2>
+                <p class="lead reveal">知识库最大的风险不是没人写，而是写出来的内容没人能用。所以标准必须明确，而且每个人都能一眼判断。</p>
+                <div class="rule-grid reveal">
+                    <div class="rule-box">
+                        <strong>时效性</strong>
+                        <p>项目结案 5 个工作日内要复盘；新流程上线前必须有 SOP；同一问题问 3 次以上必须形成 FAQ。</p>
+                    </div>
+                    <div class="rule-box">
+                        <strong>可执行</strong>
+                        <p>操作类文档必须有步骤、截图、注意事项，新人按文档就能完成。</p>
+                    </div>
+                    <div class="rule-box">
+                        <strong>可追溯</strong>
+                        <p>必须写清负责人、创建日期、最近更新日期、下次复审日期。</p>
+                    </div>
+                    <div class="rule-box">
+                        <strong>可索引</strong>
+                        <p>标题规范、结构清晰，方便搜索、归类和后续调用。</p>
+                    </div>
+                </div>
+                <div class="interaction-grid reveal">
+                    <div class="question-card">
+                        <div class="question-label">快问快答</div>
+                        <strong>“大促很重要，大家要努力”算不算好文档？</strong>
+                        <button class="toggle-answer" data-target="quality-1">展开</button>
+                        <div class="answer" id="quality-1">不算。这是正确但无用的话。真正有价值的内容，必须说清步骤、原因、结果和下次怎么做。</div>
+                    </div>
+                    <div class="question-card">
+                        <div class="question-label">快问快答</div>
+                        <strong>上线流程已经发群里讲过了，还需要写 SOP 吗？</strong>
+                        <button class="toggle-answer" data-target="quality-2">展开</button>
+                        <div class="answer" id="quality-2">需要。群消息不等于知识沉淀。没有形成可查、可复用的文档，就无法被长期使用和传承。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SLIDE 5 === -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-shell">
+                <div class="eyebrow reveal">Part 4 / Action</div>
+                <h2 class="reveal">大家接下来怎么做</h2>
+                <p class="lead reveal">不用把知识库想复杂。先记住触发场景、责任动作和自检问题，团队就能开始稳定运转起来。</p>
+                <div class="two-column">
+                    <div class="timeline-box reveal">
+                        <div class="pill">三种触发动作</div>
+                        <div class="timeline">
+                            <div class="timeline-step">
+                                <div class="step-no">1</div>
+                                <div><strong>项目结束</strong><p>输出复盘，沉淀关键动作、关键转折点和下次优化建议。</p></div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-no">2</div>
+                                <div><strong>新流程上线</strong><p>先写 SOP 和操作指引，再发布，确保别人能按标准接手。</p></div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-no">3</div>
+                                <div><strong>问题反复出现</strong><p>及时形成 FAQ，减少重复答疑，提升整体响应效率。</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-box reveal">
+                        <div class="pill">最后互动</div>
+                        <strong style="font-size:var(--h3-size); color:var(--forest);">写完一篇内容前，先问自己 3 个问题</strong>
+                        <ul class="mini-list">
+                            <li>新人看完，能独立完成这件事吗？</li>
+                            <li>这篇内容会不会已经过期？</li>
+                            <li>它是不是只解决一个明确问题？</li>
+                        </ul>
+                        <button class="toggle-answer" data-target="action-1">展开</button>
+                        <div class="answer" id="action-1">如果答案都是“是”，这篇内容大概率就是有价值的。我们的目标，是把知识库从“仓库”真正变成“武器库”。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* === SLIDE PRESENTATION CONTROLLER === */
+        class SlidePresentation {
+            constructor() {
+                this.slides = Array.from(document.querySelectorAll('.slide'));
+                this.currentSlide = 0;
+                this.progressBar = document.getElementById('progressBar');
+                this.navDots = document.getElementById('navDots');
+                this.setupIntersectionObserver();
+                this.setupKeyboardNav();
+                this.setupTouchNav();
+                this.setupWheelNav();
+                this.setupNavDots();
+                this.setupAnswerToggles();
+                this.updateUI(0);
+            }
+
+            setupIntersectionObserver() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const index = this.slides.indexOf(entry.target);
+                            entry.target.classList.add('visible');
+                            this.currentSlide = index;
+                            this.updateUI(index);
+                        }
+                    });
+                }, {
+                    threshold: 0.55
+                });
+
+                this.slides.forEach((slide) => observer.observe(slide));
+            }
+
+            setupKeyboardNav() {
+                document.addEventListener('keydown', (event) => {
+                    if (["ArrowDown", "PageDown", " ", "Spacebar"].includes(event.key)) {
+                        event.preventDefault();
+                        this.goToSlide(Math.min(this.currentSlide + 1, this.slides.length - 1));
+                    }
+                    if (["ArrowUp", "PageUp"].includes(event.key)) {
+                        event.preventDefault();
+                        this.goToSlide(Math.max(this.currentSlide - 1, 0));
+                    }
+                    if (event.key === "Home") {
+                        event.preventDefault();
+                        this.goToSlide(0);
+                    }
+                    if (event.key === "End") {
+                        event.preventDefault();
+                        this.goToSlide(this.slides.length - 1);
+                    }
+                });
+            }
+
+            setupTouchNav() {
+                let startY = 0;
+                let endY = 0;
+
+                window.addEventListener('touchstart', (event) => {
+                    startY = event.changedTouches[0].clientY;
+                }, { passive: true });
+
+                window.addEventListener('touchend', (event) => {
+                    endY = event.changedTouches[0].clientY;
+                    const diff = startY - endY;
+                    if (Math.abs(diff) < 50) return;
+                    if (diff > 0) {
+                        this.goToSlide(Math.min(this.currentSlide + 1, this.slides.length - 1));
+                    } else {
+                        this.goToSlide(Math.max(this.currentSlide - 1, 0));
+                    }
+                }, { passive: true });
+            }
+
+            setupWheelNav() {
+                let ticking = false;
+                window.addEventListener('wheel', (event) => {
+                    if (ticking) return;
+                    if (Math.abs(event.deltaY) < 20) return;
+                    ticking = true;
+                    const next = event.deltaY > 0
+                        ? Math.min(this.currentSlide + 1, this.slides.length - 1)
+                        : Math.max(this.currentSlide - 1, 0);
+                    this.goToSlide(next);
+                    window.setTimeout(() => {
+                        ticking = false;
+                    }, 700);
+                }, { passive: true });
+            }
+
+            setupNavDots() {
+                this.slides.forEach((_, index) => {
+                    const button = document.createElement('button');
+                    button.className = 'nav-dot';
+                    button.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                    button.addEventListener('click', () => this.goToSlide(index));
+                    this.navDots.appendChild(button);
+                });
+            }
+
+            setupAnswerToggles() {
+                document.querySelectorAll('.toggle-answer').forEach((button) => {
+                    button.dataset.defaultLabel = button.textContent.trim();
+                    button.addEventListener('click', () => {
+                        const targetId = button.getAttribute('data-target');
+                        const answer = document.getElementById(targetId);
+                        const parentCard = button.closest('.question-card');
+                        const isOpen = answer.style.display === 'block';
+
+                        if (parentCard) {
+                            parentCard.classList.toggle('open', !isOpen);
+                        }
+
+                        answer.style.display = isOpen ? 'none' : 'block';
+                        const openLabel = button.getAttribute('data-open-label') || '收起';
+                        const closedLabel = button.getAttribute('data-closed-label') || button.dataset.defaultLabel || '展开';
+                        button.textContent = isOpen ? closedLabel : openLabel;
+                        if (!isOpen) {
+                            answer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    });
+                });
+            }
+
+            goToSlide(index) {
+                this.slides[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            updateUI(index) {
+                const progress = ((index + 1) / this.slides.length) * 100;
+                this.progressBar.style.width = `${progress}%`;
+                Array.from(this.navDots.children).forEach((dot, dotIndex) => {
+                    dot.classList.toggle('active', dotIndex === index);
+                });
+            }
+        }
+
+        new SlidePresentation();
+    </script>
+</body>
+</html>
