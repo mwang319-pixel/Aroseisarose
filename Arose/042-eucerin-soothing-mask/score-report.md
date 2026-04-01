@@ -1,0 +1,137 @@
+# 基于 standard.md 的投品评分结果
+
+- 生成时间: 2026-04-01 19:31:55
+- 解析输入: /Users/melissawang/Documents/Playground/Arose/重点品资料/Eucerin 优色林 舒安面膜/run_prodect_score
+- 评分标准: /Users/melissawang/.codex/skills/product-score/references/standard.md
+
+## 优色林舒安面膜
+
+- 预评分总分: 59.2
+- 证据完整度: 0.74
+- 推荐动作: 先 Hold，补齐同款成分透明度和更完整官网页后再决定是否正式推进。
+- 准入依据:
+  - 本次仅拿到同系列官方页面，没有拿到舒安面膜同款完整官方 INCI，因此安全透明度不能按强证据处理。[S18][S28]
+  - 本地资料显示这支面膜在即刻舒缓和褪红上结果感很强，但要进入正式推进仍建议补同款完整成分与官网页。[S13][S26][S27]
+
+| 维度 | 得分 | 说明 |
+| --- | --- | --- |
+| 安全 | 6.8 | 敏感肌定位、0酒精香精的系列证据和第三方测试边界都不错，但同款完整 INCI 缺失，安全维度只能保守。[S18][S27] |
+| 成分 | 16.5 | B5、CMK-1、Ultra-Cica 与 SymSitive 共同构成较强的敏感肌急救故事，成分逻辑有辨识度。[S10][S17][S18][S19][S23][S24][S26] |
+| 配方 | 8.4 | 配方故事和机理路径完整，急救面膜场景也很清楚，研发背书中上。[S25][S26][S28] |
+| 即时效果 | 7.2 | 即刻舒缓和褪红结果非常亮眼，是这支产品当前最强的得分维度。[S13][S26][S27] |
+| 品牌血统 | 17.5 | Eucerin 的德国皮肤学血统、敏感肌赛道积累和系列研究背景都让品牌维度较强。[S25] |
+| 包装减负 | 2.8 | 膜布贴合与透气易用性有加分，但环保信息依旧偏系列页辅助证据。[S22] |
+
+### 子评分明细
+
+#### 安全（6.8 / 10）
+- 维度说明: 敏感肌定位、0酒精香精的系列证据和第三方测试边界都不错，但同款完整 INCI 缺失，安全维度只能保守。[S18][S27]
+- 证据:
+  - 官方同系列页面写明 SymSitive / AntiREDNESS 路线强调敏感肌舒缓，且同系列产品有 0% Alcohol and Fragrances 口径。[S18][S20][S21][S23][S24]
+  - 本地资料显示其用于敏感泛红肌急救，并有第三方受试者即刻舒缓测试。[S26][S27]
+
+| 子项 | 得分 | 满分 | 说明 |
+| --- | --- | --- | --- |
+| 配方体系安全度 | 1.8 | 4.0 | 缺少同款完整 INCI，只能按保守低中分。[S18] |
+| 可用斑贴测试 | 3.0 | 3.0 | 按规则固定 3 分。[S01] |
+| 特殊人群适配 | 2.0 | 3.0 | 敏感肌适配方向明确，但缺少更具体特殊人群边界。[S12][S26] |
+
+#### 成分（16.5 / 25）
+- 维度说明: B5、CMK-1、Ultra-Cica 与 SymSitive 共同构成较强的敏感肌急救故事，成分逻辑有辨识度。[S10][S17][S18][S19][S23][S24][S26]
+- 证据:
+  - 本地 deck 用三重修护精粹把修屏障、阻红敏、抑敏源讲得比较完整。[S09][S14][S17][S26]
+  - 官方系列页可补强 SymSitive 作为敏感源头调节成分的机制逻辑。[S19][S23][S24]
+
+| 子项 | 得分 | 满分 | 说明 |
+| --- | --- | --- | --- |
+| 独家 / 专属壁垒 | 7.2 | 12.0 | CMK-1 + Ultra-Cica + SymSitive 的组合有差异化。[S10][S17][S18][S19][S23] |
+| 专利与技术加成 | 5.0 | 8.0 | 有专利 / 商标型成分与技术叙事，但同款官方证据仍偏系列级。[S10][S19] |
+| 成分概念与故事质量 | 4.3 | 5.0 | 敏感肌急救与三通路修护故事非常好理解。[S09][S14][S28] |
+
+#### 配方（8.4 / 20）
+- 维度说明: 配方故事和机理路径完整，急救面膜场景也很清楚，研发背书中上。[S25][S26][S28]
+- 证据:
+  - 修屏障、阻红敏、抑敏源的三通路机理让产品不只是单纯补水面膜。[S26][S27]
+  - 品牌和系列页都能补强其敏感肌专研方向。[S25][S28]
+
+| 子项 | 得分 | 满分 | 说明 |
+| --- | --- | --- | --- |
+| 功效体系成立度 | 4.4 | 5.0 | 三通路修护逻辑成立。[S09][S11][S14] |
+| 肤感与交互体验 | 0.0 | 10.0 | 按规则固定 0 分。[S02] |
+| 研发与配方背书 | 4.0 | 5.0 | 品牌和系列的敏感肌研究背景较强。[S25] |
+
+#### 即时效果（7.2 / 20）
+- 维度说明: 即刻舒缓和褪红结果非常亮眼，是这支产品当前最强的得分维度。[S13][S26][S27]
+- 证据:
+  - 35 名受试者的乳酸刺激即刻舒缓测试支持 2 分钟内不适感显著下降。[S26][S27]
+  - 本地资料还给出 15 分钟泛红改善高达 71% 与屏障蛋白新生 +295% 的结果口径。[S13][S26]
+
+| 子项 | 得分 | 满分 | 说明 |
+| --- | --- | --- | --- |
+| 第三方功效报告 | 7.2 | 8.0 | 第三方即刻舒缓测试较强，但缺少更完整公开报告全文。[S13][S27] |
+| 玫瑰内部实测 | 0.0 | 6.0 | 按规则固定 0 分。[S03] |
+| 超蕙测 / 用户反馈 | 0.0 | 6.0 | 按规则固定 0 分。[S04] |
+
+#### 品牌血统（17.5 / 20）
+- 维度说明: Eucerin 的德国皮肤学血统、敏感肌赛道积累和系列研究背景都让品牌维度较强。[S25]
+- 证据:
+  - 官方历史资料强调 Eucerin 的 100+ 年创新科学历史。[S25]
+  - 本地资料补充品牌在敏感修护赛道的近 10 年研究和 1998+ 消费者测试。[S25]
+
+| 子项 | 得分 | 满分 | 说明 |
+| --- | --- | --- | --- |
+| 血统真实性 | 3.0 | 3.0 | 德国来源与皮肤学品牌属性清晰。[S25] |
+| 创始人与品类适配 | 6.0 | 8.0 | 品牌长期与皮肤学、敏感肌护理高度相关。[S17][S18][S21][S25] |
+| 权威性与专业背书 | 4.5 | 5.0 | 官方系列研究和本地科研合作叙事能提供较强背书。[S28] |
+| 时间沉淀 | 4.0 | 4.0 | 品牌历史足够长。[S25] |
+
+#### 包装减负（2.8 / 5）
+- 维度说明: 膜布贴合与透气易用性有加分，但环保信息依旧偏系列页辅助证据。[S22]
+- 证据:
+  - 本地资料强调 0.32mm 纤柔膜布、服帖、不易滑落、透气不黏腻。
+  - 同系列官方页提供 FSC certified paper 和 free of microplastics 的包装环保说明。[S22]
+
+| 子项 | 得分 | 满分 | 说明 |
+| --- | --- | --- | --- |
+| 审美与品牌感 | 0.0 | 1.0 | 按规则固定 0 分。[S05] |
+| 易用性 | 1.3 | 2.0 | 急救面膜形态和膜布贴合性较好。[S22] |
+| 多场景适配 | 0.8 | 1.0 | 适合敏感急救、晒后、泛红波动等多种场景。[S09][S11][S14][S26][S28] |
+| 环保与减负 | 0.7 | 1.0 | 环保信息存在，但为同系列辅助证据。[S22] |
+
+- 待补证据: 同款完整 INCI；同款官方产品页或更完整官网材料；更完整公开版第三方报告全文
+- 结论: 预评分总分为59.2分。品牌血统、成分相对更有支撑，但关键证据仍不完整，当前只能 Hold，作为排序参考，不可直接推进。
+
+### 引用源索引
+
+- [S01] 评分规则：可用斑贴测试固定 3 分 | 说明：safety.patch_test 固定为 3 分。
+- [S02] 评分规则：肤感与交互体验固定 0 分 | 说明：formula.sensory_experience 固定为 0 分。
+- [S03] 评分规则：玫瑰内部实测固定 0 分 | 说明：instant_effect.internal_test 固定为 0 分。
+- [S04] 评分规则：超蕙测/用户反馈固定 0 分 | 说明：instant_effect.user_feedback 固定为 0 分。
+- [S05] 评分规则：审美与品牌感固定 0 分 | 说明：packaging_burden.aesthetic 固定为 0 分。
+- [S06] Excel 文件：商品台账 | 字段：商品名称 | 摘录：优色林舒安面膜
+- [S07] Excel 文件：商品台账 | 字段：规格 | 摘录：5片
+- [S08] Excel 文件：商品台账 | 字段：价格 | 摘录：RMB 185 / 5片
+- [S09] Excel 文件：商品台账 | 字段：研发初心 | 摘录：针对敏感泛红肌急救需求开发，强调快抑敏、快褪红与三通路修护。
+- [S10] Excel 文件：商品台账 | 字段：成分 | 摘录：精纯B5、专利玻尿酸CMK-1、Ultra-Cica七重积雪草精粹、SymSitive馨肤怡
+- [S11] Excel 文件：商品台账 | 字段：功效 | 摘录：2分钟快抑敏，15分钟强褪红，修屏障、阻红敏、抑敏源
+- [S12] Excel 文件：商品台账 | 字段：适宜人群 | 摘录：敏感泛红肌、屏障波动人群
+- [S13] Excel 文件：商品台账 | 字段：亮点/功效通路 | 摘录：第三方35人测试、15分钟泛红改善71%、屏障蛋白新生+295%
+- [S14] Excel 文件：商品台账 | 字段：差异化优势 | 摘录：急救面膜场景下的三通路修护与快速体感舒缓
+- [S15] Excel 文件：商品台账 | 字段：使用方法 | 摘录：按片敷面
+- [S16] 网页：https://www.eucerin.co.uk/products/hypersensitive-skin | 字段：官网页面标题 | 摘录：AntiREDNESS and UltraSENSITIVE | Eucerin
+- [S17] 网页：https://www.eucerin.co.uk/products/hypersensitive-skin | 字段：官网成分故事 | 摘录：Official hypersensitive skin pages describe the series as managing three signs of hypersensitive skin: weakened barrier, hyper-reactive sensory fibres and redness. SymSitive is po…
+- [S18] 网页：https://www.eucerin.co.uk/products/hypersensitive-skin | 字段：官网页面摘录 | 摘录：Official series evidence is same-line rather than same-mask: the hypersensitive skin line manages barrier, sensory fibre hyper-reactivity and redness with SymSitive, while AntiRED…
+- [S19] 网页：https://www.eucerin.co.uk/products/hypersensitive-skin | 字段：官网专利/技术证据 | 摘录：Official series pages describe SymSitive as an innovative active and note it as a registered trademark of Symrise, Germany.
+- [S20] 网页：https://www.eucerin.co.uk/products/hypersensitive-skin | 字段：官网临床摘要 | 摘录：Official Anti-Redness Soothing Care page states it immediately reduces redness, irritation and burning sensation and prevents reddening in the long run.
+- [S21] 网页：https://www.eucerin.co.uk/products/hypersensitive-skin | 字段：官网临床摘要 | 摘录：Official series page states hypersensitive skin products provide instant and long-lasting skin comfort.
+- [S22] 网页：https://www.eucerin.co.uk/products/hypersensitive-skin | 字段：官网包装环保说明 | 摘录：Official product page mentions FSC certified paper and free of microplastics for the compared product page in the same sensitive-skin line.
+- [S23] 网页：https://www.eucerin.co.uk/products/hypersensitive-skin | 字段：官网核心成分 | 摘录：SymSitive - An innovative sensitivity regulator with unique neurosensory action that helps calm stinging, burning and itching at the source of hyper-reactivity.
+- [S24] 网页：https://www.eucerin.co.uk/products/hypersensitive-skin | 字段：官网核心成分 | 摘录：Licochalcone A - A natural anti-inflammatory and anti-oxidant ingredient used in the AntiREDNESS line to visibly reduce redness.
+- [S25] 附件文件：Eucerin品牌与系列背景摘要.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/Eucerin 优色林 舒安面膜/run_prodect_score/extracted/001-brand-history.md | 摘录：# Eucerin 优色林品牌与系列背景摘要 - 品牌: Eucerin 优色林，德国皮肤学护肤品牌。 - 官方系列页摘要: Eucerin Hypersensitive Skin 页面写明品牌针对 hypersensitive skin 建立了完整护理路径，围绕“皮肤屏障受损、神经纤维高反应、炎症泛红”三重问题管理。 - 官方历史页摘要: 官方历史资料写…
+- [S26] 附件文件：优色林舒安面膜本地资料摘要.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/Eucerin 优色林 舒安面膜/run_prodect_score/extracted/002-mask-local-deck.md | 摘录：# 优色林舒安面膜本地资料摘要 - 来源文件: 2.0舒安面膜.pdf - 产品名: 优色林舒安面膜 - 上市时间: 2025 年 1 月 - 建议零售价: RMB 185 / 5 片 - 核心定位: 敏感泛红肌急救面膜，强调 2 分钟快抑敏、15 分钟强褪红。 - 功效口径: - 2 分钟后刺痛、瘙痒、灼热感受显著低于空白对照组 - 15 分钟后泛红改善…
+- [S27] 附件文件：优色林舒安面膜功效与测试摘要.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/Eucerin 优色林 舒安面膜/run_prodect_score/extracted/003-mask-efficacy.md | 摘录：# 优色林舒安面膜功效与测试摘要 - 来源文件: 2.0舒安面膜.pdf - 第三方即刻舒缓测试: - 35 名 20-60 岁女性受试者 - 乳酸刺激后的即刻舒缓功效测试 - 使用本产品 2min、10min、15min 后，刺痛、瘙痒、灼烧感受 VAS 评分均显著低于空白对照组 - 2 分钟对应局部不适下降口径: 瘙痒 -72%，刺痛 -83%，灼热…
+- [S28] 附件文件：Eucerin官方敏感肌系列页摘要.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/Eucerin 优色林 舒安面膜/run_prodect_score/extracted/004-official-series-note.md | 摘录：# Eucerin 官方敏感肌系列页摘要 - 官方系列页: https://www.eucerin.co.uk/products/hypersensitive-skin - 官方产品页: https://www.eucerin.co.uk/products/hypersensitive-skin/antiredness-soothing-care - 系列…
+
+## 组合结论
+
+优色林舒安面膜 Hold / 59.2 分 / C
