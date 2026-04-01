@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品评分结果</title>
+  <style>
+    :root {
+      --page-bg: #fffaf6;
+      --paper-bg: #fffdf9;
+      --ink-main: #2f2a28;
+      --ink-subtle: #6e6661;
+      --line-soft: rgba(134, 114, 103, 0.16);
+      --accent-rose: #d89cab;
+      --accent-gold: #c4a56a;
+      --shadow-soft: 0 18px 50px rgba(120, 96, 83, 0.08);
+      --radius-lg: 28px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(circle at top left, rgba(216, 156, 171, 0.13), transparent 30%), radial-gradient(circle at top right, rgba(196, 165, 106, 0.10), transparent 28%), var(--page-bg); color: var(--ink-main); font-family: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Microsoft YaHei", sans-serif; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+    .page { width: min(100%, 860px); margin: 0 auto; padding: 56px 24px 120px; }
+    .article-wrap { position: relative; background: var(--paper-bg); border-radius: var(--radius-lg); padding: 40px 34px; border: 1px solid rgba(134, 114, 103, 0.08); box-shadow: 0 24px 60px rgba(120, 96, 83, 0.06); overflow: hidden; }
+    .article-wrap::before { content: ""; position: absolute; inset: 0 auto auto 0; width: 100%; height: 10px; background: linear-gradient(90deg, rgba(216, 156, 171, 0.68), rgba(196, 165, 106, 0.42)); opacity: 0.9; }
+    .article-wrap > :first-child { margin-top: 0; }
+    h1, h2, h3 { font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "Noto Serif SC", serif; font-weight: 600; letter-spacing: 0.01em; color: #241f1d; }
+    h1 { margin: 0 0 16px; font-size: clamp(34px, 5vw, 52px); line-height: 1.12; }
+    h1 + p { margin-top: 0; color: var(--ink-subtle); font-size: 16px; }
+    h2 { margin-top: 40px; margin-bottom: 12px; padding-top: 18px; border-top: 1px solid var(--line-soft); font-size: 25px; }
+    h3 { margin-top: 26px; margin-bottom: 10px; font-size: 18px; }
+    p, li { font-size: 15px; color: var(--ink-main); overflow-wrap: anywhere; }
+    p { margin: 12px 0; }
+    ol, ul { padding-left: 24px; margin: 14px 0; }
+    li { margin: 6px 0; }
+    ul ul, ul ol, ol ul, ol ol { margin-top: 8px; margin-bottom: 8px; padding-left: 28px; }
+    table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14px; background: #fffdfa; }
+    th, td { border: 1px solid var(--line-soft); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: rgba(196, 165, 106, 0.08); }
+    blockquote { margin: 20px 0; padding: 6px 0 6px 18px; border-left: 2px solid var(--accent-rose); color: var(--ink-main); background: transparent; }
+    code { background: rgba(196, 165, 106, 0.10); padding: 2px 6px; border-radius: 8px; }
+    a { color: #0f7c82; text-decoration: none; border-bottom: 1px solid rgba(15, 124, 130, 0.26); }
+    a:hover { color: #0a5d62; border-bottom-color: rgba(10, 93, 98, 0.42); }
+    .citation-ref { font-weight: 500; }
+    .source-anchor { display: block; position: relative; top: -104px; visibility: hidden; height: 0; }
+    pre { background: #f8f1e8; padding: 16px; border-radius: 16px; overflow-x: auto; }
+    hr { border: 0; border-top: 1px solid var(--line-soft); margin: 24px 0; }
+    @media (max-width: 720px) { .page { padding: 32px 16px 72px; } .article-wrap { padding: 28px 20px; } h1 { font-size: 32px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="article-wrap">
+      <h1>基于 standard.md 的投品评分结果</h1>
+<ul>
+<li>生成时间: 2026-04-01 21:03:51</li>
+<li>解析输入: /Users/melissawang/Documents/Playground/Arose/重点品资料/DUO笛欧 黑头净护 卸妆膏/run_prodect_score</li>
+<li>评分标准: /Users/melissawang/.codex/skills/product-score/references/standard.md</li>
+</ul>
+<h2>笛欧 黑头净护 卸妆膏</h2>
+<ul>
+<li>预评分总分: 50.0</li>
+<li>证据完整度: 0.76</li>
+<li>推荐动作: 进入观察池，可做小规模测品；若补齐功效报告与技术证据，再决定是否升级推进。</li>
+<li>准入依据:<ul>
+<li>官方页面与备案资料提供了完整 INCI 和产品主体信息，但黑头/毛孔改善仍缺少第三方功效报告支撑。<a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s33">[S33]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead><tr><th>维度</th><th>得分</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>安全</td><td>8.0</td><td>作为冲洗型卸妆膏，成分透明度较好，且备案配方表可交叉核验；但含精油香气成分，且缺少特殊人群边界说明。<a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s26">[S26]</a><a class="citation-ref" href="#source-1-s33">[S33]</a></td></tr>
+<tr><td>成分</td><td>14.0</td><td>双重炭、角栓溶解油和发酵美容成分构成了相对完整的黑头卸护叙事，但并非品牌专属或专利闭环。<a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s28">[S28]</a><a class="citation-ref" href="#source-1-s29">[S29]</a><a class="citation-ref" href="#source-1-s30">[S30]</a><a class="citation-ref" href="#source-1-s31">[S31]</a></td></tr>
+<tr><td>配方</td><td>8.5</td><td>炭吸附、角栓溶解与发酵养护的卸妆逻辑较完整，再叠加压力乳化和少摩擦叙事，体系成立度较好。<a class="citation-ref" href="#source-1-s15">[S15]</a><a class="citation-ref" href="#source-1-s19">[S19]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s32">[S32]</a></td></tr>
+<tr><td>即时效果</td><td>3.0</td><td>当前更像是基于机制与场景的预期效果，缺少第三方功效报告、内部实测和用户测试，效果维度只能保守给分。<a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s26">[S26]</a><a class="citation-ref" href="#source-1-s32">[S32]</a></td></tr>
+<tr><td>品牌血统</td><td>13.5</td><td>品牌主体、原产地、上市公司背景和多年销量沉淀都较清楚，血统相对扎实；但创始人与品类的专业适配证据不算强。<a class="citation-ref" href="#source-1-s32">[S32]</a><a class="citation-ref" href="#source-1-s33">[S33]</a></td></tr>
+<tr><td>包装减负</td><td>3.0</td><td>使用动作清晰、无需二次洁面提升了易用性，且官网明确给出 FSC 纸张信息；但多场景与减塑证据仍有限。<a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s27">[S27]</a><a class="citation-ref" href="#source-1-s32">[S32]</a></td></tr>
+</tbody>
+</table>
+<p>完整评分与证据索引已保留在页面内，可直接分享。</p>
+    </article>
+  </main>
+</body>
+</html>
