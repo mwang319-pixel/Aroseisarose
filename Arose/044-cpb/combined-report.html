@@ -1,0 +1,2873 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score投品综合报告</title>
+  <style>
+    :root {
+      --page-bg: #fffaf6;
+      --paper-bg: #fffdf9;
+      --ink-main: #2f2a28;
+      --ink-subtle: #6e6661;
+      --line-soft: rgba(134, 114, 103, 0.16);
+      --accent-rose: #d89cab;
+      --accent-gold: #c4a56a;
+      --shadow-soft: 0 18px 50px rgba(120, 96, 83, 0.08);
+      --radius-lg: 28px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(216, 156, 171, 0.13), transparent 30%),
+        radial-gradient(circle at top right, rgba(196, 165, 106, 0.10), transparent 28%),
+        var(--page-bg);
+      color: var(--ink-main);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      width: min(100%, 860px);
+      margin: 0 auto;
+      padding: 56px 24px 120px;
+    }
+    .article-wrap {
+      position: relative;
+      background: var(--paper-bg);
+      border-radius: var(--radius-lg);
+      padding: 40px 34px;
+      border: 1px solid rgba(134, 114, 103, 0.08);
+      box-shadow: 0 24px 60px rgba(120, 96, 83, 0.06);
+      overflow: hidden;
+    }
+    .article-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(90deg, rgba(216, 156, 171, 0.68), rgba(196, 165, 106, 0.42));
+      opacity: 0.9;
+    }
+    .article-wrap > :first-child {
+      margin-top: 0;
+    }
+    h1, h2, h3 {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "Noto Serif SC", serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: #241f1d;
+    }
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.12;
+    }
+    h1 + p {
+      margin-top: 0;
+      color: var(--ink-subtle);
+      font-size: 16px;
+    }
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 12px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-soft);
+      font-size: 25px;
+    }
+    h3 {
+      margin-top: 26px;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    p,
+    li {
+      font-size: 15px;
+      color: var(--ink-main);
+      overflow-wrap: anywhere;
+    }
+    p {
+      margin: 12px 0;
+    }
+    ol,
+    ul {
+      padding-left: 24px;
+      margin: 14px 0;
+    }
+    li {
+      margin: 6px 0;
+    }
+    ul ul,
+    ul ol,
+    ol ul,
+    ol ol {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      padding-left: 28px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 14px;
+      background: #fffdfa;
+    }
+    th,
+    td {
+      border: 1px solid var(--line-soft);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: rgba(196, 165, 106, 0.08);
+    }
+    blockquote {
+      margin: 20px 0;
+      padding: 6px 0 6px 18px;
+      border-left: 2px solid var(--accent-rose);
+      color: var(--ink-main);
+      background: transparent;
+    }
+    code {
+      background: rgba(196, 165, 106, 0.10);
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+    a {
+      color: #0f7c82;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(15, 124, 130, 0.26);
+    }
+    a:hover {
+      color: #0a5d62;
+      border-bottom-color: rgba(10, 93, 98, 0.42);
+    }
+    .citation-ref {
+      font-weight: 500;
+    }
+    .source-anchor {
+      display: block;
+      position: relative;
+      top: -104px;
+      visibility: hidden;
+      height: 0;
+    }
+    pre {
+      background: #f8f1e8;
+      padding: 16px;
+      border-radius: 16px;
+      overflow-x: auto;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--line-soft);
+      margin: 24px 0;
+    }
+    @media (max-width: 720px) {
+      .page {
+        padding: 32px 16px 72px;
+      }
+      .article-wrap {
+        padding: 28px 20px;
+      }
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="article-wrap">
+      <h1>/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score投品综合报告</h1>
+<ul>
+<li>生成时间: 2026-04-01 20:08:11</li>
+<li>模式: score_and_wbefa_agent_fallback</li>
+<li>商品数: 6</li>
+</ul>
+<h2>CPB 金致乳霜</h2>
+<h3>评分结果</h3>
+<ul>
+<li>预评分总分: 62.5</li>
+<li>证据完整度: 0.82</li>
+<li>推荐动作: 可作为 CPB 品牌形象和高端抗老天花板单品继续推进。</li>
+<li>准入依据:<ul>
+<li>品牌巅峰抗老单品，品牌与配方壁垒很强。<a class="citation-ref" href="#source-1-s16">[S16]</a><a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s19">[S19]</a><a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s23">[S23]</a><a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+<li>即时结果公开证据更多偏官方口径，仍建议保守表达。<a class="citation-ref" href="#source-1-s13">[S13]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>得分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安全</td>
+<td>8.1</td>
+<td>官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-1-s16">[S16]</a><a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s19">[S19]</a><a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s23">[S23]</a><a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>成分</td>
+<td>18.9</td>
+<td>品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>配方</td>
+<td>9.1</td>
+<td>体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-1-s16">[S16]</a><a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s19">[S19]</a><a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s23">[S23]</a><a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>即时效果</td>
+<td>5.6</td>
+<td>不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-1-s11">[S11]</a><a class="citation-ref" href="#source-1-s13">[S13]</a><a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>品牌血统</td>
+<td>18.6</td>
+<td>CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>包装减负</td>
+<td>2.2</td>
+<td>高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-1-s05">[S05]</a><a class="citation-ref" href="#source-1-s23">[S23]</a></td>
+</tr>
+</tbody>
+</table>
+<h5>子评分明细</h5>
+<h6>安全（8.1 / 10）</h6>
+<ul>
+<li>维度说明: 官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-1-s16">[S16]</a><a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s19">[S19]</a><a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s23">[S23]</a><a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>官方同款页补强了配方透明度和使用边界。<a class="citation-ref" href="#source-1-s16">[S16]</a><a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s19">[S19]</a><a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s23">[S23]</a><a class="citation-ref" href="#source-1-s24">[S24]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>配方体系安全度</td>
+<td>2.9</td>
+<td>4.0</td>
+<td>基于 INCI 透明度和体系成熟度给分。<a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s24">[S24]</a></td>
+</tr>
+<tr>
+<td>可用斑贴测试</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>按规则固定 3 分。<a class="citation-ref" href="#source-1-s01">[S01]</a></td>
+</tr>
+<tr>
+<td>特殊人群适配</td>
+<td>2.2</td>
+<td>3.0</td>
+<td>基于人群定位和边界信息给分。<a class="citation-ref" href="#source-1-s12">[S12]</a><a class="citation-ref" href="#source-1-s16">[S16]</a><a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s19">[S19]</a><a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s23">[S23]</a><a class="citation-ref" href="#source-1-s24">[S24]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>成分（18.9 / 25）</h6>
+<ul>
+<li>维度说明: 品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>本地资料与官网共同支持品牌级灵魂成分和专属技术叙事。<a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>独家 / 专属壁垒</td>
+<td>8.6</td>
+<td>12.0</td>
+<td>基于品牌灵魂成分与技术壁垒给分。<a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>专利与技术加成</td>
+<td>5.8</td>
+<td>8.0</td>
+<td>专属科技与品牌技术叙事提供额外加成。<a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>成分概念与故事质量</td>
+<td>4.5</td>
+<td>5.0</td>
+<td>高端叙事清晰，消费者易感知。<a class="citation-ref" href="#source-1-s13">[S13]</a><a class="citation-ref" href="#source-1-s18">[S18]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>配方（9.1 / 20）</h6>
+<ul>
+<li>维度说明: 体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-1-s16">[S16]</a><a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s19">[S19]</a><a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s21">[S21]</a><a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s23">[S23]</a><a class="citation-ref" href="#source-1-s24">[S24]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>配方系统与功效叙事高度一致。<a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功效体系成立度</td>
+<td>4.7</td>
+<td>5.0</td>
+<td>成分与功效路线协同度较高。<a class="citation-ref" href="#source-1-s18">[S18]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>肤感与交互体验</td>
+<td>0.0</td>
+<td>10.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-1-s02">[S02]</a></td>
+</tr>
+<tr>
+<td>研发与配方背书</td>
+<td>4.4</td>
+<td>5.0</td>
+<td>品牌研发积累和工艺叙事较强。<a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>即时效果（5.6 / 20）</h6>
+<ul>
+<li>维度说明: 不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-1-s11">[S11]</a><a class="citation-ref" href="#source-1-s13">[S13]</a><a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>本地资料或官方声明提供了相应功效支撑。<a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第三方功效报告</td>
+<td>5.6</td>
+<td>8.0</td>
+<td>基于本地人体数据、官方摘要或药监功效摘要综合给分。<a class="citation-ref" href="#source-1-s22">[S22]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>玫瑰内部实测</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-1-s03">[S03]</a></td>
+</tr>
+<tr>
+<td>超蕙测 / 用户反馈</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-1-s04">[S04]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>品牌血统（18.6 / 20）</h6>
+<ul>
+<li>维度说明: CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>品牌历史、科研奖项与高端矩阵支撑品牌维度。<a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s25">[S25]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>血统真实性</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>日本高端奢护奢妆品牌来源清晰。<a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s25">[S25]</a></td>
+</tr>
+<tr>
+<td>创始人与品类适配</td>
+<td>6.8</td>
+<td>8.0</td>
+<td>品牌长期聚焦高端护肤与底妆。<a class="citation-ref" href="#source-1-s09">[S09]</a><a class="citation-ref" href="#source-1-s12">[S12]</a><a class="citation-ref" href="#source-1-s20">[S20]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>权威性与专业背书</td>
+<td>4.8</td>
+<td>5.0</td>
+<td>资生堂集团与科研奖项提供权威背书。<a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>时间沉淀</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>1982 年至今，时间积累充分。<a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>包装减负（2.2 / 5）</h6>
+<ul>
+<li>维度说明: 高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-1-s05">[S05]</a><a class="citation-ref" href="#source-1-s23">[S23]</a></li>
+<li>证据:<ul>
+<li>包装更偏高端体验和使用便利，而非明确环保减负。<a class="citation-ref" href="#source-1-s23">[S23]</a><a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>审美与品牌感</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-1-s05">[S05]</a></td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>1.1</td>
+<td>2.0</td>
+<td>基于品类和使用方式给分。<a class="citation-ref" href="#source-1-s25">[S25]</a><a class="citation-ref" href="#source-1-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>多场景适配</td>
+<td>0.8</td>
+<td>1.0</td>
+<td>基于品类适配场景给分。<a class="citation-ref" href="#source-1-s05">[S05]</a><a class="citation-ref" href="#source-1-s23">[S23]</a></td>
+</tr>
+<tr>
+<td>环保与减负</td>
+<td>0.3</td>
+<td>1.0</td>
+<td>环保明确口径较少，保守给分。<a class="citation-ref" href="#source-1-s23">[S23]</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>待补证据: 更完整公开临床全文；更细的中国市场公开功效报告</li>
+<li>结论: 预评分总分为62.5分。成分、品牌血统表现相对较强，可进入下一步评审。</li>
+</ul>
+<h5>引用源索引</h5>
+<ul>
+<li><span id="source-1-s01" class="source-anchor"></span>[S01] 评分规则：可用斑贴测试固定 3 分 | 说明：safety.patch_test 固定为 3 分。</li>
+<li><span id="source-1-s02" class="source-anchor"></span>[S02] 评分规则：肤感与交互体验固定 0 分 | 说明：formula.sensory_experience 固定为 0 分。</li>
+<li><span id="source-1-s03" class="source-anchor"></span>[S03] 评分规则：玫瑰内部实测固定 0 分 | 说明：instant_effect.internal_test 固定为 0 分。</li>
+<li><span id="source-1-s04" class="source-anchor"></span>[S04] 评分规则：超蕙测/用户反馈固定 0 分 | 说明：instant_effect.user_feedback 固定为 0 分。</li>
+<li><span id="source-1-s05" class="source-anchor"></span>[S05] 评分规则：审美与品牌感固定 0 分 | 说明：packaging_burden.aesthetic 固定为 0 分。</li>
+<li><span id="source-1-s06" class="source-anchor"></span>[S06] Excel 文件：商品台账 | 字段：商品名称 | 摘录：CPB 金致乳霜</li>
+<li><span id="source-1-s07" class="source-anchor"></span>[S07] Excel 文件：商品台账 | 字段：规格 | 摘录：30mL / 50mL</li>
+<li><span id="source-1-s08" class="source-anchor"></span>[S08] Excel 文件：商品台账 | 字段：价格 | 摘录：RMB 4500 / 30mL; RMB 6000 / 50mL</li>
+<li><span id="source-1-s09" class="source-anchor"></span>[S09] Excel 文件：商品台账 | 字段：研发初心 | 摘录：依托 CPB 奢护与光采科技路线，强化高端体验与长期养护价值。</li>
+<li><span id="source-1-s10" class="source-anchor"></span>[S10] Excel 文件：商品台账 | 字段：成分 | 摘录：亮肌赋活精粹、Akoya 珍珠、铂金金蚕丝、紫苏、茶氨酸、东当归、60+ 卓效修护精粹</li>
+<li><span id="source-1-s11" class="source-anchor"></span>[S11] Excel 文件：商品台账 | 字段：功效 | 摘录：全维抗老修护、强韧、透亮、紧致、修护</li>
+<li><span id="source-1-s12" class="source-anchor"></span>[S12] Excel 文件：商品台账 | 字段：适宜人群 | 摘录：35+ 高端抗老人群</li>
+<li><span id="source-1-s13" class="source-anchor"></span>[S13] Excel 文件：商品台账 | 字段：亮点/功效通路 | 摘录：最高浓度亮肌赋活精粹、8代革新、60+ 精粹、100余步工艺</li>
+<li><span id="source-1-s14" class="source-anchor"></span>[S14] Excel 文件：商品台账 | 字段：差异化优势 | 摘录：CPB 巅峰抗老 ICON 产品，极高成分密度与品牌权威感</li>
+<li><span id="source-1-s15" class="source-anchor"></span>[S15] Excel 文件：商品台账 | 字段：使用方法 | 摘录：早晚用于护肤最后一步</li>
+<li><span id="source-1-s16" class="source-anchor"></span>[S16] 网页：https://www.cledepeau-beaute.com/es/la-creme-A19207_es.html | 字段：官网页面标题 | 摘录：La Crème - Clé de Peau Beauté</li>
+<li><span id="source-1-s17" class="source-anchor"></span>[S17] 网页：https://www.cledepeau-beaute.com/es/la-creme-A19207_es.html | 字段：官网完整 INCI | 摘录：Water(Aqua/Eau), Glycerin, Butylene Glycol, Dimethicone, Dipropylene Glycol, Hydrogenated Polydecene, PEG/PPG-14/7 Dimethyl Ether ... official site lists full ingredients.</li>
+<li><span id="source-1-s18" class="source-anchor"></span>[S18] 网页：https://www.cledepeau-beaute.com/es/la-creme-A19207_es.html | 字段：官网成分故事 | 摘录：Official La Crème page presents the product as the maison's supreme cream, centered on Skin-Empowering Illuminator and intensive replenishing care for firmness, radiance and smoot…</li>
+<li><span id="source-1-s19" class="source-anchor"></span>[S19] 网页：https://www.cledepeau-beaute.com/es/la-creme-A19207_es.html | 字段：官网页面摘录 | 摘录：Official La Crème page presents the product as the maison's supreme cream, centered on Skin-Empowering Illuminator and intensive replenishing care for firmness, radiance and smoot…</li>
+<li><span id="source-1-s20" class="source-anchor"></span>[S20] 网页：https://www.cledepeau-beaute.com/es/la-creme-A19207_es.html | 字段：官网专利/技术证据 | 摘录：Brand-level signature technology: Skin-Empowering Illuminator.</li>
+<li><span id="source-1-s21" class="source-anchor"></span>[S21] 网页：https://www.cledepeau-beaute.com/es/la-creme-A19207_es.html | 字段：官网专利/技术证据 | 摘录：Local dossier highlights 8 generations of formula upgrades and 100+ precision steps.</li>
+<li><span id="source-1-s22" class="source-anchor"></span>[S22] 网页：https://www.cledepeau-beaute.com/es/la-creme-A19207_es.html | 字段：官网临床摘要 | 摘录：Official page emphasizes visible firmness, radiance, smoothness and overnight replenishing care.</li>
+<li><span id="source-1-s23" class="source-anchor"></span>[S23] 网页：https://www.cledepeau-beaute.com/es/la-creme-A19207_es.html | 字段：官网包装环保说明 | 摘录：Luxury refillable-style jar presentation is part of premium ritual, but environmental claims are limited.</li>
+<li><span id="source-1-s24" class="source-anchor"></span>[S24] 网页：https://www.cledepeau-beaute.com/es/la-creme-A19207_es.html | 字段：官网核心成分 | 摘录：Skin-Empowering Illuminator - CPB signature radiance-support complex used across hero skincare products.</li>
+<li><span id="source-1-s25" class="source-anchor"></span>[S25] 附件文件：001-brand.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/001-brand.md | 摘录：# CPB 品牌摘要 - 品牌: CPB 肌肤之钥 / Clé de Peau Beauté，资生堂集团高端奢护品牌。 - 本地品牌资料写明：品牌诞生于 1982 年，融合日本前沿护肤科技与法式优雅美学，强调逾 40 年细胞科技、IFSCC 等科研奖项和奢护体验。 - 本地资料品牌矩阵显示护肤与底妆双轮驱动，核心单品集中在金致乳霜、钻光精华、4D 精雕眼霜…</li>
+<li><span id="source-1-s26" class="source-anchor"></span>[S26] 附件文件：002-la-creme.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/002-la-creme.md | 摘录：# 金致乳霜摘要 - 本地资料定位: 品牌代表产品，巅峰抗老，35+ 高端客群，售价 4500/30mL 与 6000/50mL。 - 本地资料成分与技术: 最高浓度亮肌赋活精粹、Akoya 珍珠、铂金金蚕丝、紫苏、茶氨酸、东当归，60+ 卓效修护精粹。 - 本地资料强调: 逾 40 年专研、8 代革新配方、100 余步精研配方步骤、255 种配方配比。…</li>
+</ul>
+<h3>WBEFA 结果</h3>
+<h4>一、产品总判断</h4>
+<p>CPB 金致乳霜CPB 的品牌天花板面霜，更像形象和奢护价值单品。它的核心价值不只是贵，而是品牌血统、成分故事、工艺和高端体验一起成立。真正决定它是不是好讲的，是可核验功效证据深度。<a class="citation-ref" href="#source-1-s13">[S13]</a><a class="citation-ref" href="#source-1-s19">[S19]</a></p>
+<ul>
+<li>推荐等级: 观察中</li>
+<li>定位一句话: CPB 的品牌天花板面霜，更像形象和奢护价值单品。</li>
+</ul>
+<h4>二、W｜Why</h4>
+<h5>1. 玫瑰为什么值得推荐</h5>
+<ul>
+<li>CPB 适合做高客单、高品牌势能、高内容美感的组合盘。</li>
+<li>这类产品更依赖品牌信任和精致表达，而不只是单一数字功效。</li>
+<li>护肤和底妆双线都可承接内容。</li>
+</ul>
+<h5>2. 为什么是这个品牌</h5>
+<ul>
+<li>品牌历史、资生堂背景和 40 年科技叙事明显加分。</li>
+<li>品牌灵魂成分 Skin-Empowering Illuminator 使多单品表达有统一中心。</li>
+<li>高端价格带与品牌辨识度使它天然适合做品牌型选品。</li>
+</ul>
+<h5>3. 为什么是这个产品</h5>
+<ul>
+<li>CPB 的品牌天花板面霜，更像形象和奢护价值单品。</li>
+<li>它更适合放在 CPB 高端奢护或奢妆矩阵里理解。</li>
+</ul>
+<h4>三、B｜Benefit</h4>
+<h5>1. 适合的用户</h5>
+<ul>
+<li>35+ 高端抗老人群</li>
+</ul>
+<h5>2. 解决的痛点</h5>
+<ul>
+<li>全维抗老修护、强韧、透亮、紧致、修护</li>
+<li>消费者更在意高端体验、肤感、养肤感与品牌价值统一。</li>
+</ul>
+<h5>3. 对应的使用场景</h5>
+<ul>
+<li>早晚用于护肤最后一步</li>
+<li>精致妆护日常或高客单礼赠场景。</li>
+</ul>
+<h4>四、E｜Evidence</h4>
+<ul>
+<li>证据强度: 强</li>
+<li>总体判断: 品牌与官网支撑很强，部分产品还有本地人体或药监摘要；但不同单品的公开第三方深度并不完全一致。</li>
+</ul>
+<h5>强证据</h5>
+<ul>
+<li>同款官方页提供了完整 INCI、品牌灵魂成分和产品定位。<a class="citation-ref" href="#source-1-s17">[S17]</a><a class="citation-ref" href="#source-1-s18">[S18]</a></li>
+</ul>
+<h5>中证据</h5>
+<ul>
+<li>本地品牌资料提供了明确的目标人群、技术卖点和品牌矩阵角色。<a class="citation-ref" href="#source-1-s25">[S25]</a></li>
+</ul>
+<h5>弱证据</h5>
+<ul>
+<li>部分产品的即时效果更多来自品牌资料或官方摘要，公开强第三方全文仍有限。<a class="citation-ref" href="#source-1-s22">[S22]</a></li>
+</ul>
+<h4>五、F｜Feature</h4>
+<h5>1. 产品特性</h5>
+<ul>
+<li>最高浓度亮肌赋活精粹、8代革新、60+ 精粹、100余步工艺</li>
+<li>CPB 巅峰抗老 ICON 产品，极高成分密度与品牌权威感</li>
+</ul>
+<h5>2. 独家成分 / 技术</h5>
+<ul>
+<li>亮肌赋活精粹、Akoya 珍珠、铂金金蚕丝、紫苏、茶氨酸、东当归、60+ 卓效修护精粹</li>
+<li>Official La Crème page presents the product as the maison's supreme cream, centered on Skin-Empowering Illuminator and intensive replenishing care for firmness, radiance and smoothness.</li>
+</ul>
+<h5>3. 信任背书</h5>
+<ul>
+<li>品牌历史</li>
+<li>官网 INCI</li>
+<li>高端矩阵角色</li>
+</ul>
+<h5>4. 品牌背景</h5>
+<ul>
+<li>CPB 为资生堂集团高端奢护奢妆品牌。</li>
+<li>1982 年起源，逾 40 年科技叙事。</li>
+</ul>
+<h4>六、A｜Advantage</h4>
+<h5>1. 品牌势能强</h5>
+<ul>
+<li>记忆点: 高端品牌信任本身就是重要购买理由。</li>
+<li>解释: 尤其适合高客单内容与礼赠心智。</li>
+<li>适合玫瑰怎么讲: 这类产品不是只卖功效，也卖品牌稀缺感和精致感。</li>
+</ul>
+<h5>2. 成分与工艺叙事完整</h5>
+<ul>
+<li>记忆点: 灵魂成分和产品技术有统一中心。</li>
+<li>解释: 多单品表达不会散。</li>
+<li>适合玫瑰怎么讲: 从精华到底妆，都是同一个光采世界观。</li>
+</ul>
+<h4>七、判断边界</h4>
+<h5>1. 已知事实</h5>
+<ul>
+<li>品牌血统强。</li>
+<li>同款官网页可用。</li>
+<li>本地资料对核心单品定位较完整。</li>
+</ul>
+<h5>2. 谨慎判断</h5>
+<ul>
+<li>可以判断 CPB 组合整体偏强。</li>
+<li>眼霜、精华和金致乳霜更适合做护肤核心表达。</li>
+</ul>
+<h5>3. 当前无法判断</h5>
+<ul>
+<li>并非每个单品都有同等级公开临床全文。</li>
+</ul>
+<h5>4. 建议补充材料</h5>
+<ul>
+<li>补更多同款第三方公开报告全文。</li>
+</ul>
+<h4>八、风险与提醒</h4>
+<ul>
+<li>不宜把所有单品都讲成同样强功效。</li>
+<li>更适合按品牌型、高端型、体验型选品来组织表达。</li>
+<li>底妆线第三方公开临床通常弱于护肤线。</li>
+</ul>
+<h2>CPB 晶钻粉霜</h2>
+<h3>评分结果</h3>
+<ul>
+<li>预评分总分: 61.2</li>
+<li>证据完整度: 0.8</li>
+<li>推荐动作: 可继续推进，建议重点讲养肤粉底与妆若天成。</li>
+<li>准入依据:<ul>
+<li>高端养肤粉底叙事完整，品牌与工艺壁垒强。<a class="citation-ref" href="#source-2-s16">[S16]</a><a class="citation-ref" href="#source-2-s17">[S17]</a><a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s19">[S19]</a><a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s23">[S23]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+<li>功效证据以品牌资料与官网叙事为主，仍适合保守落点。<a class="citation-ref" href="#source-2-s13">[S13]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>得分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安全</td>
+<td>7.9</td>
+<td>官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-2-s16">[S16]</a><a class="citation-ref" href="#source-2-s17">[S17]</a><a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s19">[S19]</a><a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s23">[S23]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>成分</td>
+<td>17.9</td>
+<td>品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>配方</td>
+<td>8.8</td>
+<td>体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-2-s16">[S16]</a><a class="citation-ref" href="#source-2-s17">[S17]</a><a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s19">[S19]</a><a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s23">[S23]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>即时效果</td>
+<td>5.7</td>
+<td>不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-2-s11">[S11]</a><a class="citation-ref" href="#source-2-s13">[S13]</a><a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>品牌血统</td>
+<td>18.4</td>
+<td>CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>包装减负</td>
+<td>2.5</td>
+<td>高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-2-s05">[S05]</a><a class="citation-ref" href="#source-2-s23">[S23]</a></td>
+</tr>
+</tbody>
+</table>
+<h5>子评分明细</h5>
+<h6>安全（7.9 / 10）</h6>
+<ul>
+<li>维度说明: 官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-2-s16">[S16]</a><a class="citation-ref" href="#source-2-s17">[S17]</a><a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s19">[S19]</a><a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s23">[S23]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+<li>证据:<ul>
+<li>官方同款页补强了配方透明度和使用边界。<a class="citation-ref" href="#source-2-s16">[S16]</a><a class="citation-ref" href="#source-2-s17">[S17]</a><a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s19">[S19]</a><a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s23">[S23]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>配方体系安全度</td>
+<td>2.8</td>
+<td>4.0</td>
+<td>基于 INCI 透明度和体系成熟度给分。<a class="citation-ref" href="#source-2-s17">[S17]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a></td>
+</tr>
+<tr>
+<td>可用斑贴测试</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>按规则固定 3 分。<a class="citation-ref" href="#source-2-s01">[S01]</a></td>
+</tr>
+<tr>
+<td>特殊人群适配</td>
+<td>2.1</td>
+<td>3.0</td>
+<td>基于人群定位和边界信息给分。<a class="citation-ref" href="#source-2-s12">[S12]</a><a class="citation-ref" href="#source-2-s16">[S16]</a><a class="citation-ref" href="#source-2-s17">[S17]</a><a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s19">[S19]</a><a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s23">[S23]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>成分（17.9 / 25）</h6>
+<ul>
+<li>维度说明: 品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+<li>证据:<ul>
+<li>本地资料与官网共同支持品牌级灵魂成分和专属技术叙事。<a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>独家 / 专属壁垒</td>
+<td>8.0</td>
+<td>12.0</td>
+<td>基于品牌灵魂成分与技术壁垒给分。<a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>专利与技术加成</td>
+<td>5.5</td>
+<td>8.0</td>
+<td>专属科技与品牌技术叙事提供额外加成。<a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>成分概念与故事质量</td>
+<td>4.4</td>
+<td>5.0</td>
+<td>高端叙事清晰，消费者易感知。<a class="citation-ref" href="#source-2-s13">[S13]</a><a class="citation-ref" href="#source-2-s18">[S18]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>配方（8.8 / 20）</h6>
+<ul>
+<li>维度说明: 体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-2-s16">[S16]</a><a class="citation-ref" href="#source-2-s17">[S17]</a><a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s19">[S19]</a><a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s23">[S23]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s25">[S25]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+<li>证据:<ul>
+<li>配方系统与功效叙事高度一致。<a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功效体系成立度</td>
+<td>4.6</td>
+<td>5.0</td>
+<td>成分与功效路线协同度较高。<a class="citation-ref" href="#source-2-s18">[S18]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>肤感与交互体验</td>
+<td>0.0</td>
+<td>10.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-2-s02">[S02]</a></td>
+</tr>
+<tr>
+<td>研发与配方背书</td>
+<td>4.2</td>
+<td>5.0</td>
+<td>品牌研发积累和工艺叙事较强。<a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s21">[S21]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>即时效果（5.7 / 20）</h6>
+<ul>
+<li>维度说明: 不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-2-s11">[S11]</a><a class="citation-ref" href="#source-2-s13">[S13]</a><a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+<li>证据:<ul>
+<li>本地资料或官方声明提供了相应功效支撑。<a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第三方功效报告</td>
+<td>5.7</td>
+<td>8.0</td>
+<td>基于本地人体数据、官方摘要或药监功效摘要综合给分。<a class="citation-ref" href="#source-2-s22">[S22]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>玫瑰内部实测</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-2-s03">[S03]</a></td>
+</tr>
+<tr>
+<td>超蕙测 / 用户反馈</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-2-s04">[S04]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>品牌血统（18.4 / 20）</h6>
+<ul>
+<li>维度说明: CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>品牌历史、科研奖项与高端矩阵支撑品牌维度。<a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>血统真实性</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>日本高端奢护奢妆品牌来源清晰。<a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>创始人与品类适配</td>
+<td>6.6</td>
+<td>8.0</td>
+<td>品牌长期聚焦高端护肤与底妆。<a class="citation-ref" href="#source-2-s09">[S09]</a><a class="citation-ref" href="#source-2-s12">[S12]</a><a class="citation-ref" href="#source-2-s14">[S14]</a><a class="citation-ref" href="#source-2-s15">[S15]</a><a class="citation-ref" href="#source-2-s20">[S20]</a><a class="citation-ref" href="#source-2-s24">[S24]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>权威性与专业背书</td>
+<td>4.8</td>
+<td>5.0</td>
+<td>资生堂集团与科研奖项提供权威背书。<a class="citation-ref" href="#source-2-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>时间沉淀</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>1982 年至今，时间积累充分。<a class="citation-ref" href="#source-2-s26">[S26]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>包装减负（2.5 / 5）</h6>
+<ul>
+<li>维度说明: 高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-2-s05">[S05]</a><a class="citation-ref" href="#source-2-s23">[S23]</a></li>
+<li>证据:<ul>
+<li>包装更偏高端体验和使用便利，而非明确环保减负。<a class="citation-ref" href="#source-2-s23">[S23]</a><a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>审美与品牌感</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-2-s05">[S05]</a></td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>1.3</td>
+<td>2.0</td>
+<td>基于品类和使用方式给分。<a class="citation-ref" href="#source-2-s26">[S26]</a><a class="citation-ref" href="#source-2-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>多场景适配</td>
+<td>0.9</td>
+<td>1.0</td>
+<td>基于品类适配场景给分。<a class="citation-ref" href="#source-2-s05">[S05]</a><a class="citation-ref" href="#source-2-s23">[S23]</a></td>
+</tr>
+<tr>
+<td>环保与减负</td>
+<td>0.3</td>
+<td>1.0</td>
+<td>环保明确口径较少，保守给分。<a class="citation-ref" href="#source-2-s23">[S23]</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>待补证据: 更完整公开临床全文；更细的中国市场公开功效报告</li>
+<li>结论: 预评分总分为61.2分。品牌血统、成分表现相对较强，可进入下一步评审。</li>
+</ul>
+<h5>引用源索引</h5>
+<ul>
+<li><span id="source-2-s01" class="source-anchor"></span>[S01] 评分规则：可用斑贴测试固定 3 分 | 说明：safety.patch_test 固定为 3 分。</li>
+<li><span id="source-2-s02" class="source-anchor"></span>[S02] 评分规则：肤感与交互体验固定 0 分 | 说明：formula.sensory_experience 固定为 0 分。</li>
+<li><span id="source-2-s03" class="source-anchor"></span>[S03] 评分规则：玫瑰内部实测固定 0 分 | 说明：instant_effect.internal_test 固定为 0 分。</li>
+<li><span id="source-2-s04" class="source-anchor"></span>[S04] 评分规则：超蕙测/用户反馈固定 0 分 | 说明：instant_effect.user_feedback 固定为 0 分。</li>
+<li><span id="source-2-s05" class="source-anchor"></span>[S05] 评分规则：审美与品牌感固定 0 分 | 说明：packaging_burden.aesthetic 固定为 0 分。</li>
+<li><span id="source-2-s06" class="source-anchor"></span>[S06] Excel 文件：商品台账 | 字段：商品名称 | 摘录：CPB 晶钻粉霜</li>
+<li><span id="source-2-s07" class="source-anchor"></span>[S07] Excel 文件：商品台账 | 字段：规格 | 摘录：28mL</li>
+<li><span id="source-2-s08" class="source-anchor"></span>[S08] Excel 文件：商品台账 | 字段：价格 | 摘录：RMB 2300 / 28mL</li>
+<li><span id="source-2-s09" class="source-anchor"></span>[S09] Excel 文件：商品台账 | 字段：研发初心 | 摘录：依托 CPB 奢护与光采科技路线，强化高端体验与长期养护价值。</li>
+<li><span id="source-2-s10" class="source-anchor"></span>[S10] Excel 文件：商品台账 | 字段：成分 | 摘录：莱希丝之泪、亮肌赋活精粹、超临界双态萃取技术、奢光柔焦技术</li>
+<li><span id="source-2-s11" class="source-anchor"></span>[S11] Excel 文件：商品台账 | 字段：功效 | 摘录：养肤底妆、润养、柔焦隐瑕、晶透光泽</li>
+<li><span id="source-2-s12" class="source-anchor"></span>[S12] Excel 文件：商品台账 | 字段：适宜人群 | 摘录：30-45岁高端养肤粉底用户</li>
+<li><span id="source-2-s13" class="source-anchor"></span>[S13] Excel 文件：商品台账 | 字段：亮点/功效通路 | 摘录：养肤饰肤两不误、300种原料、200+配方配比、奢光柔焦</li>
+<li><span id="source-2-s14" class="source-anchor"></span>[S14] Excel 文件：商品台账 | 字段：差异化优势 | 摘录：把护肤精粹和高端粉底工艺绑定在一起</li>
+<li><span id="source-2-s15" class="source-anchor"></span>[S15] Excel 文件：商品台账 | 字段：使用方法 | 摘录：作为高端养肤粉底使用</li>
+<li><span id="source-2-s16" class="source-anchor"></span>[S16] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网页面标题 | 摘录：The Foundation - Clé de Peau Beauté</li>
+<li><span id="source-2-s17" class="source-anchor"></span>[S17] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网完整 INCI | 摘录：Water(Aqua/Eau), Cyclopentasiloxane, Dimethicone, Glycerin, Diphenylsiloxy Phenyl Trimethicone ... official site lists full ingredients.</li>
+<li><span id="source-2-s18" class="source-anchor"></span>[S18] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网成分故事 | 摘录：Official The Foundation page positions it as a luxurious skincare foundation that supports radiance and comfort while delivering refined coverage.</li>
+<li><span id="source-2-s19" class="source-anchor"></span>[S19] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网页面摘录 | 摘录：Official The Foundation page positions it as a luxurious skincare foundation that supports radiance and comfort while delivering refined coverage.</li>
+<li><span id="source-2-s20" class="source-anchor"></span>[S20] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网专利/技术证据 | 摘录：Brand signature Skin-Empowering Illuminator.</li>
+<li><span id="source-2-s21" class="source-anchor"></span>[S21] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网专利/技术证据 | 摘录：Local dossier emphasizes supercritical dual-phase extraction technology.</li>
+<li><span id="source-2-s22" class="source-anchor"></span>[S22] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网临床摘要 | 摘录：Official page emphasizes radiant finish, comfortable wear and skincare makeup hybrid positioning.</li>
+<li><span id="source-2-s23" class="source-anchor"></span>[S23] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网包装环保说明 | 摘录：Luxury jewel-like package enhances ritual but environmental messaging is limited.</li>
+<li><span id="source-2-s24" class="source-anchor"></span>[S24] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网核心成分 | 摘录：Skin-Empowering Illuminator - Brand signature complex supporting radiance.</li>
+<li><span id="source-2-s25" class="source-anchor"></span>[S25] 网页：https://www.cledepeau-beaute.com/es/the-foundation-A18701_JFA_es.html | 字段：官网核心成分 | 摘录：Lakesis extract story - Local dossier uses Lakesis tears and supercritical extraction as key luxury narrative.</li>
+<li><span id="source-2-s26" class="source-anchor"></span>[S26] 附件文件：001-brand.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/001-brand.md | 摘录：# CPB 品牌摘要 - 品牌: CPB 肌肤之钥 / Clé de Peau Beauté，资生堂集团高端奢护品牌。 - 本地品牌资料写明：品牌诞生于 1982 年，融合日本前沿护肤科技与法式优雅美学，强调逾 40 年细胞科技、IFSCC 等科研奖项和奢护体验。 - 本地资料品牌矩阵显示护肤与底妆双轮驱动，核心单品集中在金致乳霜、钻光精华、4D 精雕眼霜…</li>
+<li><span id="source-2-s27" class="source-anchor"></span>[S27] 附件文件：003-the-foundation.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/003-the-foundation.md | 摘录：# 晶钻粉霜摘要 - 本地资料定位: 高端养肤粉霜，30-45 岁精致女性，诉求“妆若天成、上妆即养肤”。 - 本地资料核心卖点: 莱希丝之泪、超临界双态萃取技术、奢光柔焦技术、300 种原料与 200+ 配方配比。 - 本地资料场景: 渴望不卡粉、不假面、贴合、养肤饰肤两不误的高端底妆用户。 - 官方页可补强: The Foundation 强调 ski…</li>
+</ul>
+<h3>WBEFA 结果</h3>
+<h4>一、产品总判断</h4>
+<p>CPB 晶钻粉霜高端养肤粉底代表，适合讲妆若天成和上妆即养肤。它的核心价值不只是贵，而是品牌血统、成分故事、工艺和高端体验一起成立。真正决定它是不是好讲的，是可核验功效证据深度。<a class="citation-ref" href="#source-2-s13">[S13]</a><a class="citation-ref" href="#source-2-s19">[S19]</a></p>
+<ul>
+<li>推荐等级: 观察中</li>
+<li>定位一句话: 高端养肤粉底代表，适合讲妆若天成和上妆即养肤。</li>
+</ul>
+<h4>二、W｜Why</h4>
+<h5>1. 玫瑰为什么值得推荐</h5>
+<ul>
+<li>CPB 适合做高客单、高品牌势能、高内容美感的组合盘。</li>
+<li>这类产品更依赖品牌信任和精致表达，而不只是单一数字功效。</li>
+<li>护肤和底妆双线都可承接内容。</li>
+</ul>
+<h5>2. 为什么是这个品牌</h5>
+<ul>
+<li>品牌历史、资生堂背景和 40 年科技叙事明显加分。</li>
+<li>品牌灵魂成分 Skin-Empowering Illuminator 使多单品表达有统一中心。</li>
+<li>高端价格带与品牌辨识度使它天然适合做品牌型选品。</li>
+</ul>
+<h5>3. 为什么是这个产品</h5>
+<ul>
+<li>高端养肤粉底代表，适合讲妆若天成和上妆即养肤。</li>
+<li>它更适合放在 CPB 高端奢护或奢妆矩阵里理解。</li>
+</ul>
+<h4>三、B｜Benefit</h4>
+<h5>1. 适合的用户</h5>
+<ul>
+<li>30-45岁高端养肤粉底用户</li>
+</ul>
+<h5>2. 解决的痛点</h5>
+<ul>
+<li>养肤底妆、润养、柔焦隐瑕、晶透光泽</li>
+<li>消费者更在意高端体验、肤感、养肤感与品牌价值统一。</li>
+</ul>
+<h5>3. 对应的使用场景</h5>
+<ul>
+<li>作为高端养肤粉底使用</li>
+<li>精致妆护日常或高客单礼赠场景。</li>
+</ul>
+<h4>四、E｜Evidence</h4>
+<ul>
+<li>证据强度: 中强</li>
+<li>总体判断: 品牌与官网支撑很强，部分产品还有本地人体或药监摘要；但不同单品的公开第三方深度并不完全一致。</li>
+</ul>
+<h5>强证据</h5>
+<ul>
+<li>同款官方页提供了完整 INCI、品牌灵魂成分和产品定位。<a class="citation-ref" href="#source-2-s17">[S17]</a><a class="citation-ref" href="#source-2-s18">[S18]</a></li>
+</ul>
+<h5>中证据</h5>
+<ul>
+<li>本地品牌资料提供了明确的目标人群、技术卖点和品牌矩阵角色。<a class="citation-ref" href="#source-2-s26">[S26]</a></li>
+</ul>
+<h5>弱证据</h5>
+<ul>
+<li>部分产品的即时效果更多来自品牌资料或官方摘要，公开强第三方全文仍有限。<a class="citation-ref" href="#source-2-s22">[S22]</a></li>
+</ul>
+<h4>五、F｜Feature</h4>
+<h5>1. 产品特性</h5>
+<ul>
+<li>养肤饰肤两不误、300种原料、200+配方配比、奢光柔焦</li>
+<li>把护肤精粹和高端粉底工艺绑定在一起</li>
+</ul>
+<h5>2. 独家成分 / 技术</h5>
+<ul>
+<li>莱希丝之泪、亮肌赋活精粹、超临界双态萃取技术、奢光柔焦技术</li>
+<li>Official The Foundation page positions it as a luxurious skincare foundation that supports radiance and comfort while delivering refined coverage.</li>
+</ul>
+<h5>3. 信任背书</h5>
+<ul>
+<li>品牌历史</li>
+<li>官网 INCI</li>
+<li>高端矩阵角色</li>
+</ul>
+<h5>4. 品牌背景</h5>
+<ul>
+<li>CPB 为资生堂集团高端奢护奢妆品牌。</li>
+<li>1982 年起源，逾 40 年科技叙事。</li>
+</ul>
+<h4>六、A｜Advantage</h4>
+<h5>1. 品牌势能强</h5>
+<ul>
+<li>记忆点: 高端品牌信任本身就是重要购买理由。</li>
+<li>解释: 尤其适合高客单内容与礼赠心智。</li>
+<li>适合玫瑰怎么讲: 这类产品不是只卖功效，也卖品牌稀缺感和精致感。</li>
+</ul>
+<h5>2. 成分与工艺叙事完整</h5>
+<ul>
+<li>记忆点: 灵魂成分和产品技术有统一中心。</li>
+<li>解释: 多单品表达不会散。</li>
+<li>适合玫瑰怎么讲: 从精华到底妆，都是同一个光采世界观。</li>
+</ul>
+<h4>七、判断边界</h4>
+<h5>1. 已知事实</h5>
+<ul>
+<li>品牌血统强。</li>
+<li>同款官网页可用。</li>
+<li>本地资料对核心单品定位较完整。</li>
+</ul>
+<h5>2. 谨慎判断</h5>
+<ul>
+<li>可以判断 CPB 组合整体偏强。</li>
+<li>眼霜、精华和金致乳霜更适合做护肤核心表达。</li>
+</ul>
+<h5>3. 当前无法判断</h5>
+<ul>
+<li>并非每个单品都有同等级公开临床全文。</li>
+</ul>
+<h5>4. 建议补充材料</h5>
+<ul>
+<li>补更多同款第三方公开报告全文。</li>
+</ul>
+<h4>八、风险与提醒</h4>
+<ul>
+<li>不宜把所有单品都讲成同样强功效。</li>
+<li>更适合按品牌型、高端型、体验型选品来组织表达。</li>
+<li>底妆线第三方公开临床通常弱于护肤线。</li>
+</ul>
+<h2>CPB 4D精雕眼霜</h2>
+<h3>评分结果</h3>
+<ul>
+<li>预评分总分: 64.3</li>
+<li>证据完整度: 0.88</li>
+<li>推荐动作: 优先推荐作为 CPB 功效型护肤代表单品。</li>
+<li>准入依据:<ul>
+<li>本地 8 周人体结果相对完整，结构性抗老叙事很强。<a class="citation-ref" href="#source-3-s16">[S16]</a><a class="citation-ref" href="#source-3-s17">[S17]</a><a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s19">[S19]</a><a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s24">[S24]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+<li>成分和品牌壁垒稳定，属于 CPB 更容易讲清楚功效的一支眼霜。<a class="citation-ref" href="#source-3-s13">[S13]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>得分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安全</td>
+<td>8.2</td>
+<td>官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-3-s16">[S16]</a><a class="citation-ref" href="#source-3-s17">[S17]</a><a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s19">[S19]</a><a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s24">[S24]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>成分</td>
+<td>18.9</td>
+<td>品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>配方</td>
+<td>9.1</td>
+<td>体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-3-s16">[S16]</a><a class="citation-ref" href="#source-3-s17">[S17]</a><a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s19">[S19]</a><a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s24">[S24]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>即时效果</td>
+<td>7.0</td>
+<td>不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-3-s11">[S11]</a><a class="citation-ref" href="#source-3-s13">[S13]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>品牌血统</td>
+<td>18.5</td>
+<td>CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>包装减负</td>
+<td>2.6</td>
+<td>高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-3-s05">[S05]</a><a class="citation-ref" href="#source-3-s24">[S24]</a></td>
+</tr>
+</tbody>
+</table>
+<h5>子评分明细</h5>
+<h6>安全（8.2 / 10）</h6>
+<ul>
+<li>维度说明: 官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-3-s16">[S16]</a><a class="citation-ref" href="#source-3-s17">[S17]</a><a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s19">[S19]</a><a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s24">[S24]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>官方同款页补强了配方透明度和使用边界。<a class="citation-ref" href="#source-3-s16">[S16]</a><a class="citation-ref" href="#source-3-s17">[S17]</a><a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s19">[S19]</a><a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s24">[S24]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>配方体系安全度</td>
+<td>2.8</td>
+<td>4.0</td>
+<td>基于 INCI 透明度和体系成熟度给分。<a class="citation-ref" href="#source-3-s17">[S17]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>可用斑贴测试</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>按规则固定 3 分。<a class="citation-ref" href="#source-3-s01">[S01]</a></td>
+</tr>
+<tr>
+<td>特殊人群适配</td>
+<td>2.4</td>
+<td>3.0</td>
+<td>基于人群定位和边界信息给分。<a class="citation-ref" href="#source-3-s12">[S12]</a><a class="citation-ref" href="#source-3-s16">[S16]</a><a class="citation-ref" href="#source-3-s17">[S17]</a><a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s19">[S19]</a><a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s24">[S24]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>成分（18.9 / 25）</h6>
+<ul>
+<li>维度说明: 品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>本地资料与官网共同支持品牌级灵魂成分和专属技术叙事。<a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>独家 / 专属壁垒</td>
+<td>8.4</td>
+<td>12.0</td>
+<td>基于品牌灵魂成分与技术壁垒给分。<a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>专利与技术加成</td>
+<td>5.9</td>
+<td>8.0</td>
+<td>专属科技与品牌技术叙事提供额外加成。<a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>成分概念与故事质量</td>
+<td>4.6</td>
+<td>5.0</td>
+<td>高端叙事清晰，消费者易感知。<a class="citation-ref" href="#source-3-s13">[S13]</a><a class="citation-ref" href="#source-3-s18">[S18]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>配方（9.1 / 20）</h6>
+<ul>
+<li>维度说明: 体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-3-s16">[S16]</a><a class="citation-ref" href="#source-3-s17">[S17]</a><a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s19">[S19]</a><a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s21">[S21]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s24">[S24]</a><a class="citation-ref" href="#source-3-s25">[S25]</a><a class="citation-ref" href="#source-3-s26">[S26]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>配方系统与功效叙事高度一致。<a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功效体系成立度</td>
+<td>4.8</td>
+<td>5.0</td>
+<td>成分与功效路线协同度较高。<a class="citation-ref" href="#source-3-s18">[S18]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>肤感与交互体验</td>
+<td>0.0</td>
+<td>10.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-3-s02">[S02]</a></td>
+</tr>
+<tr>
+<td>研发与配方背书</td>
+<td>4.3</td>
+<td>5.0</td>
+<td>品牌研发积累和工艺叙事较强。<a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>即时效果（7.0 / 20）</h6>
+<ul>
+<li>维度说明: 不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-3-s11">[S11]</a><a class="citation-ref" href="#source-3-s13">[S13]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>本地资料或官方声明提供了相应功效支撑。<a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第三方功效报告</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>基于本地人体数据、官方摘要或药监功效摘要综合给分。<a class="citation-ref" href="#source-3-s13">[S13]</a><a class="citation-ref" href="#source-3-s22">[S22]</a><a class="citation-ref" href="#source-3-s23">[S23]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>玫瑰内部实测</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-3-s03">[S03]</a></td>
+</tr>
+<tr>
+<td>超蕙测 / 用户反馈</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-3-s04">[S04]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>品牌血统（18.5 / 20）</h6>
+<ul>
+<li>维度说明: CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s27">[S27]</a></li>
+<li>证据:<ul>
+<li>品牌历史、科研奖项与高端矩阵支撑品牌维度。<a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s27">[S27]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>血统真实性</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>日本高端奢护奢妆品牌来源清晰。<a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>创始人与品类适配</td>
+<td>6.7</td>
+<td>8.0</td>
+<td>品牌长期聚焦高端护肤与底妆。<a class="citation-ref" href="#source-3-s09">[S09]</a><a class="citation-ref" href="#source-3-s20">[S20]</a><a class="citation-ref" href="#source-3-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>权威性与专业背书</td>
+<td>4.8</td>
+<td>5.0</td>
+<td>资生堂集团与科研奖项提供权威背书。<a class="citation-ref" href="#source-3-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>时间沉淀</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>1982 年至今，时间积累充分。<a class="citation-ref" href="#source-3-s27">[S27]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>包装减负（2.6 / 5）</h6>
+<ul>
+<li>维度说明: 高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-3-s05">[S05]</a><a class="citation-ref" href="#source-3-s24">[S24]</a></li>
+<li>证据:<ul>
+<li>包装更偏高端体验和使用便利，而非明确环保减负。<a class="citation-ref" href="#source-3-s24">[S24]</a><a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>审美与品牌感</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-3-s05">[S05]</a></td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>1.4</td>
+<td>2.0</td>
+<td>基于品类和使用方式给分。<a class="citation-ref" href="#source-3-s27">[S27]</a><a class="citation-ref" href="#source-3-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>多场景适配</td>
+<td>0.9</td>
+<td>1.0</td>
+<td>基于品类适配场景给分。<a class="citation-ref" href="#source-3-s05">[S05]</a><a class="citation-ref" href="#source-3-s24">[S24]</a></td>
+</tr>
+<tr>
+<td>环保与减负</td>
+<td>0.3</td>
+<td>1.0</td>
+<td>环保明确口径较少，保守给分。<a class="citation-ref" href="#source-3-s24">[S24]</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>待补证据: 更完整公开临床全文；更细的中国市场公开功效报告</li>
+<li>结论: 预评分总分为64.3分。成分、品牌血统表现相对较强，可进入下一步评审。</li>
+</ul>
+<h5>引用源索引</h5>
+<ul>
+<li><span id="source-3-s01" class="source-anchor"></span>[S01] 评分规则：可用斑贴测试固定 3 分 | 说明：safety.patch_test 固定为 3 分。</li>
+<li><span id="source-3-s02" class="source-anchor"></span>[S02] 评分规则：肤感与交互体验固定 0 分 | 说明：formula.sensory_experience 固定为 0 分。</li>
+<li><span id="source-3-s03" class="source-anchor"></span>[S03] 评分规则：玫瑰内部实测固定 0 分 | 说明：instant_effect.internal_test 固定为 0 分。</li>
+<li><span id="source-3-s04" class="source-anchor"></span>[S04] 评分规则：超蕙测/用户反馈固定 0 分 | 说明：instant_effect.user_feedback 固定为 0 分。</li>
+<li><span id="source-3-s05" class="source-anchor"></span>[S05] 评分规则：审美与品牌感固定 0 分 | 说明：packaging_burden.aesthetic 固定为 0 分。</li>
+<li><span id="source-3-s06" class="source-anchor"></span>[S06] Excel 文件：商品台账 | 字段：商品名称 | 摘录：CPB 4D精雕眼霜</li>
+<li><span id="source-3-s07" class="source-anchor"></span>[S07] Excel 文件：商品台账 | 字段：规格 | 摘录：15mL</li>
+<li><span id="source-3-s08" class="source-anchor"></span>[S08] Excel 文件：商品台账 | 字段：价格 | 摘录：RMB 2200 / 15mL</li>
+<li><span id="source-3-s09" class="source-anchor"></span>[S09] Excel 文件：商品台账 | 字段：研发初心 | 摘录：依托 CPB 奢护与光采科技路线，强化高端体验与长期养护价值。</li>
+<li><span id="source-3-s10" class="source-anchor"></span>[S10] Excel 文件：商品台账 | 字段：成分 | 摘录：白尾鸢尾花、肌醇、缓释精纯视黄醇、4MSK、亮肌赋活精粹</li>
+<li><span id="source-3-s11" class="source-anchor"></span>[S11] Excel 文件：商品台账 | 字段：功效 | 摘录：提拉、淡纹、淡黑眼圈、焕亮、结构性抗老</li>
+<li><span id="source-3-s12" class="source-anchor"></span>[S12] Excel 文件：商品台账 | 字段：适宜人群 | 摘录：30+ 眼周结构性老化人群</li>
+<li><span id="source-3-s13" class="source-anchor"></span>[S13] Excel 文件：商品台账 | 字段：亮点/功效通路 | 摘录：8周眼角提升+12.86%、细纹-10.64%、暗沉-11.05%</li>
+<li><span id="source-3-s14" class="source-anchor"></span>[S14] Excel 文件：商品台账 | 字段：差异化优势 | 摘录：大眼轮C区结构性抗老叙事非常完整</li>
+<li><span id="source-3-s15" class="source-anchor"></span>[S15] Excel 文件：商品台账 | 字段：使用方法 | 摘录：早晚用于眼周，搭配铂金按摩棒</li>
+<li><span id="source-3-s16" class="source-anchor"></span>[S16] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网页面标题 | 摘录：Enhancing Eye Contour Cream Supreme - Clé de Peau Beauté</li>
+<li><span id="source-3-s17" class="source-anchor"></span>[S17] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网完整 INCI | 摘录：Water(Aqua/Eau), Glycerin, Butylene Glycol, Dimethicone, Dipropylene Glycol ... official site lists full ingredients.</li>
+<li><span id="source-3-s18" class="source-anchor"></span>[S18] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网成分故事 | 摘录：Official page positions the eye cream as a supreme contour product focused on firmness, smoothness and radiance around the eye area.</li>
+<li><span id="source-3-s19" class="source-anchor"></span>[S19] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网页面摘录 | 摘录：Official page positions the eye cream as a supreme contour product focused on firmness, smoothness and radiance around the eye area.</li>
+<li><span id="source-3-s20" class="source-anchor"></span>[S20] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网专利/技术证据 | 摘录：Brand signature Skin-Empowering Illuminator.</li>
+<li><span id="source-3-s21" class="source-anchor"></span>[S21] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网专利/技术证据 | 摘录：Group-exclusive 4MSK is highlighted in local dossier.</li>
+<li><span id="source-3-s22" class="source-anchor"></span>[S22] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网临床摘要 | 摘录：Local dossier provides 8-week human test improvements for lifting, fine lines and dullness.</li>
+<li><span id="source-3-s23" class="source-anchor"></span>[S23] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网临床摘要 | 摘录：Official page supports contour-firming and brightening direction.</li>
+<li><span id="source-3-s24" class="source-anchor"></span>[S24] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网包装环保说明 | 摘录：Platinum massage tool adds ritual and usability value.</li>
+<li><span id="source-3-s25" class="source-anchor"></span>[S25] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网核心成分 | 摘录：Retinol - Local dossier highlights slow-release pure retinol for eye-area wrinkles.</li>
+<li><span id="source-3-s26" class="source-anchor"></span>[S26] 网页：https://www.cledepeau-beaute.com/es/enhancing-eye-contour-cream-supreme-15301_es.html | 字段：官网核心成分 | 摘录：4MSK - Shiseido group brightening active highlighted in local dossier.</li>
+<li><span id="source-3-s27" class="source-anchor"></span>[S27] 附件文件：001-brand.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/001-brand.md | 摘录：# CPB 品牌摘要 - 品牌: CPB 肌肤之钥 / Clé de Peau Beauté，资生堂集团高端奢护品牌。 - 本地品牌资料写明：品牌诞生于 1982 年，融合日本前沿护肤科技与法式优雅美学，强调逾 40 年细胞科技、IFSCC 等科研奖项和奢护体验。 - 本地资料品牌矩阵显示护肤与底妆双轮驱动，核心单品集中在金致乳霜、钻光精华、4D 精雕眼霜…</li>
+<li><span id="source-3-s28" class="source-anchor"></span>[S28] 附件文件：004-eye-cream.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/004-eye-cream.md | 摘录：# 4D精雕眼霜摘要 - 本地资料定位: 大眼轮 C 区结构性抗老眼霜。 - 本地资料核心成分: 白尾鸢尾花、肌醇、缓释精纯视黄醇、4MSK、亮肌赋活精粹。 - 本地资料结果: 8 周后眼角提升 +12.86%，眼周细纹 -10.64%，眼周暗沉 -11.05%，眼周弹性 +4%。 - 官方页可补强: Enhancing Eye Contour Cream…</li>
+</ul>
+<h3>WBEFA 结果</h3>
+<h4>一、产品总判断</h4>
+<p>CPB 4D精雕眼霜这组里最容易把功效讲清楚的一支眼霜。它的核心价值不只是贵，而是品牌血统、成分故事、工艺和高端体验一起成立。真正决定它是不是好讲的，是可核验功效证据深度。<a class="citation-ref" href="#source-3-s13">[S13]</a><a class="citation-ref" href="#source-3-s19">[S19]</a></p>
+<ul>
+<li>推荐等级: 观察中</li>
+<li>定位一句话: 这组里最容易把功效讲清楚的一支眼霜。</li>
+</ul>
+<h4>二、W｜Why</h4>
+<h5>1. 玫瑰为什么值得推荐</h5>
+<ul>
+<li>CPB 适合做高客单、高品牌势能、高内容美感的组合盘。</li>
+<li>这类产品更依赖品牌信任和精致表达，而不只是单一数字功效。</li>
+<li>护肤和底妆双线都可承接内容。</li>
+</ul>
+<h5>2. 为什么是这个品牌</h5>
+<ul>
+<li>品牌历史、资生堂背景和 40 年科技叙事明显加分。</li>
+<li>品牌灵魂成分 Skin-Empowering Illuminator 使多单品表达有统一中心。</li>
+<li>高端价格带与品牌辨识度使它天然适合做品牌型选品。</li>
+</ul>
+<h5>3. 为什么是这个产品</h5>
+<ul>
+<li>这组里最容易把功效讲清楚的一支眼霜。</li>
+<li>它更适合放在 CPB 高端奢护或奢妆矩阵里理解。</li>
+</ul>
+<h4>三、B｜Benefit</h4>
+<h5>1. 适合的用户</h5>
+<ul>
+<li>30+ 眼周结构性老化人群</li>
+</ul>
+<h5>2. 解决的痛点</h5>
+<ul>
+<li>提拉、淡纹、淡黑眼圈、焕亮、结构性抗老</li>
+<li>消费者更在意高端体验、肤感、养肤感与品牌价值统一。</li>
+</ul>
+<h5>3. 对应的使用场景</h5>
+<ul>
+<li>早晚用于眼周，搭配铂金按摩棒</li>
+<li>精致妆护日常或高客单礼赠场景。</li>
+</ul>
+<h4>四、E｜Evidence</h4>
+<ul>
+<li>证据强度: 强</li>
+<li>总体判断: 品牌与官网支撑很强，部分产品还有本地人体或药监摘要；但不同单品的公开第三方深度并不完全一致。</li>
+</ul>
+<h5>强证据</h5>
+<ul>
+<li>同款官方页提供了完整 INCI、品牌灵魂成分和产品定位。<a class="citation-ref" href="#source-3-s17">[S17]</a><a class="citation-ref" href="#source-3-s18">[S18]</a></li>
+</ul>
+<h5>中证据</h5>
+<ul>
+<li>本地品牌资料提供了明确的目标人群、技术卖点和品牌矩阵角色。<a class="citation-ref" href="#source-3-s27">[S27]</a></li>
+</ul>
+<h5>弱证据</h5>
+<ul>
+<li>部分产品的即时效果更多来自品牌资料或官方摘要，公开强第三方全文仍有限。<a class="citation-ref" href="#source-3-s22">[S22]</a></li>
+</ul>
+<h4>五、F｜Feature</h4>
+<h5>1. 产品特性</h5>
+<ul>
+<li>8周眼角提升+12.86%、细纹-10.64%、暗沉-11.05%</li>
+<li>大眼轮C区结构性抗老叙事非常完整</li>
+</ul>
+<h5>2. 独家成分 / 技术</h5>
+<ul>
+<li>白尾鸢尾花、肌醇、缓释精纯视黄醇、4MSK、亮肌赋活精粹</li>
+<li>Official page positions the eye cream as a supreme contour product focused on firmness, smoothness and radiance around the eye area.</li>
+</ul>
+<h5>3. 信任背书</h5>
+<ul>
+<li>品牌历史</li>
+<li>官网 INCI</li>
+<li>高端矩阵角色</li>
+</ul>
+<h5>4. 品牌背景</h5>
+<ul>
+<li>CPB 为资生堂集团高端奢护奢妆品牌。</li>
+<li>1982 年起源，逾 40 年科技叙事。</li>
+</ul>
+<h4>六、A｜Advantage</h4>
+<h5>1. 品牌势能强</h5>
+<ul>
+<li>记忆点: 高端品牌信任本身就是重要购买理由。</li>
+<li>解释: 尤其适合高客单内容与礼赠心智。</li>
+<li>适合玫瑰怎么讲: 这类产品不是只卖功效，也卖品牌稀缺感和精致感。</li>
+</ul>
+<h5>2. 成分与工艺叙事完整</h5>
+<ul>
+<li>记忆点: 灵魂成分和产品技术有统一中心。</li>
+<li>解释: 多单品表达不会散。</li>
+<li>适合玫瑰怎么讲: 从精华到底妆，都是同一个光采世界观。</li>
+</ul>
+<h4>七、判断边界</h4>
+<h5>1. 已知事实</h5>
+<ul>
+<li>品牌血统强。</li>
+<li>同款官网页可用。</li>
+<li>本地资料对核心单品定位较完整。</li>
+</ul>
+<h5>2. 谨慎判断</h5>
+<ul>
+<li>可以判断 CPB 组合整体偏强。</li>
+<li>眼霜、精华和金致乳霜更适合做护肤核心表达。</li>
+</ul>
+<h5>3. 当前无法判断</h5>
+<ul>
+<li>并非每个单品都有同等级公开临床全文。</li>
+</ul>
+<h5>4. 建议补充材料</h5>
+<ul>
+<li>补更多同款第三方公开报告全文。</li>
+</ul>
+<h4>八、风险与提醒</h4>
+<ul>
+<li>不宜把所有单品都讲成同样强功效。</li>
+<li>更适合按品牌型、高端型、体验型选品来组织表达。</li>
+<li>底妆线第三方公开临床通常弱于护肤线。</li>
+</ul>
+<h2>CPB 钻光精华</h2>
+<h3>评分结果</h3>
+<ul>
+<li>预评分总分: 62.9</li>
+<li>证据完整度: 0.84</li>
+<li>推荐动作: 可继续推进，作为品牌级灵魂精华表达更合适。</li>
+<li>准入依据:<ul>
+<li>品牌灵魂精华，抗老透亮和光采叙事完整。<a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+<li>8周多维数字口径加分明显，但多数仍属于品牌自有资料体系。<a class="citation-ref" href="#source-4-s13">[S13]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>得分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安全</td>
+<td>8.1</td>
+<td>官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>成分</td>
+<td>18.6</td>
+<td>品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>配方</td>
+<td>9.0</td>
+<td>体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>即时效果</td>
+<td>6.4</td>
+<td>不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-4-s11">[S11]</a><a class="citation-ref" href="#source-4-s13">[S13]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>品牌血统</td>
+<td>18.5</td>
+<td>CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-4-s12">[S12]</a><a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>包装减负</td>
+<td>2.3</td>
+<td>高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-4-s05">[S05]</a><a class="citation-ref" href="#source-4-s24">[S24]</a></td>
+</tr>
+</tbody>
+</table>
+<h5>子评分明细</h5>
+<h6>安全（8.1 / 10）</h6>
+<ul>
+<li>维度说明: 官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>官方同款页补强了配方透明度和使用边界。<a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>配方体系安全度</td>
+<td>2.8</td>
+<td>4.0</td>
+<td>基于 INCI 透明度和体系成熟度给分。<a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>可用斑贴测试</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>按规则固定 3 分。<a class="citation-ref" href="#source-4-s01">[S01]</a></td>
+</tr>
+<tr>
+<td>特殊人群适配</td>
+<td>2.3</td>
+<td>3.0</td>
+<td>基于人群定位和边界信息给分。<a class="citation-ref" href="#source-4-s12">[S12]</a><a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>成分（18.6 / 25）</h6>
+<ul>
+<li>维度说明: 品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>本地资料与官网共同支持品牌级灵魂成分和专属技术叙事。<a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>独家 / 专属壁垒</td>
+<td>8.3</td>
+<td>12.0</td>
+<td>基于品牌灵魂成分与技术壁垒给分。<a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>专利与技术加成</td>
+<td>5.8</td>
+<td>8.0</td>
+<td>专属科技与品牌技术叙事提供额外加成。<a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>成分概念与故事质量</td>
+<td>4.5</td>
+<td>5.0</td>
+<td>高端叙事清晰，消费者易感知。<a class="citation-ref" href="#source-4-s13">[S13]</a><a class="citation-ref" href="#source-4-s18">[S18]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>配方（9.0 / 20）</h6>
+<ul>
+<li>维度说明: 体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>配方系统与功效叙事高度一致。<a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功效体系成立度</td>
+<td>4.7</td>
+<td>5.0</td>
+<td>成分与功效路线协同度较高。<a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>肤感与交互体验</td>
+<td>0.0</td>
+<td>10.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-4-s02">[S02]</a></td>
+</tr>
+<tr>
+<td>研发与配方背书</td>
+<td>4.3</td>
+<td>5.0</td>
+<td>品牌研发积累和工艺叙事较强。<a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>即时效果（6.4 / 20）</h6>
+<ul>
+<li>维度说明: 不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-4-s11">[S11]</a><a class="citation-ref" href="#source-4-s13">[S13]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>本地资料或官方声明提供了相应功效支撑。<a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第三方功效报告</td>
+<td>6.4</td>
+<td>8.0</td>
+<td>基于本地人体数据、官方摘要或药监功效摘要综合给分。<a class="citation-ref" href="#source-4-s13">[S13]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>玫瑰内部实测</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-4-s03">[S03]</a></td>
+</tr>
+<tr>
+<td>超蕙测 / 用户反馈</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-4-s04">[S04]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>品牌血统（18.5 / 20）</h6>
+<ul>
+<li>维度说明: CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-4-s12">[S12]</a><a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>品牌历史、科研奖项与高端矩阵支撑品牌维度。<a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s27">[S27]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>血统真实性</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>日本高端奢护奢妆品牌来源清晰。<a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>创始人与品类适配</td>
+<td>6.7</td>
+<td>8.0</td>
+<td>品牌长期聚焦高端护肤与底妆。<a class="citation-ref" href="#source-4-s09">[S09]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>权威性与专业背书</td>
+<td>4.8</td>
+<td>5.0</td>
+<td>资生堂集团与科研奖项提供权威背书。<a class="citation-ref" href="#source-4-s12">[S12]</a><a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>时间沉淀</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>1982 年至今，时间积累充分。<a class="citation-ref" href="#source-4-s12">[S12]</a><a class="citation-ref" href="#source-4-s16">[S16]</a><a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a><a class="citation-ref" href="#source-4-s19">[S19]</a><a class="citation-ref" href="#source-4-s20">[S20]</a><a class="citation-ref" href="#source-4-s21">[S21]</a><a class="citation-ref" href="#source-4-s22">[S22]</a><a class="citation-ref" href="#source-4-s23">[S23]</a><a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s25">[S25]</a><a class="citation-ref" href="#source-4-s26">[S26]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>包装减负（2.3 / 5）</h6>
+<ul>
+<li>维度说明: 高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-4-s05">[S05]</a><a class="citation-ref" href="#source-4-s24">[S24]</a></li>
+<li>证据:<ul>
+<li>包装更偏高端体验和使用便利，而非明确环保减负。<a class="citation-ref" href="#source-4-s24">[S24]</a><a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>审美与品牌感</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-4-s05">[S05]</a></td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>1.2</td>
+<td>2.0</td>
+<td>基于品类和使用方式给分。<a class="citation-ref" href="#source-4-s27">[S27]</a><a class="citation-ref" href="#source-4-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>多场景适配</td>
+<td>0.8</td>
+<td>1.0</td>
+<td>基于品类适配场景给分。<a class="citation-ref" href="#source-4-s05">[S05]</a><a class="citation-ref" href="#source-4-s24">[S24]</a></td>
+</tr>
+<tr>
+<td>环保与减负</td>
+<td>0.3</td>
+<td>1.0</td>
+<td>环保明确口径较少，保守给分。<a class="citation-ref" href="#source-4-s24">[S24]</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>待补证据: 更完整公开临床全文；更细的中国市场公开功效报告</li>
+<li>结论: 预评分总分为62.9分。成分、品牌血统表现相对较强，可进入下一步评审。</li>
+</ul>
+<h5>引用源索引</h5>
+<ul>
+<li><span id="source-4-s01" class="source-anchor"></span>[S01] 评分规则：可用斑贴测试固定 3 分 | 说明：safety.patch_test 固定为 3 分。</li>
+<li><span id="source-4-s02" class="source-anchor"></span>[S02] 评分规则：肤感与交互体验固定 0 分 | 说明：formula.sensory_experience 固定为 0 分。</li>
+<li><span id="source-4-s03" class="source-anchor"></span>[S03] 评分规则：玫瑰内部实测固定 0 分 | 说明：instant_effect.internal_test 固定为 0 分。</li>
+<li><span id="source-4-s04" class="source-anchor"></span>[S04] 评分规则：超蕙测/用户反馈固定 0 分 | 说明：instant_effect.user_feedback 固定为 0 分。</li>
+<li><span id="source-4-s05" class="source-anchor"></span>[S05] 评分规则：审美与品牌感固定 0 分 | 说明：packaging_burden.aesthetic 固定为 0 分。</li>
+<li><span id="source-4-s06" class="source-anchor"></span>[S06] Excel 文件：商品台账 | 字段：商品名称 | 摘录：CPB 钻光精华</li>
+<li><span id="source-4-s07" class="source-anchor"></span>[S07] Excel 文件：商品台账 | 字段：规格 | 摘录：30mL / 50mL</li>
+<li><span id="source-4-s08" class="source-anchor"></span>[S08] Excel 文件：商品台账 | 字段：价格 | 摘录：RMB 1250 / 30mL; RMB 1980 / 50mL</li>
+<li><span id="source-4-s09" class="source-anchor"></span>[S09] Excel 文件：商品台账 | 字段：研发初心 | 摘录：依托 CPB 奢护与光采科技路线，强化高端体验与长期养护价值。</li>
+<li><span id="source-4-s10" class="source-anchor"></span>[S10] Excel 文件：商品台账 | 字段：成分 | 摘录：亮肌赋活精粹、Kelplex 渗透肌底科技、Akoya 珍珠、铂金金蚕丝、茶氨酸、紫苏、东当归</li>
+<li><span id="source-4-s11" class="source-anchor"></span>[S11] Excel 文件：商品台账 | 字段：功效 | 摘录：强韧、透亮、紧致、充盈、光采、长期富养</li>
+<li><span id="source-4-s12" class="source-anchor"></span>[S12] Excel 文件：商品台账 | 字段：适宜人群 | 摘录：25-40 岁抗初老到抗老人群</li>
+<li><span id="source-4-s13" class="source-anchor"></span>[S13] Excel 文件：商品台账 | 字段：亮点/功效通路 | 摘录：8周多维度90%+数字口径、吸收力2.15倍以上</li>
+<li><span id="source-4-s14" class="source-anchor"></span>[S14] Excel 文件：商品台账 | 字段：差异化优势 | 摘录：品牌级灵魂精华，光采与抗老双路线统一</li>
+<li><span id="source-4-s15" class="source-anchor"></span>[S15] Excel 文件：商品台账 | 字段：使用方法 | 摘录：早晚用于水后精华步骤</li>
+<li><span id="source-4-s16" class="source-anchor"></span>[S16] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网页面标题 | 摘录：The Serum - Clé de Peau Beauté</li>
+<li><span id="source-4-s17" class="source-anchor"></span>[S17] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网完整 INCI | 摘录：Water(Aqua/Eau), Alcohol Denat., Glycerin, Dipropylene Glycol, PEG/PPG-14/7 Dimethyl Ether ... official site lists full ingredients.</li>
+<li><span id="source-4-s18" class="source-anchor"></span>[S18] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网成分故事 | 摘录：Official The Serum page centers on Skin-Empowering Illuminator and renewing radiance while supporting smoothness and vitality.</li>
+<li><span id="source-4-s19" class="source-anchor"></span>[S19] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网页面摘录 | 摘录：Official The Serum page centers on Skin-Empowering Illuminator and renewing radiance while supporting smoothness and vitality.</li>
+<li><span id="source-4-s20" class="source-anchor"></span>[S20] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网专利/技术证据 | 摘录：Brand signature Skin-Empowering Illuminator.</li>
+<li><span id="source-4-s21" class="source-anchor"></span>[S21] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网专利/技术证据 | 摘录：Local dossier emphasizes 40-year cell science and Kelplex penetration technology.</li>
+<li><span id="source-4-s22" class="source-anchor"></span>[S22] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网临床摘要 | 摘录：Local dossier offers 8-week quantitative improvements across smoothness, radiance, firmness and plumpness.</li>
+<li><span id="source-4-s23" class="source-anchor"></span>[S23] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网临床摘要 | 摘录：Official page supports radiance-renewing serum positioning.</li>
+<li><span id="source-4-s24" class="source-anchor"></span>[S24] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网包装环保说明 | 摘录：Premium bottle ritual, limited explicit environmental claims.</li>
+<li><span id="source-4-s25" class="source-anchor"></span>[S25] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网核心成分 | 摘录：Skin-Empowering Illuminator - CPB signature radiance-supporting complex.</li>
+<li><span id="source-4-s26" class="source-anchor"></span>[S26] 网页：https://www.cledepeau-beaute.com/es/the-serum-A21409_es.html | 字段：官网核心成分 | 摘录：Kelp-inspired penetration tech - Local dossier emphasizes Kelplex and enhanced penetration.</li>
+<li><span id="source-4-s27" class="source-anchor"></span>[S27] 附件文件：001-brand.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/001-brand.md | 摘录：# CPB 品牌摘要 - 品牌: CPB 肌肤之钥 / Clé de Peau Beauté，资生堂集团高端奢护品牌。 - 本地品牌资料写明：品牌诞生于 1982 年，融合日本前沿护肤科技与法式优雅美学，强调逾 40 年细胞科技、IFSCC 等科研奖项和奢护体验。 - 本地资料品牌矩阵显示护肤与底妆双轮驱动，核心单品集中在金致乳霜、钻光精华、4D 精雕眼霜…</li>
+<li><span id="source-4-s28" class="source-anchor"></span>[S28] 附件文件：005-the-serum.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/005-the-serum.md | 摘录：# 钻光精华摘要 - 本地资料定位: 2023 升级定位的功效型抗老精华，逾 40 年细胞科技，主打全通路抗老与长期富养。 - 本地资料成分与技术: 亮肌赋活精粹、Kelplex 渗透肌底科技、铂金金蚕丝、Akoya 珍珠、茶氨酸、紫苏、东当归。 - 本地资料结果: 8 周后在细腻、透亮、强韧、紧致、光采、充盈等维度给出 90%+ 数字口径。 - 官方页可…</li>
+</ul>
+<h3>WBEFA 结果</h3>
+<h4>一、产品总判断</h4>
+<p>CPB 钻光精华品牌灵魂精华，适合讲光采抗老和长期富养。它的核心价值不只是贵，而是品牌血统、成分故事、工艺和高端体验一起成立。真正决定它是不是好讲的，是可核验功效证据深度。<a class="citation-ref" href="#source-4-s13">[S13]</a><a class="citation-ref" href="#source-4-s19">[S19]</a></p>
+<ul>
+<li>推荐等级: 观察中</li>
+<li>定位一句话: 品牌灵魂精华，适合讲光采抗老和长期富养。</li>
+</ul>
+<h4>二、W｜Why</h4>
+<h5>1. 玫瑰为什么值得推荐</h5>
+<ul>
+<li>CPB 适合做高客单、高品牌势能、高内容美感的组合盘。</li>
+<li>这类产品更依赖品牌信任和精致表达，而不只是单一数字功效。</li>
+<li>护肤和底妆双线都可承接内容。</li>
+</ul>
+<h5>2. 为什么是这个品牌</h5>
+<ul>
+<li>品牌历史、资生堂背景和 40 年科技叙事明显加分。</li>
+<li>品牌灵魂成分 Skin-Empowering Illuminator 使多单品表达有统一中心。</li>
+<li>高端价格带与品牌辨识度使它天然适合做品牌型选品。</li>
+</ul>
+<h5>3. 为什么是这个产品</h5>
+<ul>
+<li>品牌灵魂精华，适合讲光采抗老和长期富养。</li>
+<li>它更适合放在 CPB 高端奢护或奢妆矩阵里理解。</li>
+</ul>
+<h4>三、B｜Benefit</h4>
+<h5>1. 适合的用户</h5>
+<ul>
+<li>25-40 岁抗初老到抗老人群</li>
+</ul>
+<h5>2. 解决的痛点</h5>
+<ul>
+<li>强韧、透亮、紧致、充盈、光采、长期富养</li>
+<li>消费者更在意高端体验、肤感、养肤感与品牌价值统一。</li>
+</ul>
+<h5>3. 对应的使用场景</h5>
+<ul>
+<li>早晚用于水后精华步骤</li>
+<li>精致妆护日常或高客单礼赠场景。</li>
+</ul>
+<h4>四、E｜Evidence</h4>
+<ul>
+<li>证据强度: 强</li>
+<li>总体判断: 品牌与官网支撑很强，部分产品还有本地人体或药监摘要；但不同单品的公开第三方深度并不完全一致。</li>
+</ul>
+<h5>强证据</h5>
+<ul>
+<li>同款官方页提供了完整 INCI、品牌灵魂成分和产品定位。<a class="citation-ref" href="#source-4-s17">[S17]</a><a class="citation-ref" href="#source-4-s18">[S18]</a></li>
+</ul>
+<h5>中证据</h5>
+<ul>
+<li>本地品牌资料提供了明确的目标人群、技术卖点和品牌矩阵角色。<a class="citation-ref" href="#source-4-s27">[S27]</a></li>
+</ul>
+<h5>弱证据</h5>
+<ul>
+<li>部分产品的即时效果更多来自品牌资料或官方摘要，公开强第三方全文仍有限。<a class="citation-ref" href="#source-4-s22">[S22]</a></li>
+</ul>
+<h4>五、F｜Feature</h4>
+<h5>1. 产品特性</h5>
+<ul>
+<li>8周多维度90%+数字口径、吸收力2.15倍以上</li>
+<li>品牌级灵魂精华，光采与抗老双路线统一</li>
+</ul>
+<h5>2. 独家成分 / 技术</h5>
+<ul>
+<li>亮肌赋活精粹、Kelplex 渗透肌底科技、Akoya 珍珠、铂金金蚕丝、茶氨酸、紫苏、东当归</li>
+<li>Official The Serum page centers on Skin-Empowering Illuminator and renewing radiance while supporting smoothness and vitality.</li>
+</ul>
+<h5>3. 信任背书</h5>
+<ul>
+<li>品牌历史</li>
+<li>官网 INCI</li>
+<li>高端矩阵角色</li>
+</ul>
+<h5>4. 品牌背景</h5>
+<ul>
+<li>CPB 为资生堂集团高端奢护奢妆品牌。</li>
+<li>1982 年起源，逾 40 年科技叙事。</li>
+</ul>
+<h4>六、A｜Advantage</h4>
+<h5>1. 品牌势能强</h5>
+<ul>
+<li>记忆点: 高端品牌信任本身就是重要购买理由。</li>
+<li>解释: 尤其适合高客单内容与礼赠心智。</li>
+<li>适合玫瑰怎么讲: 这类产品不是只卖功效，也卖品牌稀缺感和精致感。</li>
+</ul>
+<h5>2. 成分与工艺叙事完整</h5>
+<ul>
+<li>记忆点: 灵魂成分和产品技术有统一中心。</li>
+<li>解释: 多单品表达不会散。</li>
+<li>适合玫瑰怎么讲: 从精华到底妆，都是同一个光采世界观。</li>
+</ul>
+<h4>七、判断边界</h4>
+<h5>1. 已知事实</h5>
+<ul>
+<li>品牌血统强。</li>
+<li>同款官网页可用。</li>
+<li>本地资料对核心单品定位较完整。</li>
+</ul>
+<h5>2. 谨慎判断</h5>
+<ul>
+<li>可以判断 CPB 组合整体偏强。</li>
+<li>眼霜、精华和金致乳霜更适合做护肤核心表达。</li>
+</ul>
+<h5>3. 当前无法判断</h5>
+<ul>
+<li>并非每个单品都有同等级公开临床全文。</li>
+</ul>
+<h5>4. 建议补充材料</h5>
+<ul>
+<li>补更多同款第三方公开报告全文。</li>
+</ul>
+<h4>八、风险与提醒</h4>
+<ul>
+<li>不宜把所有单品都讲成同样强功效。</li>
+<li>更适合按品牌型、高端型、体验型选品来组织表达。</li>
+<li>底妆线第三方公开临床通常弱于护肤线。</li>
+</ul>
+<h2>CPB 长管隔离</h2>
+<h3>评分结果</h3>
+<ul>
+<li>预评分总分: 57.4</li>
+<li>证据完整度: 0.72</li>
+<li>推荐动作: 可继续推进，但建议更多作为高端妆前明星单品来讲。</li>
+<li>准入依据:<ul>
+<li>品牌和官方同款页支撑度足够，作为高端妆前明星单品成立。<a class="citation-ref" href="#source-5-s16">[S16]</a><a class="citation-ref" href="#source-5-s17">[S17]</a><a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s19">[S19]</a><a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s23">[S23]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+<li>本地可核验功效报告不足，因此即时效果和安全边界按保守口径处理。<a class="citation-ref" href="#source-5-s13">[S13]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>得分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安全</td>
+<td>7.7</td>
+<td>官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-5-s16">[S16]</a><a class="citation-ref" href="#source-5-s17">[S17]</a><a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s19">[S19]</a><a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s23">[S23]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>成分</td>
+<td>15.9</td>
+<td>品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>配方</td>
+<td>8.1</td>
+<td>体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-5-s16">[S16]</a><a class="citation-ref" href="#source-5-s17">[S17]</a><a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s19">[S19]</a><a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s23">[S23]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>即时效果</td>
+<td>4.8</td>
+<td>不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-5-s11">[S11]</a><a class="citation-ref" href="#source-5-s13">[S13]</a><a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>品牌血统</td>
+<td>18.2</td>
+<td>CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a></td>
+</tr>
+<tr>
+<td>包装减负</td>
+<td>2.7</td>
+<td>高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-5-s05">[S05]</a><a class="citation-ref" href="#source-5-s23">[S23]</a></td>
+</tr>
+</tbody>
+</table>
+<h5>子评分明细</h5>
+<h6>安全（7.7 / 10）</h6>
+<ul>
+<li>维度说明: 官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-5-s16">[S16]</a><a class="citation-ref" href="#source-5-s17">[S17]</a><a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s19">[S19]</a><a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s23">[S23]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>官方同款页补强了配方透明度和使用边界。<a class="citation-ref" href="#source-5-s16">[S16]</a><a class="citation-ref" href="#source-5-s17">[S17]</a><a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s19">[S19]</a><a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s23">[S23]</a><a class="citation-ref" href="#source-5-s24">[S24]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>配方体系安全度</td>
+<td>2.7</td>
+<td>4.0</td>
+<td>基于 INCI 透明度和体系成熟度给分。<a class="citation-ref" href="#source-5-s17">[S17]</a><a class="citation-ref" href="#source-5-s24">[S24]</a></td>
+</tr>
+<tr>
+<td>可用斑贴测试</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>按规则固定 3 分。<a class="citation-ref" href="#source-5-s01">[S01]</a></td>
+</tr>
+<tr>
+<td>特殊人群适配</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>基于人群定位和边界信息给分。<a class="citation-ref" href="#source-5-s12">[S12]</a><a class="citation-ref" href="#source-5-s16">[S16]</a><a class="citation-ref" href="#source-5-s17">[S17]</a><a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s19">[S19]</a><a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s23">[S23]</a><a class="citation-ref" href="#source-5-s24">[S24]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>成分（15.9 / 25）</h6>
+<ul>
+<li>维度说明: 品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>本地资料与官网共同支持品牌级灵魂成分和专属技术叙事。<a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>独家 / 专属壁垒</td>
+<td>7.0</td>
+<td>12.0</td>
+<td>基于品牌灵魂成分与技术壁垒给分。<a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>专利与技术加成</td>
+<td>4.9</td>
+<td>8.0</td>
+<td>专属科技与品牌技术叙事提供额外加成。<a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>成分概念与故事质量</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>高端叙事清晰，消费者易感知。<a class="citation-ref" href="#source-5-s13">[S13]</a><a class="citation-ref" href="#source-5-s18">[S18]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>配方（8.1 / 20）</h6>
+<ul>
+<li>维度说明: 体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-5-s16">[S16]</a><a class="citation-ref" href="#source-5-s17">[S17]</a><a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s19">[S19]</a><a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s23">[S23]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>配方系统与功效叙事高度一致。<a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功效体系成立度</td>
+<td>4.2</td>
+<td>5.0</td>
+<td>成分与功效路线协同度较高。<a class="citation-ref" href="#source-5-s18">[S18]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>肤感与交互体验</td>
+<td>0.0</td>
+<td>10.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-5-s02">[S02]</a></td>
+</tr>
+<tr>
+<td>研发与配方背书</td>
+<td>3.9</td>
+<td>5.0</td>
+<td>品牌研发积累和工艺叙事较强。<a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>即时效果（4.8 / 20）</h6>
+<ul>
+<li>维度说明: 不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-5-s11">[S11]</a><a class="citation-ref" href="#source-5-s13">[S13]</a><a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+<li>证据:<ul>
+<li>本地资料或官方声明提供了相应功效支撑。<a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第三方功效报告</td>
+<td>4.8</td>
+<td>8.0</td>
+<td>基于本地人体数据、官方摘要或药监功效摘要综合给分。<a class="citation-ref" href="#source-5-s21">[S21]</a><a class="citation-ref" href="#source-5-s22">[S22]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>玫瑰内部实测</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-5-s03">[S03]</a></td>
+</tr>
+<tr>
+<td>超蕙测 / 用户反馈</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-5-s04">[S04]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>品牌血统（18.2 / 20）</h6>
+<ul>
+<li>维度说明: CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a></li>
+<li>证据:<ul>
+<li>品牌历史、科研奖项与高端矩阵支撑品牌维度。<a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>血统真实性</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>日本高端奢护奢妆品牌来源清晰。<a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a></td>
+</tr>
+<tr>
+<td>创始人与品类适配</td>
+<td>6.4</td>
+<td>8.0</td>
+<td>品牌长期聚焦高端护肤与底妆。<a class="citation-ref" href="#source-5-s09">[S09]</a><a class="citation-ref" href="#source-5-s12">[S12]</a><a class="citation-ref" href="#source-5-s20">[S20]</a><a class="citation-ref" href="#source-5-s24">[S24]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>权威性与专业背书</td>
+<td>4.8</td>
+<td>5.0</td>
+<td>资生堂集团与科研奖项提供权威背书。<a class="citation-ref" href="#source-5-s25">[S25]</a></td>
+</tr>
+<tr>
+<td>时间沉淀</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>1982 年至今，时间积累充分。<a class="citation-ref" href="#source-5-s25">[S25]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>包装减负（2.7 / 5）</h6>
+<ul>
+<li>维度说明: 高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-5-s05">[S05]</a><a class="citation-ref" href="#source-5-s23">[S23]</a></li>
+<li>证据:<ul>
+<li>包装更偏高端体验和使用便利，而非明确环保减负。<a class="citation-ref" href="#source-5-s23">[S23]</a><a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>审美与品牌感</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-5-s05">[S05]</a></td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>1.5</td>
+<td>2.0</td>
+<td>基于品类和使用方式给分。<a class="citation-ref" href="#source-5-s25">[S25]</a><a class="citation-ref" href="#source-5-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>多场景适配</td>
+<td>0.9</td>
+<td>1.0</td>
+<td>基于品类适配场景给分。<a class="citation-ref" href="#source-5-s05">[S05]</a><a class="citation-ref" href="#source-5-s23">[S23]</a></td>
+</tr>
+<tr>
+<td>环保与减负</td>
+<td>0.3</td>
+<td>1.0</td>
+<td>环保明确口径较少，保守给分。<a class="citation-ref" href="#source-5-s23">[S23]</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>待补证据: 更完整公开临床全文；更细的中国市场公开功效报告</li>
+<li>结论: 预评分总分为57.4分。品牌血统、成分表现相对较强，可进入下一步评审。</li>
+</ul>
+<h5>引用源索引</h5>
+<ul>
+<li><span id="source-5-s01" class="source-anchor"></span>[S01] 评分规则：可用斑贴测试固定 3 分 | 说明：safety.patch_test 固定为 3 分。</li>
+<li><span id="source-5-s02" class="source-anchor"></span>[S02] 评分规则：肤感与交互体验固定 0 分 | 说明：formula.sensory_experience 固定为 0 分。</li>
+<li><span id="source-5-s03" class="source-anchor"></span>[S03] 评分规则：玫瑰内部实测固定 0 分 | 说明：instant_effect.internal_test 固定为 0 分。</li>
+<li><span id="source-5-s04" class="source-anchor"></span>[S04] 评分规则：超蕙测/用户反馈固定 0 分 | 说明：instant_effect.user_feedback 固定为 0 分。</li>
+<li><span id="source-5-s05" class="source-anchor"></span>[S05] 评分规则：审美与品牌感固定 0 分 | 说明：packaging_burden.aesthetic 固定为 0 分。</li>
+<li><span id="source-5-s06" class="source-anchor"></span>[S06] Excel 文件：商品台账 | 字段：商品名称 | 摘录：CPB 长管隔离</li>
+<li><span id="source-5-s07" class="source-anchor"></span>[S07] Excel 文件：商品台账 | 字段：规格 | 摘录：37mL</li>
+<li><span id="source-5-s08" class="source-anchor"></span>[S08] Excel 文件：商品台账 | 字段：价格 | 摘录：约 RMB 700-800</li>
+<li><span id="source-5-s09" class="source-anchor"></span>[S09] Excel 文件：商品台账 | 字段：研发初心 | 摘录：依托 CPB 奢护与光采科技路线，强化高端体验与长期养护价值。</li>
+<li><span id="source-5-s10" class="source-anchor"></span>[S10] Excel 文件：商品台账 | 字段：成分 | 摘录：亮肌赋活精粹、防晒体系、保湿基底</li>
+<li><span id="source-5-s11" class="source-anchor"></span>[S11] Excel 文件：商品台账 | 字段：功效 | 摘录：防晒、保湿、匀净、妆前修饰、持妆</li>
+<li><span id="source-5-s12" class="source-anchor"></span>[S12] Excel 文件：商品台账 | 字段：适宜人群 | 摘录：高端底妆妆前用户</li>
+<li><span id="source-5-s13" class="source-anchor"></span>[S13] Excel 文件：商品台账 | 字段：亮点/功效通路 | 摘录：CPB 底妆明星单品，修饰+防晒+养肤底盘</li>
+<li><span id="source-5-s14" class="source-anchor"></span>[S14] Excel 文件：商品台账 | 字段：差异化优势 | 摘录：妆前乳里的高品牌认知度单品</li>
+<li><span id="source-5-s15" class="source-anchor"></span>[S15] Excel 文件：商品台账 | 字段：使用方法 | 摘录：底妆前全脸涂抹</li>
+<li><span id="source-5-s16" class="source-anchor"></span>[S16] 网页：https://www.cledepeau-beaute.com/es/correcting-cream-veil-n-16182_es.html | 字段：官网页面标题 | 摘录：Correcting Cream Veil n - Clé de Peau Beauté</li>
+<li><span id="source-5-s17" class="source-anchor"></span>[S17] 网页：https://www.cledepeau-beaute.com/es/correcting-cream-veil-n-16182_es.html | 字段：官网完整 INCI | 摘录：Water(Aqua/Eau), Dimethicone, Alcohol Denat., Butylene Glycol, Ethylhexyl Methoxycinnamate ... official site lists full ingredients.</li>
+<li><span id="source-5-s18" class="source-anchor"></span>[S18] 网页：https://www.cledepeau-beaute.com/es/correcting-cream-veil-n-16182_es.html | 字段：官网成分故事 | 摘录：Official Correcting Cream Veil n page positions the product as a pre-makeup base with UV protection, hydration and skin-smoothing support.</li>
+<li><span id="source-5-s19" class="source-anchor"></span>[S19] 网页：https://www.cledepeau-beaute.com/es/correcting-cream-veil-n-16182_es.html | 字段：官网页面摘录 | 摘录：Official Correcting Cream Veil n page positions the product as a pre-makeup base with UV protection, hydration and skin-smoothing support.</li>
+<li><span id="source-5-s20" class="source-anchor"></span>[S20] 网页：https://www.cledepeau-beaute.com/es/correcting-cream-veil-n-16182_es.html | 字段：官网专利/技术证据 | 摘录：Brand signature Skin-Empowering Illuminator.</li>
+<li><span id="source-5-s21" class="source-anchor"></span>[S21] 网页：https://www.cledepeau-beaute.com/es/correcting-cream-veil-n-16182_es.html | 字段：官网临床摘要 | 摘录：Official page supports smoothing, hydration and makeup finish enhancement.</li>
+<li><span id="source-5-s22" class="source-anchor"></span>[S22] 网页：https://www.cledepeau-beaute.com/es/correcting-cream-veil-n-16182_es.html | 字段：官网临床摘要 | 摘录：Local file indicates sunscreen testing exists but extractable report text is unavailable.</li>
+<li><span id="source-5-s23" class="source-anchor"></span>[S23] 网页：https://www.cledepeau-beaute.com/es/correcting-cream-veil-n-16182_es.html | 字段：官网包装环保说明 | 摘录：Portable tube improves use burden but environmental claims are limited.</li>
+<li><span id="source-5-s24" class="source-anchor"></span>[S24] 网页：https://www.cledepeau-beaute.com/es/correcting-cream-veil-n-16182_es.html | 字段：官网核心成分 | 摘录：Skin-Empowering Illuminator - Brand signature complex.</li>
+<li><span id="source-5-s25" class="source-anchor"></span>[S25] 附件文件：001-brand.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/001-brand.md | 摘录：# CPB 品牌摘要 - 品牌: CPB 肌肤之钥 / Clé de Peau Beauté，资生堂集团高端奢护品牌。 - 本地品牌资料写明：品牌诞生于 1982 年，融合日本前沿护肤科技与法式优雅美学，强调逾 40 年细胞科技、IFSCC 等科研奖项和奢护体验。 - 本地资料品牌矩阵显示护肤与底妆双轮驱动，核心单品集中在金致乳霜、钻光精华、4D 精雕眼霜…</li>
+<li><span id="source-5-s26" class="source-anchor"></span>[S26] 附件文件：006-correcting-veil.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/006-correcting-veil.md | 摘录：# 长管隔离摘要 - 本地品牌矩阵把长管隔离列为 CPB 专业底妆核心单品之一。 - 官方同款页 Correcting Cream Veil n 可补强: 妆前乳/隔离定位、保湿与持妆支持、完整 INCI、SPF 防护。 - 本地补充资料仅提供《长管隔离-防晒测试报告》文件名，正文暂未抽取到可用文字，因此即时效果按保守口径处理。</li>
+</ul>
+<h3>WBEFA 结果</h3>
+<h4>一、产品总判断</h4>
+<p>CPB 长管隔离高认知度妆前明星，但证据更多来自品牌与官网基础面。它的核心价值不只是贵，而是品牌血统、成分故事、工艺和高端体验一起成立。真正决定它是不是好讲的，是可核验功效证据深度。<a class="citation-ref" href="#source-5-s13">[S13]</a><a class="citation-ref" href="#source-5-s19">[S19]</a></p>
+<ul>
+<li>推荐等级: 观察中</li>
+<li>定位一句话: 高认知度妆前明星，但证据更多来自品牌与官网基础面。</li>
+</ul>
+<h4>二、W｜Why</h4>
+<h5>1. 玫瑰为什么值得推荐</h5>
+<ul>
+<li>CPB 适合做高客单、高品牌势能、高内容美感的组合盘。</li>
+<li>这类产品更依赖品牌信任和精致表达，而不只是单一数字功效。</li>
+<li>护肤和底妆双线都可承接内容。</li>
+</ul>
+<h5>2. 为什么是这个品牌</h5>
+<ul>
+<li>品牌历史、资生堂背景和 40 年科技叙事明显加分。</li>
+<li>品牌灵魂成分 Skin-Empowering Illuminator 使多单品表达有统一中心。</li>
+<li>高端价格带与品牌辨识度使它天然适合做品牌型选品。</li>
+</ul>
+<h5>3. 为什么是这个产品</h5>
+<ul>
+<li>高认知度妆前明星，但证据更多来自品牌与官网基础面。</li>
+<li>它更适合放在 CPB 高端奢护或奢妆矩阵里理解。</li>
+</ul>
+<h4>三、B｜Benefit</h4>
+<h5>1. 适合的用户</h5>
+<ul>
+<li>高端底妆妆前用户</li>
+</ul>
+<h5>2. 解决的痛点</h5>
+<ul>
+<li>防晒、保湿、匀净、妆前修饰、持妆</li>
+<li>消费者更在意高端体验、肤感、养肤感与品牌价值统一。</li>
+</ul>
+<h5>3. 对应的使用场景</h5>
+<ul>
+<li>底妆前全脸涂抹</li>
+<li>精致妆护日常或高客单礼赠场景。</li>
+</ul>
+<h4>四、E｜Evidence</h4>
+<ul>
+<li>证据强度: 中强</li>
+<li>总体判断: 品牌与官网支撑很强，部分产品还有本地人体或药监摘要；但不同单品的公开第三方深度并不完全一致。</li>
+</ul>
+<h5>强证据</h5>
+<ul>
+<li>同款官方页提供了完整 INCI、品牌灵魂成分和产品定位。<a class="citation-ref" href="#source-5-s17">[S17]</a><a class="citation-ref" href="#source-5-s18">[S18]</a></li>
+</ul>
+<h5>中证据</h5>
+<ul>
+<li>本地品牌资料提供了明确的目标人群、技术卖点和品牌矩阵角色。<a class="citation-ref" href="#source-5-s25">[S25]</a></li>
+</ul>
+<h5>弱证据</h5>
+<ul>
+<li>部分产品的即时效果更多来自品牌资料或官方摘要，公开强第三方全文仍有限。<a class="citation-ref" href="#source-5-s21">[S21]</a></li>
+</ul>
+<h4>五、F｜Feature</h4>
+<h5>1. 产品特性</h5>
+<ul>
+<li>CPB 底妆明星单品，修饰+防晒+养肤底盘</li>
+<li>妆前乳里的高品牌认知度单品</li>
+</ul>
+<h5>2. 独家成分 / 技术</h5>
+<ul>
+<li>亮肌赋活精粹、防晒体系、保湿基底</li>
+<li>Official Correcting Cream Veil n page positions the product as a pre-makeup base with UV protection, hydration and skin-smoothing support.</li>
+</ul>
+<h5>3. 信任背书</h5>
+<ul>
+<li>品牌历史</li>
+<li>官网 INCI</li>
+<li>高端矩阵角色</li>
+</ul>
+<h5>4. 品牌背景</h5>
+<ul>
+<li>CPB 为资生堂集团高端奢护奢妆品牌。</li>
+<li>1982 年起源，逾 40 年科技叙事。</li>
+</ul>
+<h4>六、A｜Advantage</h4>
+<h5>1. 品牌势能强</h5>
+<ul>
+<li>记忆点: 高端品牌信任本身就是重要购买理由。</li>
+<li>解释: 尤其适合高客单内容与礼赠心智。</li>
+<li>适合玫瑰怎么讲: 这类产品不是只卖功效，也卖品牌稀缺感和精致感。</li>
+</ul>
+<h5>2. 成分与工艺叙事完整</h5>
+<ul>
+<li>记忆点: 灵魂成分和产品技术有统一中心。</li>
+<li>解释: 多单品表达不会散。</li>
+<li>适合玫瑰怎么讲: 从精华到底妆，都是同一个光采世界观。</li>
+</ul>
+<h4>七、判断边界</h4>
+<h5>1. 已知事实</h5>
+<ul>
+<li>品牌血统强。</li>
+<li>同款官网页可用。</li>
+<li>本地资料对核心单品定位较完整。</li>
+</ul>
+<h5>2. 谨慎判断</h5>
+<ul>
+<li>可以判断 CPB 组合整体偏强。</li>
+<li>眼霜、精华和金致乳霜更适合做护肤核心表达。</li>
+</ul>
+<h5>3. 当前无法判断</h5>
+<ul>
+<li>并非每个单品都有同等级公开临床全文。</li>
+</ul>
+<h5>4. 建议补充材料</h5>
+<ul>
+<li>补更多同款第三方公开报告全文。</li>
+</ul>
+<h4>八、风险与提醒</h4>
+<ul>
+<li>不宜把所有单品都讲成同样强功效。</li>
+<li>更适合按品牌型、高端型、体验型选品来组织表达。</li>
+<li>底妆线第三方公开临床通常弱于护肤线。</li>
+</ul>
+<h2>CPB 光柔水凝气垫精华粉底膏 I10</h2>
+<h3>评分结果</h3>
+<ul>
+<li>预评分总分: 58.9</li>
+<li>证据完整度: 0.78</li>
+<li>推荐动作: 可继续推进，重点讲高端养肤气垫与防晒修饰兼顾。</li>
+<li>准入依据:<ul>
+<li>药监功效摘要提供了防晒与保湿的可核验证据。<a class="citation-ref" href="#source-6-s16">[S16]</a><a class="citation-ref" href="#source-6-s17">[S17]</a><a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s19">[S19]</a><a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s21">[S21]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s24">[S24]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+<li>品牌与气垫产品叙事成立，但第三方强证据主要集中在 SPF/PFA 维度。<a class="citation-ref" href="#source-6-s13">[S13]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>得分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安全</td>
+<td>7.8</td>
+<td>官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-6-s16">[S16]</a><a class="citation-ref" href="#source-6-s17">[S17]</a><a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s19">[S19]</a><a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s21">[S21]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s24">[S24]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>成分</td>
+<td>16.3</td>
+<td>品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>配方</td>
+<td>8.3</td>
+<td>体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-6-s16">[S16]</a><a class="citation-ref" href="#source-6-s17">[S17]</a><a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s19">[S19]</a><a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s21">[S21]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s24">[S24]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>即时效果</td>
+<td>5.4</td>
+<td>不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-6-s11">[S11]</a><a class="citation-ref" href="#source-6-s13">[S13]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>品牌血统</td>
+<td>18.2</td>
+<td>CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>包装减负</td>
+<td>2.9</td>
+<td>高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-6-s05">[S05]</a><a class="citation-ref" href="#source-6-s24">[S24]</a></td>
+</tr>
+</tbody>
+</table>
+<h5>子评分明细</h5>
+<h6>安全（7.8 / 10）</h6>
+<ul>
+<li>维度说明: 官方同款页提供 INCI 或完整配方信息，安全透明度较好；但不同产品的临床公开深度存在差异。<a class="citation-ref" href="#source-6-s16">[S16]</a><a class="citation-ref" href="#source-6-s17">[S17]</a><a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s19">[S19]</a><a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s21">[S21]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s24">[S24]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>官方同款页补强了配方透明度和使用边界。<a class="citation-ref" href="#source-6-s16">[S16]</a><a class="citation-ref" href="#source-6-s17">[S17]</a><a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s19">[S19]</a><a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s21">[S21]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s24">[S24]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>配方体系安全度</td>
+<td>2.7</td>
+<td>4.0</td>
+<td>基于 INCI 透明度和体系成熟度给分。<a class="citation-ref" href="#source-6-s17">[S17]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a></td>
+</tr>
+<tr>
+<td>可用斑贴测试</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>按规则固定 3 分。<a class="citation-ref" href="#source-6-s01">[S01]</a></td>
+</tr>
+<tr>
+<td>特殊人群适配</td>
+<td>2.1</td>
+<td>3.0</td>
+<td>基于人群定位和边界信息给分。<a class="citation-ref" href="#source-6-s12">[S12]</a><a class="citation-ref" href="#source-6-s16">[S16]</a><a class="citation-ref" href="#source-6-s17">[S17]</a><a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s19">[S19]</a><a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s21">[S21]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s24">[S24]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>成分（16.3 / 25）</h6>
+<ul>
+<li>维度说明: 品牌灵魂成分与单品技术叙事完整，成分故事质量较高。<a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>本地资料与官网共同支持品牌级灵魂成分和专属技术叙事。<a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s21">[S21]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>独家 / 专属壁垒</td>
+<td>7.2</td>
+<td>12.0</td>
+<td>基于品牌灵魂成分与技术壁垒给分。<a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>专利与技术加成</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>专属科技与品牌技术叙事提供额外加成。<a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s21">[S21]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>成分概念与故事质量</td>
+<td>4.1</td>
+<td>5.0</td>
+<td>高端叙事清晰，消费者易感知。<a class="citation-ref" href="#source-6-s13">[S13]</a><a class="citation-ref" href="#source-6-s18">[S18]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>配方（8.3 / 20）</h6>
+<ul>
+<li>维度说明: 体系完整、品牌成熟度高，但感官体验项按规则不计分。<a class="citation-ref" href="#source-6-s16">[S16]</a><a class="citation-ref" href="#source-6-s17">[S17]</a><a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s19">[S19]</a><a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s21">[S21]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s24">[S24]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s26">[S26]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>配方系统与功效叙事高度一致。<a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功效体系成立度</td>
+<td>4.3</td>
+<td>5.0</td>
+<td>成分与功效路线协同度较高。<a class="citation-ref" href="#source-6-s18">[S18]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>肤感与交互体验</td>
+<td>0.0</td>
+<td>10.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-6-s02">[S02]</a></td>
+</tr>
+<tr>
+<td>研发与配方背书</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>品牌研发积累和工艺叙事较强。<a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>即时效果（5.4 / 20）</h6>
+<ul>
+<li>维度说明: 不同单品有官方宣称、本地人体数据或药监摘要支撑，即时效果维度整体中上。<a class="citation-ref" href="#source-6-s11">[S11]</a><a class="citation-ref" href="#source-6-s13">[S13]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+<li>证据:<ul>
+<li>本地资料或官方声明提供了相应功效支撑。<a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第三方功效报告</td>
+<td>5.4</td>
+<td>8.0</td>
+<td>基于本地人体数据、官方摘要或药监功效摘要综合给分。<a class="citation-ref" href="#source-6-s13">[S13]</a><a class="citation-ref" href="#source-6-s22">[S22]</a><a class="citation-ref" href="#source-6-s23">[S23]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>玫瑰内部实测</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-6-s03">[S03]</a></td>
+</tr>
+<tr>
+<td>超蕙测 / 用户反馈</td>
+<td>0.0</td>
+<td>6.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-6-s04">[S04]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>品牌血统（18.2 / 20）</h6>
+<ul>
+<li>维度说明: CPB 的高端品牌历史、资生堂背景和长期科研叙事，使品牌血统维度明显偏强。<a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s27">[S27]</a></li>
+<li>证据:<ul>
+<li>品牌历史、科研奖项与高端矩阵支撑品牌维度。<a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s27">[S27]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>血统真实性</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>日本高端奢护奢妆品牌来源清晰。<a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>创始人与品类适配</td>
+<td>6.4</td>
+<td>8.0</td>
+<td>品牌长期聚焦高端护肤与底妆。<a class="citation-ref" href="#source-6-s09">[S09]</a><a class="citation-ref" href="#source-6-s12">[S12]</a><a class="citation-ref" href="#source-6-s20">[S20]</a><a class="citation-ref" href="#source-6-s25">[S25]</a><a class="citation-ref" href="#source-6-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>权威性与专业背书</td>
+<td>4.8</td>
+<td>5.0</td>
+<td>资生堂集团与科研奖项提供权威背书。<a class="citation-ref" href="#source-6-s27">[S27]</a></td>
+</tr>
+<tr>
+<td>时间沉淀</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>1982 年至今，时间积累充分。<a class="citation-ref" href="#source-6-s27">[S27]</a></td>
+</tr>
+</tbody>
+</table>
+<h6>包装减负（2.9 / 5）</h6>
+<ul>
+<li>维度说明: 高端包装与仪式感强，但环保口径整体有限，使用便利性因单品不同略有差异。<a class="citation-ref" href="#source-6-s05">[S05]</a><a class="citation-ref" href="#source-6-s24">[S24]</a></li>
+<li>证据:<ul>
+<li>包装更偏高端体验和使用便利，而非明确环保减负。<a class="citation-ref" href="#source-6-s24">[S24]</a><a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>得分</th>
+<th>满分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>审美与品牌感</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>按规则固定 0 分。<a class="citation-ref" href="#source-6-s05">[S05]</a></td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>1.6</td>
+<td>2.0</td>
+<td>基于品类和使用方式给分。<a class="citation-ref" href="#source-6-s27">[S27]</a><a class="citation-ref" href="#source-6-s28">[S28]</a></td>
+</tr>
+<tr>
+<td>多场景适配</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>基于品类适配场景给分。<a class="citation-ref" href="#source-6-s05">[S05]</a><a class="citation-ref" href="#source-6-s24">[S24]</a></td>
+</tr>
+<tr>
+<td>环保与减负</td>
+<td>0.3</td>
+<td>1.0</td>
+<td>环保明确口径较少，保守给分。<a class="citation-ref" href="#source-6-s24">[S24]</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>待补证据: 更完整公开临床全文；更细的中国市场公开功效报告</li>
+<li>结论: 预评分总分为58.9分。品牌血统、成分表现相对较强，可进入下一步评审。</li>
+</ul>
+<h5>引用源索引</h5>
+<ul>
+<li><span id="source-6-s01" class="source-anchor"></span>[S01] 评分规则：可用斑贴测试固定 3 分 | 说明：safety.patch_test 固定为 3 分。</li>
+<li><span id="source-6-s02" class="source-anchor"></span>[S02] 评分规则：肤感与交互体验固定 0 分 | 说明：formula.sensory_experience 固定为 0 分。</li>
+<li><span id="source-6-s03" class="source-anchor"></span>[S03] 评分规则：玫瑰内部实测固定 0 分 | 说明：instant_effect.internal_test 固定为 0 分。</li>
+<li><span id="source-6-s04" class="source-anchor"></span>[S04] 评分规则：超蕙测/用户反馈固定 0 分 | 说明：instant_effect.user_feedback 固定为 0 分。</li>
+<li><span id="source-6-s05" class="source-anchor"></span>[S05] 评分规则：审美与品牌感固定 0 分 | 说明：packaging_burden.aesthetic 固定为 0 分。</li>
+<li><span id="source-6-s06" class="source-anchor"></span>[S06] Excel 文件：商品台账 | 字段：商品名称 | 摘录：CPB 光柔水凝气垫精华粉底膏 I10</li>
+<li><span id="source-6-s07" class="source-anchor"></span>[S07] Excel 文件：商品台账 | 字段：规格 | 摘录：15g</li>
+<li><span id="source-6-s08" class="source-anchor"></span>[S08] Excel 文件：商品台账 | 字段：价格 | 摘录：约 RMB 800-1000</li>
+<li><span id="source-6-s09" class="source-anchor"></span>[S09] Excel 文件：商品台账 | 字段：研发初心 | 摘录：依托 CPB 奢护与光采科技路线，强化高端体验与长期养护价值。</li>
+<li><span id="source-6-s10" class="source-anchor"></span>[S10] Excel 文件：商品台账 | 字段：成分 | 摘录：双重瞬活精粹、亮肌赋活精粹、持色粉末、防晒体系</li>
+<li><span id="source-6-s11" class="source-anchor"></span>[S11] Excel 文件：商品台账 | 字段：功效 | 摘录：防晒、保湿、美容修饰、养肤底妆</li>
+<li><span id="source-6-s12" class="source-anchor"></span>[S12] Excel 文件：商品台账 | 字段：适宜人群 | 摘录：高端精致补妆与轻奢养肤气垫用户</li>
+<li><span id="source-6-s13" class="source-anchor"></span>[S13] Excel 文件：商品台账 | 字段：亮点/功效通路 | 摘录：SPF31 / PFA11，24人保湿文献，养肤粉底叙事</li>
+<li><span id="source-6-s14" class="source-anchor"></span>[S14] Excel 文件：商品台账 | 字段：差异化优势 | 摘录：一按激活双效胶囊的养肤气垫表达</li>
+<li><span id="source-6-s15" class="source-anchor"></span>[S15] Excel 文件：商品台账 | 字段：使用方法 | 摘录：随身补妆或全脸底妆使用</li>
+<li><span id="source-6-s16" class="source-anchor"></span>[S16] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网页面标题 | 摘录：Radiant Cushion Foundation - Clé de Peau Beauté</li>
+<li><span id="source-6-s17" class="source-anchor"></span>[S17] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网完整 INCI | 摘录：Water(Aqua/Eau), Cyclopentasiloxane, Titanium Dioxide, Glycerin, Diphenylsiloxy Phenyl Trimethicone ... official site lists full ingredients.</li>
+<li><span id="source-6-s18" class="source-anchor"></span>[S18] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网成分故事 | 摘录：Official Radiant Cushion Foundation page positions it as a radiant skincare cushion foundation combining luminous finish and comfort.</li>
+<li><span id="source-6-s19" class="source-anchor"></span>[S19] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网页面摘录 | 摘录：Official Radiant Cushion Foundation page positions it as a radiant skincare cushion foundation combining luminous finish and comfort.</li>
+<li><span id="source-6-s20" class="source-anchor"></span>[S20] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网专利/技术证据 | 摘录：Brand signature Skin-Empowering Illuminator.</li>
+<li><span id="source-6-s21" class="source-anchor"></span>[S21] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网专利/技术证据 | 摘录：Local dossier emphasizes fresh activation capsule system.</li>
+<li><span id="source-6-s22" class="source-anchor"></span>[S22] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网临床摘要 | 摘录：NMPA efficacy summary: SPF31, PFA11, plus moisturizing support from base formula literature.</li>
+<li><span id="source-6-s23" class="source-anchor"></span>[S23] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网临床摘要 | 摘录：Official page supports radiant skincare cushion positioning.</li>
+<li><span id="source-6-s24" class="source-anchor"></span>[S24] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网包装环保说明 | 摘录：Portable compact and custom puff improve use burden.</li>
+<li><span id="source-6-s25" class="source-anchor"></span>[S25] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网核心成分 | 摘录：Skin-Empowering Illuminator - Brand signature complex.</li>
+<li><span id="source-6-s26" class="source-anchor"></span>[S26] 网页：https://www.cledepeau-beaute.com/de/A15500_de.html | 字段：官网核心成分 | 摘录：Dual fresh-activation essence story - Local dossier emphasizes dual essence activation upon pressing.</li>
+<li><span id="source-6-s27" class="source-anchor"></span>[S27] 附件文件：001-brand.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/001-brand.md | 摘录：# CPB 品牌摘要 - 品牌: CPB 肌肤之钥 / Clé de Peau Beauté，资生堂集团高端奢护品牌。 - 本地品牌资料写明：品牌诞生于 1982 年，融合日本前沿护肤科技与法式优雅美学，强调逾 40 年细胞科技、IFSCC 等科研奖项和奢护体验。 - 本地资料品牌矩阵显示护肤与底妆双轮驱动，核心单品集中在金致乳霜、钻光精华、4D 精雕眼霜…</li>
+<li><span id="source-6-s28" class="source-anchor"></span>[S28] 附件文件：007-cushion.md | 原文件：/Users/melissawang/Documents/Playground/Arose/重点品资料/CPB/run_prodect_score/extracted/007-cushion.md | 摘录：# 光柔水凝气垫精华粉底膏摘要 - 本地资料定位: 钻光方气垫，主打一按激活双重瞬活精粹、养肤精华与持色粉末合二为一、清冷裸钻光妆效。 - 国家药监局功效宣称摘要: - 产品中文名: 肌肤之钥光柔水凝气垫精华粉底膏 I10 - 宣称: 防晒、保湿、美容修饰 - SPF 值 31，PFA 值 11 - 24 名 35-55 岁亚洲女性基础配方文献支持保湿效果…</li>
+</ul>
+<h3>WBEFA 结果</h3>
+<h4>一、产品总判断</h4>
+<p>CPB 光柔水凝气垫精华粉底膏 I10高端养肤气垫，防晒和保湿有可核验基础，综合表达稳健。它的核心价值不只是贵，而是品牌血统、成分故事、工艺和高端体验一起成立。真正决定它是不是好讲的，是可核验功效证据深度。<a class="citation-ref" href="#source-6-s13">[S13]</a><a class="citation-ref" href="#source-6-s19">[S19]</a></p>
+<ul>
+<li>推荐等级: 观察中</li>
+<li>定位一句话: 高端养肤气垫，防晒和保湿有可核验基础，综合表达稳健。</li>
+</ul>
+<h4>二、W｜Why</h4>
+<h5>1. 玫瑰为什么值得推荐</h5>
+<ul>
+<li>CPB 适合做高客单、高品牌势能、高内容美感的组合盘。</li>
+<li>这类产品更依赖品牌信任和精致表达，而不只是单一数字功效。</li>
+<li>护肤和底妆双线都可承接内容。</li>
+</ul>
+<h5>2. 为什么是这个品牌</h5>
+<ul>
+<li>品牌历史、资生堂背景和 40 年科技叙事明显加分。</li>
+<li>品牌灵魂成分 Skin-Empowering Illuminator 使多单品表达有统一中心。</li>
+<li>高端价格带与品牌辨识度使它天然适合做品牌型选品。</li>
+</ul>
+<h5>3. 为什么是这个产品</h5>
+<ul>
+<li>高端养肤气垫，防晒和保湿有可核验基础，综合表达稳健。</li>
+<li>它更适合放在 CPB 高端奢护或奢妆矩阵里理解。</li>
+</ul>
+<h4>三、B｜Benefit</h4>
+<h5>1. 适合的用户</h5>
+<ul>
+<li>高端精致补妆与轻奢养肤气垫用户</li>
+</ul>
+<h5>2. 解决的痛点</h5>
+<ul>
+<li>防晒、保湿、美容修饰、养肤底妆</li>
+<li>消费者更在意高端体验、肤感、养肤感与品牌价值统一。</li>
+</ul>
+<h5>3. 对应的使用场景</h5>
+<ul>
+<li>随身补妆或全脸底妆使用</li>
+<li>精致妆护日常或高客单礼赠场景。</li>
+</ul>
+<h4>四、E｜Evidence</h4>
+<ul>
+<li>证据强度: 强</li>
+<li>总体判断: 品牌与官网支撑很强，部分产品还有本地人体或药监摘要；但不同单品的公开第三方深度并不完全一致。</li>
+</ul>
+<h5>强证据</h5>
+<ul>
+<li>同款官方页提供了完整 INCI、品牌灵魂成分和产品定位。<a class="citation-ref" href="#source-6-s17">[S17]</a><a class="citation-ref" href="#source-6-s18">[S18]</a></li>
+</ul>
+<h5>中证据</h5>
+<ul>
+<li>本地品牌资料提供了明确的目标人群、技术卖点和品牌矩阵角色。<a class="citation-ref" href="#source-6-s27">[S27]</a></li>
+</ul>
+<h5>弱证据</h5>
+<ul>
+<li>部分产品的即时效果更多来自品牌资料或官方摘要，公开强第三方全文仍有限。<a class="citation-ref" href="#source-6-s22">[S22]</a></li>
+</ul>
+<h4>五、F｜Feature</h4>
+<h5>1. 产品特性</h5>
+<ul>
+<li>SPF31 / PFA11，24人保湿文献，养肤粉底叙事</li>
+<li>一按激活双效胶囊的养肤气垫表达</li>
+</ul>
+<h5>2. 独家成分 / 技术</h5>
+<ul>
+<li>双重瞬活精粹、亮肌赋活精粹、持色粉末、防晒体系</li>
+<li>Official Radiant Cushion Foundation page positions it as a radiant skincare cushion foundation combining luminous finish and comfort.</li>
+</ul>
+<h5>3. 信任背书</h5>
+<ul>
+<li>品牌历史</li>
+<li>官网 INCI</li>
+<li>高端矩阵角色</li>
+</ul>
+<h5>4. 品牌背景</h5>
+<ul>
+<li>CPB 为资生堂集团高端奢护奢妆品牌。</li>
+<li>1982 年起源，逾 40 年科技叙事。</li>
+</ul>
+<h4>六、A｜Advantage</h4>
+<h5>1. 品牌势能强</h5>
+<ul>
+<li>记忆点: 高端品牌信任本身就是重要购买理由。</li>
+<li>解释: 尤其适合高客单内容与礼赠心智。</li>
+<li>适合玫瑰怎么讲: 这类产品不是只卖功效，也卖品牌稀缺感和精致感。</li>
+</ul>
+<h5>2. 成分与工艺叙事完整</h5>
+<ul>
+<li>记忆点: 灵魂成分和产品技术有统一中心。</li>
+<li>解释: 多单品表达不会散。</li>
+<li>适合玫瑰怎么讲: 从精华到底妆，都是同一个光采世界观。</li>
+</ul>
+<h4>七、判断边界</h4>
+<h5>1. 已知事实</h5>
+<ul>
+<li>品牌血统强。</li>
+<li>同款官网页可用。</li>
+<li>本地资料对核心单品定位较完整。</li>
+</ul>
+<h5>2. 谨慎判断</h5>
+<ul>
+<li>可以判断 CPB 组合整体偏强。</li>
+<li>眼霜、精华和金致乳霜更适合做护肤核心表达。</li>
+</ul>
+<h5>3. 当前无法判断</h5>
+<ul>
+<li>并非每个单品都有同等级公开临床全文。</li>
+</ul>
+<h5>4. 建议补充材料</h5>
+<ul>
+<li>补更多同款第三方公开报告全文。</li>
+</ul>
+<h4>八、风险与提醒</h4>
+<ul>
+<li>不宜把所有单品都讲成同样强功效。</li>
+<li>更适合按品牌型、高端型、体验型选品来组织表达。</li>
+<li>底妆线第三方公开临床通常弱于护肤线。</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

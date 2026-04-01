@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPB 组合评分分享页</title>
+  <style>
+    :root { --bg:#f3eee6; --paper:#fffdfa; --ink:#221c18; --muted:#6a615a; --line:rgba(61,49,41,.12); --gold:#b58a44; --shadow:0 24px 72px rgba(58,46,38,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC",sans-serif; background:linear-gradient(180deg,#fff8f1 0%,var(--bg) 50%,#ece4d7 100%); }
+    .page { width:min(1140px,calc(100% - 32px)); margin:0 auto; padding:28px 0 64px; }
+    .hero,.section,.card { background:var(--paper); border:1px solid var(--line); box-shadow:var(--shadow); border-radius:30px; }
+    .hero,.section { padding:30px; }
+    .section { margin-top:22px; }
+    .eyebrow,.pill { display:inline-flex; padding:8px 14px; border-radius:999px; background:rgba(34,28,24,.06); color:var(--muted); font-size:12px; }
+    h1 { margin:18px 0 12px; font-family:"Iowan Old Style","Songti SC",serif; font-size:clamp(34px,6vw,62px); line-height:1.04; }
+    p { color:var(--muted); line-height:1.8; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:18px; }
+    .card { padding:20px; }
+    .meta { display:flex; justify-content:space-between; align-items:center; margin-top:14px; }
+    .meta strong { font-size:24px; font-family:"Iowan Old Style","Songti SC",serif; }
+    @media (max-width: 920px) { .page{width:min(100%,calc(100% - 24px));} .grid{grid-template-columns:1fr;} .hero,.section{padding:22px;} }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">Rose Score Share</div>
+      <h1>CPB 品牌组合评分</h1>
+      <p>这次不是只看一个单品，而是把 CPB 代表性护肤和底妆一起放进来评。整体特征很清楚：品牌血统和成分科技叙事都非常强，真正拉开差异的是每个单品的可核验功效证据深浅不同。</p>
+      <p>品牌：CPB 肌肤之钥 / Clé de Peau Beauté</p>
+    </section>
+    <section class="section">
+      <h2>单品结果</h2>
+      <div class="grid">
+            <article class="card">
+              <div class="pill">Pass</div>
+              <h3>CPB 金致乳霜</h3>
+              <p>预评分总分为62.5分。成分、品牌血统表现相对较强，可进入下一步评审。</p>
+              <div class="meta"><strong>62.5 分</strong><span>C</span></div>
+            </article>
+            
+            <article class="card">
+              <div class="pill">Pass</div>
+              <h3>CPB 晶钻粉霜</h3>
+              <p>预评分总分为61.2分。品牌血统、成分表现相对较强，可进入下一步评审。</p>
+              <div class="meta"><strong>61.2 分</strong><span>C</span></div>
+            </article>
+            
+            <article class="card">
+              <div class="pill">Pass</div>
+              <h3>CPB 4D精雕眼霜</h3>
+              <p>预评分总分为64.3分。成分、品牌血统表现相对较强，可进入下一步评审。</p>
+              <div class="meta"><strong>64.3 分</strong><span>C</span></div>
+            </article>
+            
+            <article class="card">
+              <div class="pill">Pass</div>
+              <h3>CPB 钻光精华</h3>
+              <p>预评分总分为62.9分。成分、品牌血统表现相对较强，可进入下一步评审。</p>
+              <div class="meta"><strong>62.9 分</strong><span>C</span></div>
+            </article>
+            
+            <article class="card">
+              <div class="pill">Pass</div>
+              <h3>CPB 长管隔离</h3>
+              <p>预评分总分为57.4分。品牌血统、成分表现相对较强，可进入下一步评审。</p>
+              <div class="meta"><strong>57.4 分</strong><span>C</span></div>
+            </article>
+            
+            <article class="card">
+              <div class="pill">Pass</div>
+              <h3>CPB 光柔水凝气垫精华粉底膏 I10</h3>
+              <p>预评分总分为58.9分。品牌血统、成分表现相对较强，可进入下一步评审。</p>
+              <div class="meta"><strong>58.9 分</strong><span>C</span></div>
+            </article>
+            </div>
+    </section>
+  </main>
+</body>
+</html>
