@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>倍至蓝光牙刷分享页</title>
+  <style>
+    :root {
+      --bg: #f7f1e8;
+      --paper: #fffdf8;
+      --ink: #261f1b;
+      --muted: #6f645c;
+      --line: rgba(72, 54, 42, 0.12);
+      --salmon: #dc8f72;
+      --gold: #c8a262;
+      --teal: #2f7a78;
+      --shadow: 0 24px 80px rgba(77, 56, 42, 0.10);
+      --radius: 28px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(220,143,114,0.24), transparent 28%),
+        radial-gradient(circle at top right, rgba(47,122,120,0.16), transparent 25%),
+        linear-gradient(180deg, #fff8f0 0%, var(--bg) 52%, #efe8de 100%);
+    }
+    .page { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 64px; }
+    .hero {
+      background: linear-gradient(135deg, rgba(255,250,244,0.96), rgba(255,245,234,0.90));
+      border: 1px solid rgba(72,54,42,0.08);
+      border-radius: 32px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(47,122,120,0.16), transparent 68%);
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(38,31,27,0.06);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
+    h1 {
+      margin: 18px 0 10px;
+      font-family: "Iowan Old Style", "Songti SC", serif;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.04;
+      max-width: 760px;
+    }
+    .sub {
+      max-width: 760px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--muted);
+      margin: 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .score-hero {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .mini-stat {
+      background: #fff6ec;
+      border-radius: 20px;
+      padding: 14px;
+      border: 1px solid rgba(220,143,114,0.18);
+    }
+    .mini-stat span {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .mini-stat strong {
+      font-size: 28px;
+      font-family: "Iowan Old Style", "Songti SC", serif;
+    }
+    .section {
+      margin-top: 22px;
+      background: rgba(255,253,248,0.86);
+      border-radius: 32px;
+      padding: 28px;
+      border: 1px solid rgba(72,54,42,0.08);
+      box-shadow: 0 14px 48px rgba(77,56,42,0.06);
+    }
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      font-family: "Iowan Old Style", "Songti SC", serif;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--paper);
+      border-radius: 24px;
+      padding: 18px;
+      border: 1px solid var(--line);
+    }
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 17px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.8;
+      color: #403731;
+    }
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+    .adv-card {
+      padding: 20px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #fffaf4, #fff3e7);
+      border: 1px solid rgba(200,162,98,0.20);
+    }
+    .adv-index {
+      color: var(--gold);
+      font-family: "Iowan Old Style", "Songti SC", serif;
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    .adv-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .adv-card .lead { color: #8b5a45; font-weight: 600; }
+    .adv-card .rose { color: var(--teal); }
+    .evidence-group {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+    .evidence-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 16px;
+      min-height: 150px;
+    }
+    .evidence-card p { margin: 0; line-height: 1.8; }
+    .evidence-title {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .cites { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .cite {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 11px;
+      background: rgba(47,122,120,0.10);
+      color: var(--teal);
+    }
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0,1fr));
+      gap: 12px;
+    }
+    .score-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 10px;
+      text-align: center;
+    }
+    .score-card span {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .score-card strong {
+      font-size: 24px;
+      font-family: "Iowan Old Style", "Songti SC", serif;
+    }
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    @media (max-width: 900px) {
+      .hero-grid, .grid-2, .grid-3, .adv-grid, .evidence-group, .score-grid {
+        grid-template-columns: 1fr;
+      }
+      .score-hero {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 24px;
+      }
+      .section {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">Rose Internal Share · WBEFA + Score</div>
+      <h1>倍至蓝光美白电动牙刷</h1>
+      <p class="sub">这是一款把“居家刷牙”与“渐进式牙齿美白”绑定在一起的技术型口腔护理产品，核心价值不在一次性激进漂白，而在于把 460nm 蓝光、导能刷头和 PAP 牙膏协同成一套更容易长期坚持的家庭方案。它最适合被玫瑰定义为“更温和、更可持续的居家美白工具”，而不是医疗级美白替代。机会点在于技术故事、第三方检测和场景清晰；风险点在于 W66 单机闭环证据和材料透明度仍不够完整。</p>
+      <div class="hero-grid">
+        <div class="panel">
+          <h3>一句话定位</h3>
+          <p>一支更适合长期坚持、偏温和路线的居家蓝光美白电动牙刷。</p>
+          <div class="score-hero">
+            <div class="mini-stat"><span>预评分</span><strong>58.5</strong></div>
+            <div class="mini-stat"><span>等级</span><strong>C</strong></div>
+            <div class="mini-stat"><span>推荐等级</span><strong>可推荐</strong></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>当前结论</h3>
+          <ul>
+            <li>Gate: Hold</li>
+            <li>证据强度: 中</li>
+            <li>证据完整度: 0.68</li>
+            <li>核心人群: 12+ 外源性色渍、正畸后牙黄、想走温和居家亮白路线的人群</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>三大优势</h2>
+      <div class="adv-grid"><article class='adv-card'><div class='adv-index'>01</div><h3>把美白塞进日常刷牙动作里</h3><p class='lead'>不是额外加一步，而是把日常刷牙直接升级成长期亮白方案。</p><p>这降低了用户执行成本，也更容易形成真实长期使用。</p><p class='rose'>它不是那种需要你额外坚持的美白项目，而是你每天刷牙时顺手就在做的亮白维护。</p></article><article class='adv-card'><div class='adv-index'>02</div><h3>技术叙事比普通电动牙刷更完整</h3><p class='lead'>460nm 蓝光、导能系统和导光刷头一起构成了它的核心记忆点。</p><p>这让它不是简单的“会发光的牙刷”，而是有清晰技术结构的居家美白工具。</p><p class='rose'>真正值得记住的不是“蓝光”两个字，而是它把蓝光输出、刷头结构和牙膏协同讲成了一套逻辑。</p></article><article class='adv-card'><div class='adv-index'>03</div><h3>第三方检测让表达更能站住</h3><p class='lead'>安全、清洁和联用亮白都有第三方支撑，内容表达更容易收口。</p><p>虽然还不到可以无边界放大的程度，但至少不是纯品牌自述。</p><p class='rose'>我们可以讲它有检测基础、有亮白结果感，但不会把它讲成医疗级一次性漂白替代。</p></article></div>
+    </section>
+
+    <section class="section">
+      <h2>W | Why</h2>
+      <div class="grid-3">
+        <article class="card"><h3>为什么玫瑰值得推荐</h3><ul><li>玫瑰用户里存在明显的“想要牙齿更白，但不想走高刺激过氧化物路线”的需求，这款产品正好承接“有效但更温和”的解决方案。</li><li>它不是纯审美噱头，而是把日常刷牙动作升级成带结果感的长期护理，符合玫瑰偏“解决方案型选品”的逻辑。</li><li>技术点和结果点都足够可转述，既能做内容，也能做销售解释，不会只有一句空泛的“美白牙刷”。</li></ul></article>
+        <article class="card"><h3>为什么是这个品牌</h3><ul><li>倍至的品牌底色偏工程和专业口腔护理，品牌资料显示其 2018 年创立、团队背景来自 Philips、P&amp;G、Unilever、Midea 等企业，品牌真实性和专业感相对清晰。</li><li>它在品类里的差异不是“普通声波牙刷换个壳”，而是持续强化蓝光美白、冲牙器和专业口腔护理的技术路线。</li><li>品牌层面有专利、临床和检测叙事，虽然仍需区分品牌证据和单品证据，但至少不是完全靠营销词堆砌。</li></ul></article>
+        <article class="card"><h3>为什么是这个产品</h3><ul><li>在品牌矩阵里，这支 W66 更像是“美白能力显性化”的代表单品，最能承接用户对“更白、更干净、更容易坚持”的复合需求。</li><li>相比单纯强调清洁的电动牙刷，它的价值在于把蓝光、刷头结构和牙膏协同讲成一个更完整的机制。</li><li>如果要从倍至体系里优先推荐一个更容易被消费者理解的单品，这支蓝光美白电动牙刷比纯硬件清洁类产品更有内容传播性。</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>B | Benefit</h2>
+      <div class="grid-3">
+        <article class="card"><h3>适合的用户</h3><ul><li>核心目标用户：牙齿有外源性色渍、咖啡茶渍、烟渍或正畸后发黄困扰，又不想使用高刺激漂白方案的人。</li><li>次目标用户：已经有电动牙刷习惯，希望在不额外增加复杂步骤的情况下，把刷牙升级成“清洁 + 渐进美白”方案的人。</li><li>潜在延展用户：对形象管理敏感、经常出镜或社交频繁，想要长期维护牙齿状态的人群。</li></ul></article>
+        <article class="card"><h3>解决的痛点</h3><ul><li>它解决的不只是“牙齿不够白”，更是“现有美白手段要么刺激、要么麻烦、要么难坚持”的组合痛点。</li><li>它承接的是表层牙渍和淡黄的可视化改善需求，同时通过把美白动作嵌入刷牙流程，降低用户执行成本。</li><li>对于敏感口腔用户，它提供了一条比传统过氧化物更容易接受的温和路线，但这仍是保守判断，不应夸大为完全无刺激。</li></ul></article>
+        <article class="card"><h3>对应场景</h3><ul><li>每天早晚正常刷牙时，希望不额外加一步，也能顺手做美白维护。</li><li>正畸后、长期喝咖啡茶饮或吸烟后，想把外源性色渍慢慢刷浅的阶段。</li><li>出差、旅行或长期在外时，希望用一支设备兼顾清洁、亮白和续航，不想带多件工具。</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>E | Evidence</h2>
+      <p class="sub" style="max-width:none">证据链整体偏中上，安全和第三方检测部分较强，但最核心的美白强证据仍主要来自 W66 与 PAP 牙膏联用结果，单机与材料透明度仍有明显缺口。</p>
+      <div class="evidence-group">
+        <div>
+          <div class="evidence-title">Strong Evidence</div>
+          <article class='evidence-card'><p>WTS2025-19103 第三方测试报告直接验证了 W66 搭配活氧美白牙膏在 14 天、28 天节点的色阶和亮度改善，方法学和对照组信息相对完整。</p><div class='cites'><span class='cite'>S33</span></div></article><article class='evidence-card'><p>WTS2025-4111 报告显示 W66 在美白模式下体外清洁效率 89.9%，达到 1 级清洁效率。</p><div class='cites'><span class='cite'>S34</span></div></article><article class='evidence-card'><p>WTS2025-3293 光生物安全性报告显示 W66 在美白模式下归于“无危险类”，为蓝光安全边界提供了较强支撑。</p><div class='cites'><span class='cite'>S35</span></div></article><article class='evidence-card'><p>WTS2025-3413 通用安全检测报告显示该产品符合 GB 39669-2020 全项目要求。</p><div class='cites'><span class='cite'>S36</span></div></article>
+        </div>
+        <div>
+          <div class="evidence-title">Medium Evidence</div>
+          <article class='evidence-card'><p>品牌答疑与培训资料披露了专利能量灌注系统、4 倍导光刷头和蓝光 + PAP 协同逻辑，能支撑技术叙事，但仍以品牌自述和内部整理为主。</p><div class='cites'><span class='cite'>S31</span><span class='cite'>S32</span><span class='cite'>S22</span></div></article><article class='evidence-card'><p>官网同系列 W60 页面公开了 460nm 蓝光、Perlon 高透光刷丝、IPX7 和 180 天续航，能作为系列级增强证据，但不能完全替代 W66 同款证据。</p><div class='cites'><span class='cite'>S20</span><span class='cite'>S24</span><span class='cite'>S26</span></div></article><article class='evidence-card'><p>品牌资料提供了 2018 年创立、团队背景和口腔护理专业定位，为品牌血统提供了中等强度支撑。</p><div class='cites'><span class='cite'>S30</span></div></article>
+        </div>
+        <div>
+          <div class="evidence-title">Weak Evidence</div>
+          <article class='evidence-card'><p>当前几乎没有独立、可核验的真实用户长期反馈或复购型口碑材料。</p><div class='cites'><span class='cite'>S32</span></div></article><article class='evidence-card'><p>关于孕妇、哺乳期、口腔疾病人群的适配边界，目前更多是品牌答疑口径，不属于强医学证据。</p><div class='cites'><span class='cite'>S32</span></div></article><article class='evidence-card'><p>没有看到 W66 单机独立美白效果与完整材料透明清单，导致表达边界必须收住。</p><div class='cites'><span class='cite'>S32</span><span class='cite'>S20</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>F | Feature</h2>
+      <div class="grid-2">
+        <article class="card"><h3>产品特性</h3><ul><li>把居家刷牙、美白维护和结果感结合成一个日常护理动作，降低美白方案的执行门槛。</li><li>AI 模式、5 模式切换、屏显互动、漏刷提醒和 180 天续航，让它更偏“长期使用型设备”而非一次性尝鲜仪器。</li><li>12+ 人群可用，居家和差旅场景都能承接，使用方式直观。</li></ul></article>
+        <article class="card"><h3>独家成分 / 技术</h3><ul><li>核心技术不是传统意义成分，而是 460nm 蓝光系统、专利能量灌注结构和 4 倍导光刷头。</li><li>它的机制重点在于通过更稳定的刷头端蓝光输出，去协同激活 PAP 活氧牙膏中的美白路径。</li><li>相比普通“声波清洁 = 洁净白”的电动牙刷，它更强调从清洁走向“清洁 + 渐进亮白”的复合路径。</li></ul></article>
+        <article class="card"><h3>信任背书</h3><ul><li>有第三方清洁效率报告、光生物安全性报告和通用安全检测报告。</li><li>品牌答疑中能看到对敏感口腔、搭配牙膏、频率和不适管理的具体建议，说明其并非只强调结果，不谈边界。</li><li>品牌层面存在一定专利、工程和口腔专家共研叙事。</li></ul></article>
+        <article class="card"><h3>品牌背景</h3><ul><li>倍至定位专业口腔护理品牌，品牌资料显示 2018 年创立，强调循证、工程研发和全球专利积累。</li><li>品牌团队背景与口腔护理硬件方向匹配度较高，这对设备类产品尤其重要。</li><li>品牌更适合走“专业家用口腔护理”路线，而不是纯情绪化审美品牌路线。</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>六维评分</h2>
+      <div class="score-grid"><div class='score-card'><span>安全</span><strong>8.0</strong></div><div class='score-card'><span>成分</span><strong>17.5</strong></div><div class='score-card'><span>配方</span><strong>9.0</strong></div><div class='score-card'><span>即时效果</span><strong>7.0</strong></div><div class='score-card'><span>品牌血统</span><strong>14.5</strong></div><div class='score-card'><span>包装减负</span><strong>2.5</strong></div></div>
+      <div class="footer-note">当前评分结论: 先 Hold，建议补齐同款 W66 材料透明度、单机闭环功效证据和包装信息后再决定是否推进。</div>
+    </section>
+
+    <section class="section">
+      <h2>判断边界与风险</h2>
+      <div class="grid-2">
+        <article class="card"><h3>已知事实</h3><ul><li>W66 有第三方清洁效率、安全性和联用美白报告。</li><li>品牌资料和答疑材料可支撑其技术型口腔护理品牌定位。</li><li>产品场景、人群和使用方式都比较清晰。</li></ul></article>
+        <article class="card"><h3>谨慎判断</h3><ul><li>可以谨慎判断它是一个适合长期居家使用的渐进式亮白方案，而不是激进漂白型方案。</li><li>可以判断其技术叙事成立度高于普通电动牙刷，但还不能把所有品牌层专利直接等同为单机强证据。</li><li>可以认为它对外源性色渍和日常亮白维护更有吸引力，而不是解决所有牙色问题。</li></ul></article>
+        <article class="card"><h3>当前无法判断</h3><ul><li>W66 单机不搭配 PAP 牙膏时的独立美白闭环强度。</li><li>更完整的特殊人群适配边界和长期真实用户反馈。</li><li>环保包装、可回收材质和减负细节。</li></ul></article>
+        <article class="card"><h3>建议补充材料</h3><ul><li>W66 单机独立功效报告或更清晰的联用 / 单机边界说明。</li><li>真实用户前后对比、复购反馈和敏感口腔使用样本。</li><li>更完整的材料透明信息和包装说明。</li></ul></article>
+      </div>
+      <div class="card" style="margin-top:18px">
+        <h3>表达边界</h3>
+        <ul><li>不能把它讲成医疗器械或院线冷光项目替代，培训资料也明确提示“本产品非医疗器械，无医疗作用”。</li><li>美白核心结果要明确是与 PAP 活氧美白牙膏联用后的第三方结果，避免夸成设备单机强效果。</li><li>孕哺期、敏感口腔和基础口腔疾病用户仍应保守表达，建议遵医嘱或先低频试用。</li><li>官网公开页对应 W60，不是 W66 同款页，因此只能作为系列级辅助证据。</li></ul>
+      </div>
+      <p class="footer-note">注: 本页基于本地材料、第三方检测报告与同系列官网公开页整理。官网增强来自 W60 系列公开页，已按“系列级辅助证据”保守处理，不等同 W66 同款强证据。</p>
+    </section>
+  </main>
+</body>
+</html>
