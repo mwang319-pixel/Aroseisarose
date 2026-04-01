@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist&Artisan Top 10 Shortlist</title>
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --paper: #fffdf9;
+      --ink: #221b17;
+      --muted: #6c6158;
+      --line: #e7ddd1;
+      --accent: #a55f3d;
+      --accent-2: #6e8577;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(165,95,61,.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(110,133,119,.14), transparent 24%),
+        linear-gradient(180deg, #fffaf3 0%, var(--bg) 46%, #ece2d4 100%);
+    }
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+    .hero, .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 44px rgba(34, 27, 23, 0.06);
+    }
+    .hero {
+      border-radius: 30px;
+      padding: 30px;
+      margin-bottom: 22px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(34, 27, 23, 0.06);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .04em;
+    }
+    h1 {
+      margin: 16px 0 12px;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.05;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 880px;
+    }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .meta div {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      background: #fff;
+      text-align: center;
+    }
+    .meta span {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .meta strong {
+      font-size: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      border-radius: 24px;
+      padding: 22px;
+    }
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .rank {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .badge {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: rgba(110, 133, 119, 0.14);
+      color: #466052;
+      white-space: nowrap;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+    .scoreline {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .scorechip {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 8px 10px;
+      background: #fff;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .summary {
+      margin: 0 0 12px;
+      color: #433932;
+      line-height: 1.75;
+    }
+    .position {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+    .foot {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    @media (max-width: 860px) {
+      .meta, .grid { grid-template-columns: 1fr; }
+      .topline { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Artist&Artisan Top 10</div>
+      <h1>包袋适配评分 Top 10 Shortlist</h1>
+      <p>这份 shortlist 不是护肤品式的正式投品结论，而是把现有美妆评分框架迁移到包袋品类后的内部排序页。更适合回答先补哪几款资料最值得，不适合直接拿去做护肤品横向比较。</p>
+      <div class="meta">
+        <div><span>品牌</span><strong>AA</strong></div>
+        <div><span>入选数</span><strong>10</strong></div>
+        <div><span>最高分</span><strong>55</strong></div>
+        <div><span>可推荐</span><strong>1</strong></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card"><div class="topline"><div class="rank">TOP 1</div><div class="badge">可推荐</div></div><h2>玫瑰原创定制包 SY 星空系列</h2><div class="scoreline"><div class="scorechip">总分 55</div><div class="scorechip">等级 C</div><div class="scorechip">Gate Hold</div></div><p class="summary">当前全场最值得继续补证的一款，强项在于星空主题、法国提花与轻防泼水/保护逻辑，内容表达比常规目录款更完整。</p><p class="position">定位：更适合被定义为围绕收纳效率和高频使用场景展开的功能型包袋候选。</p></article>
+      <article class="card"><div class="topline"><div class="rank">TOP 2</div><div class="badge">观察中</div></div><h2>013 Minimal pouch</h2><div class="scoreline"><div class="scorechip">总分 51</div><div class="scorechip">等级 C</div><div class="scorechip">Gate Hold</div></div><p class="summary">极简小包方向里相对稳的一款，结构清楚，容易讲轻便、收纳、随身带着不占地方。</p><p class="position">定位：适合做高频日常随身收纳的小体积功能包。</p></article>
+      <article class="card"><div class="topline"><div class="rank">TOP 3</div><div class="badge">观察中</div></div><h2>6092 Square pouch for vertical storage</h2><div class="scoreline"><div class="scorechip">总分 51</div><div class="scorechip">等级 C</div><div class="scorechip">Gate Hold</div></div><p class="summary">竖放收纳这个点非常直给，功能理解成本低，是一款适合拿来讲整理效率的典型款。</p><p class="position">定位：更像一款围绕垂直收纳和包内秩序展开的工具型 pouch。</p></article>
+      <article class="card"><div class="topline"><div class="rank">TOP 4</div><div class="badge">观察中</div></div><h2>20 Tall vanity for travelling</h2><div class="scoreline"><div class="scorechip">总分 50</div><div class="scorechip">等级 C</div><div class="scorechip">Gate Hold</div></div><p class="summary">旅行场景很明确，名字本身就在替用户完成教育，适合做出差/旅行怎么装的内容。</p><p class="position">定位：旅行和短途出差导向的高容量 vanity pouch。</p></article>
+      <article class="card"><div class="topline"><div class="rank">TOP 5</div><div class="badge">观察中</div></div><h2>102 Multi-use tissue pouch</h2><div class="scoreline"><div class="scorechip">总分 49</div><div class="scorechip">等级 D</div><div class="scorechip">Gate Hold</div></div><p class="summary">多用途和纸巾位让它具备明确生活化入口，适合从随身小物整合切入。</p><p class="position">定位：偏轻便日常的小件整合型随身收纳包。</p></article>
+      <article class="card"><div class="topline"><div class="rank">TOP 6</div><div class="badge">观察中</div></div><h2>907 Minimal multi-use pouch</h2><div class="scoreline"><div class="scorechip">总分 49</div><div class="scorechip">等级 D</div><div class="scorechip">Gate Hold</div></div><p class="summary">跟 013 类似，胜在轻量和多用，但还需要更多材料和真实装载图把差异讲得更清楚。</p><p class="position">定位：偏极简、多用途和轻便携带的小型功能 pouch。</p></article>
+      <article class="card"><div class="topline"><div class="rank">TOP 7</div><div class="badge">观察中</div></div><h2>04 2-Way Wallet Pouch</h2><div class="scoreline"><div class="scorechip">总分 48</div><div class="scorechip">等级 D</div><div class="scorechip">Gate Hold</div></div><p class="summary">钱包加 pouch 双重身份很适合内容表达，用户更容易快速理解它能替代什么。</p><p class="position">定位：介于钱包和随身小包之间的双用途收纳工具。</p></article>
+      <article class="card"><div class="topline"><div class="rank">TOP 8</div><div class="badge">观察中</div></div><h2>KG2-604 Compact Clasp Opening Backpack</h2><div class="scoreline"><div class="scorechip">总分 48</div><div class="scorechip">等级 D</div><div class="scorechip">Gate Hold</div></div><p class="summary">在背包里它属于更有功能感的一款，适合从开口方式、取物效率和通勤便利性切入。</p><p class="position">定位：更偏通勤和日常移动场景的功能型小背包。</p></article>
+      <article class="card"><div class="topline"><div class="rank">TOP 9</div><div class="badge">观察中</div></div><h2>KG2-704 Clasp Opening Backpack</h2><div class="scoreline"><div class="scorechip">总分 48</div><div class="scorechip">等级 D</div><div class="scorechip">Gate Hold</div></div><p class="summary">和 604 同属值得观察的背包方向，容量和开口逻辑是它最有机会被看见的点。</p><p class="position">定位：更偏大一点容量的通勤/日常功能背包。</p></article>
+      <article class="card"><div class="topline"><div class="rank">TOP 10</div><div class="badge">观察中</div></div><h2>110H Slope shape pouch</h2><div class="scoreline"><div class="scorechip">总分 47</div><div class="scorechip">等级 D</div><div class="scorechip">Gate Hold</div></div><p class="summary">斜坡型包型本身就具备一定结构记忆点，如果后续能补材质和实拍，表达空间会更大。</p><p class="position">定位：靠包型和收纳便利性取胜的功能 pouch。</p></article>
+    </section>
+
+    <p class="foot">说明：这份 Top 10 基于当前目录资料、适配评分和包袋版 WBEFA 综合排序得出。若后续补齐销量、用户反馈、打样图、材质检测或真实装载图，排名仍可能变化。</p>
+  </main>
+</body>
+</html>
