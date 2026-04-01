@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIOEFFECT 蓓欧菲综合分享页</title>
+  <style>
+    :root {
+      --bg:#f4f0ea; --paper:#fffdf9; --ink:#221d1a; --muted:#6b625d; --line:rgba(75,60,50,.1);
+      --clay:#c97352; --sage:#5f8a75; --gold:#c59a5b; --shadow:0 24px 72px rgba(58,46,38,.08); --radius:28px;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; color:var(--ink); font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC",sans-serif;
+      background:radial-gradient(circle at top left, rgba(201,115,82,.18), transparent 26%),radial-gradient(circle at top right, rgba(95,138,117,.16), transparent 24%),linear-gradient(180deg,#fff9f3 0%,var(--bg) 48%,#ece5dc 100%);
+    }
+    .page { width:min(1180px,calc(100% - 32px)); margin:0 auto; padding:28px 0 64px; }
+    .hero,.section,.card { background:var(--paper); border:1px solid var(--line); box-shadow:var(--shadow); }
+    .hero { border-radius:34px; padding:36px; position:relative; overflow:hidden; }
+    .hero::after { content:""; position:absolute; right:-50px; top:-40px; width:240px; height:240px; background:radial-gradient(circle, rgba(95,138,117,.18), transparent 68%); }
+    .eyebrow { display:inline-flex; padding:8px 14px; border-radius:999px; background:rgba(34,29,26,.06); color:var(--muted); font-size:13px; letter-spacing:.04em; }
+    h1 { margin:18px 0 12px; font-family:"Iowan Old Style","Songti SC",serif; font-size:clamp(34px,6vw,66px); line-height:1.04; max-width:860px; }
+    .hero p { margin:0; max-width:860px; color:var(--muted); font-size:18px; line-height:1.8; }
+    .hero-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:20px; margin-top:28px; position:relative; z-index:1; }
+    .panel { background:#fff8f1; border:1px solid rgba(75,60,50,.08); border-radius:24px; padding:20px; }
+    .section { margin-top:22px; border-radius:32px; padding:28px; }
+    .section h2 { margin:0 0 18px; font-size:25px; font-family:"Iowan Old Style","Songti SC",serif; }
+    .product-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .product-card { border-radius:26px; padding:22px; }
+    .status { display:inline-flex; border-radius:999px; padding:6px 10px; font-size:12px; margin-bottom:12px; }
+    .status-pass { background:rgba(95,138,117,.15); color:#2f7156; }
+    .status-hold { background:rgba(201,115,82,.15); color:#9a4f33; }
+    .product-card h3 { margin:0 0 10px; font-size:24px; }
+    .summary { color:var(--muted); line-height:1.8; min-height:180px; }
+    .hero-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:16px 0; }
+    .hero-stats div,.score-chip { background:#fff; border:1px solid var(--line); border-radius:18px; padding:12px; text-align:center; }
+    .hero-stats span,.score-chip span { display:block; font-size:11px; color:var(--muted); margin-bottom:3px; }
+    .hero-stats strong,.score-chip strong { font-size:24px; font-family:"Iowan Old Style","Songti SC",serif; }
+    .score-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+    .split { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:16px; }
+    .split h4,.panel h3 { margin:0 0 8px; font-size:15px; }
+    ul { margin:0; padding-left:18px; line-height:1.8; color:#3e3631; }
+    .foot { color:var(--muted); font-size:13px; line-height:1.8; margin-top:16px; }
+    @media (max-width: 980px) {
+      .page { width:min(100%,calc(100% - 24px)); }
+      .hero,.section { padding:22px; }
+      .hero-grid,.product-grid,.split,.hero-stats,.score-grid { grid-template-columns:1fr; }
+      .summary { min-height:auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">Rose WBEFA + Score Share</div>
+      <h1>蓓欧菲 BIOEFFECT</h1>
+      <p>这组产品最清楚的结构不是“哪支都能推”，而是角色分层非常明确：基础 EGF 精华适合做品牌入口，双子精华最适合做高阶抗老主推，白金精华霜更适合做熟龄滋养的承接位。真正最值得优先上的，是双子精华。</p>
+      <div class="hero-grid">
+        <article class="panel">
+          <h3>组合结论</h3>
+          <ul>
+            <li>基础 EGF 精华：代表作入口款，适合温和抗老与品牌认知建立。</li>
+            <li>双子精华：证据链最完整，最适合作为高阶抗老主推款。</li>
+            <li>白金精华霜：更适合作为熟龄肌滋养抗老的搭配承接位。</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h3>最适合怎么讲</h3>
+          <ul>
+            <li>品牌讲“冰岛植物源性生长因子平台”，不要只讲单一成分神话。</li>
+            <li>双子精华讲“高阶抗老核心款”，而不是所有人的入门第一支。</li>
+            <li>面霜讲“熟龄肌承接位”，而不是替代双子精华的唯一主推款。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>单品综合拆解</h2>
+      <div class="product-grid"><article class='card product-card'><div class='status status-pass'>Pass</div><h3>蓓欧菲益肌焕颜修护精华露 15ml</h3><p class='summary'>这是一支最能代表 BIOEFFECT 品牌方法论的基础抗老精华，核心价值不是堆砌复杂成分，而是用极简 7 成分承载植物源性 EGF 的高势能修护逻辑。它最适合被玫瑰当作“品牌代表作”和“温和型高功效抗老入门款”来推荐。机会点在于品牌故事、平台技术和官网透明度都很强；风险点在于即时效果证据仍以品牌内部研究为主，表达边界要保持专业克制。</p><div class='hero-stats'><div><span>预评分</span><strong>64.3</strong></div><div><span>等级</span><strong>C</strong></div><div><span>WBEFA</span><strong>可推荐</strong></div></div><div class='score-grid'><div class='score-chip'><span>安全</span><strong>9.0</strong></div><div class='score-chip'><span>成分</span><strong>19.7</strong></div><div class='score-chip'><span>配方</span><strong>8.3</strong></div><div class='score-chip'><span>即时效果</span><strong>6.5</strong></div><div class='score-chip'><span>品牌血统</span><strong>17.5</strong></div><div class='score-chip'><span>包装减负</span><strong>3.3</strong></div></div><div class='split'><div><h4>为什么值得推</h4><ul><li>在品牌矩阵里，它是最经典、最易理解也最有代表性的那支产品。</li><li>它把品牌最核心的植物源性 EGF、极简配方和结果表达压缩成一支单品，用户理解门槛最低。</li><li>如果用户第一次接触品牌，这支比更高阶的双子精华更适合作为认知入口。</li></ul></div><div><h4>证据判断</h4><p>品牌底盘、官网透明度和核心成分壁垒都很强，但即时效果主要还是官网与品牌研究口径，因此证据链属于中上强度而不是满格临床型。</p></div></div><div class='split'><div><h4>三大优势</h4><ul><li>如果要认识 BIOEFFECT，这支就是最好的入口。</li><li>7 种成分不是做减法做得空，而是把重点全压在 EGF 这条主线上。</li><li>冰岛生物科技、大麦表达 EGF 和极简配方一起构成强记忆点。</li></ul></div><div><h4>风险边界</h4><ul><li>不适合夸成医美替代或立竿见影型抗老方案。</li><li>即时效果表达要明确主要来自品牌研究口径。</li><li>更适合讲长期维稳和温和抗老，而不是高刺激强结果路线。</li></ul></div></div></article><article class='card product-card'><div class='status status-pass'>Pass</div><h3>白金级浓萃双子精华露 15ml</h3><p class='summary'>这是一支最值得被当作 BIOEFFECT 高阶抗老核心款来理解的产品，核心价值在于把 EGF、KGF 和 NAG 组合成更完整的成熟肌解决方案。它不是基础抗老入门，而是针对已经出现明显老化、屏障和色沉问题的进阶型精华。机会点在于这组三款里它的证据链最完整、表达最强；风险点在于功效依旧主要由品牌研究主导，不能夸成完全独立临床金标准。</p><div class='hero-stats'><div><span>预评分</span><strong>69.2</strong></div><div><span>等级</span><strong>B</strong></div><div><span>WBEFA</span><strong>强推荐</strong></div></div><div class='score-grid'><div class='score-chip'><span>安全</span><strong>9.0</strong></div><div class='score-chip'><span>成分</span><strong>21.9</strong></div><div class='score-chip'><span>配方</span><strong>9.5</strong></div><div class='score-chip'><span>即时效果</span><strong>7.4</strong></div><div class='score-chip'><span>品牌血统</span><strong>18.1</strong></div><div class='score-chip'><span>包装减负</span><strong>3.3</strong></div></div><div class='split'><div><h4>为什么值得推</h4><ul><li>在品牌矩阵里，它承担的是明显高于基础 EGF Serum 的进阶定位。</li><li>双生长因子加 NAG，让它不只做皱纹，还能覆盖屏障、干燥和肤色问题。</li><li>如果用户只想买一支更高阶、结果感更完整的产品，这支是品牌里优先级最高的单品之一。</li></ul></div><div><h4>证据判断</h4><p>这组三款里，双子精华的证据链最完整。官网有完整机制和结果摘要，本地报告与 Excel 结果口径也高度一致，适合做主推款的证据底盘。</p></div></div><div class='split'><div><h4>三大优势</h4><ul><li>它不是只有概念强，连结果表达和定位边界都最清楚。</li><li>EGF + KGF 让它从“基础抗老”升级成“更成熟肌的系统方案”。</li><li>它的贵不是单一成分贵，而是技术路线、配方组合和结果表达都更完整。</li></ul></div><div><h4>风险边界</h4><ul><li>不适合夸成完全独立临床金标准级结果产品。</li><li>高阶抗老表达应强调长期使用，而不是短期医美替代。</li><li>更适合成熟肌、进阶抗老人群，不建议讲成所有人的第一支精华。</li></ul></div></div></article><article class='card product-card'><div class='status status-pass'>Pass</div><h3>蓓欧菲益肌白金级浓萃精华霜 50ml</h3><p class='summary'>这是一支更偏成熟肌滋养修护路线的高阶抗老面霜，核心价值不在单纯封层保湿，而在于把 BIOEFFECT 的 EGF 平台延伸到更丰润、更稳定的面霜场景。它最适合被玫瑰当作“进阶滋养抗老面霜”来推荐，而不是品牌第一认知入口。机会点在于品牌平台、成分组合和熟龄肌定位都成立；风险点在于它的主推性仍略低于双子精华，表达上更适合做搭配位或第二推荐位。</p><div class='hero-stats'><div><span>预评分</span><strong>65.8</strong></div><div><span>等级</span><strong>B</strong></div><div><span>WBEFA</span><strong>可推荐</strong></div></div><div class='score-grid'><div class='score-chip'><span>安全</span><strong>8.5</strong></div><div class='score-chip'><span>成分</span><strong>20.1</strong></div><div class='score-chip'><span>配方</span><strong>8.9</strong></div><div class='score-chip'><span>即时效果</span><strong>7.0</strong></div><div class='score-chip'><span>品牌血统</span><strong>18.1</strong></div><div class='score-chip'><span>包装减负</span><strong>3.2</strong></div></div><div class='split'><div><h4>为什么值得推</h4><ul><li>在品牌矩阵里，它更像承接熟龄滋养和夜间修护场景的一支高阶面霜。</li><li>如果用户已经接受品牌技术路线，面霜会是更容易扩展客单的第二支产品。</li><li>它不是最适合做第一认知入口的一支，但很适合做搭配升级位。</li></ul></div><div><h4>证据判断</h4><p>品牌与成分逻辑很完整，功效数据也不弱，但综合主推性和表达强度仍略低于双子精华，因此证据链是中上强度。</p></div></div><div class='split'><div><h4>三大优势</h4><ul><li>它让 BIOEFFECT 不只会做精华，也能把高端抗老面霜讲清楚。</li><li>EGF、β-葡聚糖、Oridonin 和烟酰胺让它不只是单纯封层保湿。</li><li>它的最好位置不是第一入口，而是认知建立后的升级选择。</li></ul></div><div><h4>风险边界</h4><ul><li>不建议把它放在品牌第一入口去强推，容易被双子精华抢走解释效率。</li><li>即时效果表达不宜夸成短期猛效，重点仍应放在长期熟龄护理。</li><li>更适合做套组、搭配和高客单延展，而不是单独主打唯一明星位。</li></ul></div></div></article></div>
+      <p class="foot">注：本页基于本地 Excel、PDF、ZIP 辅助资料与 BIOEFFECT 官网公开页整理。官网增强主要补强了完整 INCI、核心成分故事、功效摘要和包装环保说明。</p>
+    </section>
+  </main>
+</body>
+</html>
