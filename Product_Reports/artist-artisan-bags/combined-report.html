@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist&Artisan 包袋适配综合报告</title>
+  <style>
+    :root {
+      --bg: #f5efe6;
+      --paper: #fffdf9;
+      --ink: #231c18;
+      --muted: #6c615a;
+      --line: rgba(102, 84, 74, 0.14);
+      --accent: #a25b42;
+      --accent2: #607e73;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(162, 91, 66, 0.13), transparent 28%),
+        radial-gradient(circle at top right, rgba(96, 126, 115, 0.12), transparent 30%),
+        linear-gradient(180deg, #fffaf3 0%, var(--bg) 46%, #ece1d4 100%);
+    }
+    main {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 30px 18px 70px;
+    }
+    .hero, .panel, .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 44px rgba(35, 28, 24, 0.06);
+    }
+    .hero {
+      border-radius: 30px;
+      padding: 32px;
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      background: rgba(35, 28, 24, 0.06);
+    }
+    h1 {
+      margin: 16px 0 12px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.06;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", serif;
+    }
+    .hero p {
+      margin: 0;
+      max-width: 880px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    .stats, .grid {
+      display: grid;
+      gap: 14px;
+    }
+    .stats {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 22px;
+    }
+    .stats div {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      text-align: center;
+    }
+    .stats span {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .stats strong {
+      font-size: 24px;
+    }
+    .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .panel {
+      border-radius: 24px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+    .card {
+      border-radius: 20px;
+      padding: 18px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", serif;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    p, li {
+      color: #463b35;
+      line-height: 1.75;
+      font-size: 14px;
+    }
+    ul { margin: 0; padding-left: 18px; }
+    .tag {
+      display: inline-block;
+      margin-right: 8px;
+      margin-top: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(162, 91, 66, 0.10);
+      color: #8b4c37;
+      font-size: 12px;
+    }
+    .toplist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .topitem {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(255,255,255,.78);
+    }
+    .footer-note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 16px;
+      line-height: 1.8;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--accent2);
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    @media (max-width: 860px) {
+      .stats, .grid, .toplist { grid-template-columns: 1fr; }
+      .hero, .panel { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Combined Report</div>
+      <h1>Artist&amp;Artisan 包袋适配综合报告</h1>
+      <p>本次不是护肤品式标准投品结论，而是把现有 `product-score` 的六维逻辑迁移到包袋品类后的兼容版综合报告。它更适合内部排序、筛选 shortlist 和决定下一步补证方向，不适合直接和护肤品分数横向比较。</p>
+      <div class="stats">
+        <div><span>覆盖款数</span><strong>67</strong></div>
+        <div><span>最高分</span><strong>55</strong></div>
+        <div><span>可推荐</span><strong>1</strong></div>
+        <div><span>观察中</span><strong>13</strong></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>核心结论</h2>
+      <p>Artist&amp;Artisan 最适合玫瑰切入的，不是纯时尚审美包，而是围绕化妆、收纳、通勤、旅行这些高频真实场景的功能型包袋。品牌的稳定优势主要来自长期目录沉淀、Made in Japan 信任感、以及把包内整理逻辑做成可讲卖点的能力。</p>
+      <p>这次全量 67 款里，没有任何一款适合直接判定为 Pass，原因也比较一致：目前证据以目录、系列说明和提案资料为主，缺少统一官网单品页、真实用户反馈、销量、耐用性和更完整的材质/工艺证明。所以现在最合理的用法，是把这版结果拿来做内部排序和补证优先级，而不是直接作为最终投放结论。</p>
+      <span class="tag">功能型包袋优先</span>
+      <span class="tag">适合内部排序</span>
+      <span class="tag">仍需补证</span>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <h2>方法映射</h2>
+        <ul>
+          <li>`安全` 映射为材质透明度、基础检测与产地可信度。</li>
+          <li>`成分` 映射为面料工艺壁垒、结构卖点与故事表达。</li>
+          <li>`配方` 映射为结构布局、收纳逻辑与产品化完成度。</li>
+          <li>`即时效果` 映射为即用价值、打开即用的便利性与场景清晰度。</li>
+          <li>`品牌血统` 映射为产地、长期目录沉淀与专业收纳定位。</li>
+          <li>`包装减负` 映射为携带负担、易用性与多场景适配。</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>最值得推进的方向</h2>
+        <ul>
+          <li>最值得继续往下做的是 `SY 星空系列`，因为它的系列故事、法国提花和保护逻辑最完整，内容表达也最成熟。</li>
+          <li>第二梯队是 `013`、`6092`、`20`，因为它们的用途清楚，用户一眼能理解为什么要买。</li>
+          <li>背包方向里 `KG2-604`、`KG2-704` 值得保留观察，但仍需要更多容量、开合和上身场景证据。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Top 10 候选</h2>
+      <div class="toplist">
+        <div class="topitem"><h3>1. SY 星空系列</h3><p>55 分，C，唯一进入“可推荐”的候选。优势在于主题、面料故事和保护逻辑更完整。</p></div>
+        <div class="topitem"><h3>2. 013 Minimal pouch</h3><p>51 分，C。极简、轻便、日常随身收纳逻辑清楚。</p></div>
+        <div class="topitem"><h3>3. 6092 Square pouch for vertical storage</h3><p>51 分，C。竖放收纳心智非常直接，容易做整理效率表达。</p></div>
+        <div class="topitem"><h3>4. 20 Tall vanity for travelling</h3><p>50 分，C。旅行场景明确，适合讲出差和外出装载。</p></div>
+        <div class="topitem"><h3>5. 102 Multi-use tissue pouch</h3><p>49 分，D。轻生活向入口清楚，适合作为随身小件整合款观察。</p></div>
+        <div class="topitem"><h3>6. 907 Minimal multi-use pouch</h3><p>49 分，D。偏极简、多用途，但仍需要更多材质和实拍支撑。</p></div>
+        <div class="topitem"><h3>7. 04 2-Way Wallet Pouch</h3><p>48 分，D。钱包和 pouch 双用途身份，内容切入点清楚。</p></div>
+        <div class="topitem"><h3>8. KG2-604 Compact Clasp Opening Backpack</h3><p>48 分，D。背包方向里更有功能感的一款，适合观察。</p></div>
+        <div class="topitem"><h3>9. KG2-704 Clasp Opening Backpack</h3><p>48 分，D。容量和开口逻辑是重点，仍需更多上身和装载证据。</p></div>
+        <div class="topitem"><h3>10. 110H Slope shape pouch</h3><p>47 分，D。包型有记忆点，如果补足材质和实拍，表达空间会更大。</p></div>
+      </div>
+      <a class="button" href="./top10-shortlist.html">查看 Top 10 详情页</a>
+    </section>
+
+    <section class="panel">
+      <h2>当前风险</h2>
+      <ul>
+        <li>缺少统一官网单品页，单款材质与规格披露深度不够稳定。</li>
+        <li>缺少用户反馈、销量、复购和真实使用口碑，无法判断商业化上限。</li>
+        <li>缺少更完整的耐用性、五金、泼水、耐磨或打样细节，因此很多判断仍停留在“目录级可信”。</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>下一步建议</h2>
+      <ul>
+        <li>先补 `SY`、`013`、`6092`、`20` 四款的单款实拍和装载演示。</li>
+        <li>补真实材质、里布、五金、泼水或耐磨说明，让“功能”从目录卖点变成可验证信息。</li>
+        <li>如果要进入进一步筛选，最好补达人试用、团队试装或初步销量反馈。</li>
+      </ul>
+      <p class="footer-note">这页是为 GitHub Pages 分享而压缩后的综合页。它保留了最重要的排序结论和行动建议，适合快速分享。</p>
+    </section>
+  </main>
+</body>
+</html>
