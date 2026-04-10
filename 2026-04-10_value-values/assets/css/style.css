@@ -253,35 +253,6 @@ body {
     font-weight: 300;
 }
 
-.slide-bridge {
-    text-align: center;
-}
-
-.bridge-text {
-    width: 100%;
-    max-width: 940px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    color: var(--arose-black);
-}
-
-.bridge-label {
-    font-size: 12px;
-    color: var(--arose-black-60);
-    letter-spacing: 8px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-.bridge-line {
-    font-size: 34px;
-    font-weight: 500;
-    letter-spacing: 8px;
-    line-height: 1.2;
-}
-
 .cover-version {
     position: absolute;
     bottom: 85px;
@@ -327,6 +298,22 @@ body {
     justify-content: center;
     gap: 25px;
     margin-top: 25px;
+}
+
+.mvv-extensions {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.mvv-extensions p {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    line-height: 1.2;
+    color: var(--arose-black);
 }
 
 .value-tag {
@@ -1054,6 +1041,13 @@ body {
     .cover-title {
         font-size: 40px;
     }
+    .mvv-extensions {
+        margin-top: 28px;
+        gap: 12px;
+    }
+    .mvv-extensions p {
+        font-size: 24px;
+    }
     .mvv-values {
         flex-direction: column;
         align-items: center;
@@ -1080,15 +1074,6 @@ body {
         font-size: 20px;
     }
     .philosophy-em {
-        font-size: 24px;
-    }
-    .bridge-text {
-        gap: 14px;
-    }
-    .bridge-label {
-        margin-bottom: 4px;
-    }
-    .bridge-line {
         font-size: 24px;
     }
     .pager-controls {
