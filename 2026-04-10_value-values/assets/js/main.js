@@ -5,6 +5,10 @@ const pagerIndicator = document.querySelector('.pager-indicator');
 const prevButton = document.querySelector('[data-nav="prev"]');
 const nextButton = document.querySelector('[data-nav="next"]');
 
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 function goToSlide(index) {
     showSlide(index);
 }
@@ -34,6 +38,7 @@ function showSlide(index) {
 
     if (previousSlide) {
         previousSlide.classList.remove('is-active');
+        previousSlide.scrollTop = 0;
     }
 
     currentSlide = index;
@@ -41,6 +46,7 @@ function showSlide(index) {
     if (nextSlide) {
         nextSlide.classList.add('is-active');
         nextSlide.scrollTop = 0;
+        window.scrollTo(0, 0);
         revealSlide(nextSlide);
     }
 
@@ -85,8 +91,10 @@ window.addEventListener('load', () => {
     currentSlide = initialIndex;
     slides.forEach((slide, index) => {
         slide.classList.toggle('is-active', index === initialIndex);
+        slide.scrollTop = 0;
     });
     if (slides[initialIndex]) {
+        window.scrollTo(0, 0);
         revealSlide(slides[initialIndex]);
     }
     updatePager();
