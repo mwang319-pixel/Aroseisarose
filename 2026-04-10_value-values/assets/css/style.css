@@ -314,6 +314,8 @@ body {
     font-size: 13px;
     line-height: 1.6;
     font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.01em;
 }
 
 /* Collapsible Image Section - 图片按钮 */
@@ -520,6 +522,7 @@ body {
     font-size: 14px;
     color: var(--arose-black-60);
     line-height: 1.8;
+    white-space: pre-line;
 }
 
 /* Final Slide */
