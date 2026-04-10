@@ -653,16 +653,56 @@ body {
 }
 
 .slide-extreme-detail .content-wrapper {
-    max-width: 1080px;
+    max-width: 1020px;
+}
+
+.slide-extreme-detail {
+    justify-content: center;
+    padding-top: 44px;
+    padding-bottom: 72px;
+}
+
+.slide-extreme-detail .philosophy-hero {
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.slide-extreme-detail .philosophy-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.slide-extreme-detail .philosophy-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.slide-extreme-detail .philosophy-title {
+    font-size: 34px;
+    letter-spacing: 6px;
+}
+
+.slide-extreme-detail .philosophy-subtitle {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+.slide-extreme-detail .philosophy-grid {
+    gap: 14px;
+}
+
+.slide-extreme-detail .philosophy-card {
+    padding: 22px 22px 22px 46px;
+    min-height: 104px;
 }
 
 .slide-extreme-detail .pillars-grid {
     margin-top: 0;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 
 .slide-extreme-detail .content-header {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 
 .slide-love-detail .content-wrapper {
@@ -706,22 +746,33 @@ body {
 
 .pillar-item {
     background: var(--white);
-    padding: 30px;
+    padding: 26px 24px 24px 54px;
+    position: relative;
+    min-height: 118px;
 }
 
 .pillar-label {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--arose-black-60);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 12px;
     font-weight: 500;
 }
 
 .pillar-text {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.55;
     color: var(--arose-black);
     font-weight: 500;
+}
+
+.pillar-item .philosophy-number {
+    position: absolute;
+    left: -12px;
+    top: 24px;
+    margin-bottom: 0;
+    transform: none;
+    z-index: 1;
 }
 
 /* Red Lines */
@@ -1155,6 +1206,21 @@ body {
     }
     .slide-extreme-detail .pillars-grid {
         margin-bottom: 18px;
+    }
+    .pillar-item {
+        padding: 22px 18px 18px 46px;
+        min-height: 104px;
+    }
+    .pillar-item .philosophy-number {
+        left: -10px;
+        top: 18px;
+    }
+    .pillar-label {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+    .pillar-text {
+        font-size: 13px;
     }
     .slide-love-detail .content-header {
         margin-bottom: 18px;
