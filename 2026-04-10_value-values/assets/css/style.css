@@ -525,6 +525,10 @@ body {
     white-space: pre-line;
 }
 
+.redline-line {
+    display: block;
+}
+
 /* Final Slide */
 .slide-final {
     text-align: center;
