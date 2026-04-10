@@ -671,10 +671,10 @@ body {
 }
 
 .pillar-label {
-    font-size: 10px;
+    font-size: 14px;
     color: var(--arose-black-60);
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
     font-weight: 500;
 }
 
@@ -1052,6 +1052,11 @@ body {
     }
     .pillars-grid {
         grid-template-columns: 1fr;
+    }
+    .pillar-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
     }
     .section-title {
         font-size: 42px;
