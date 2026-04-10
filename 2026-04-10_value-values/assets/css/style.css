@@ -959,10 +959,12 @@ body {
 }
 
 .redline-desc {
-    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
     color: var(--arose-black-60);
-    line-height: 1.8;
-    white-space: pre-line;
+    line-height: 1.6;
 }
 
 .redline-line {
@@ -970,18 +972,17 @@ body {
 }
 
 .redline-line.lead {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--arose-black);
-    line-height: 1.55;
-    margin-bottom: 4px;
+    line-height: 1.45;
 }
 
 .redline-line.detail {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: var(--arose-black-60);
-    line-height: 1.8;
+    line-height: 1.55;
 }
 
 /* Final Slide */
@@ -1101,6 +1102,16 @@ body {
     }
     .philosophy-em {
         font-size: 26px;
+    }
+    .redline-desc {
+        gap: 3px;
+        font-size: 12px;
+    }
+    .redline-line.lead {
+        font-size: 13px;
+    }
+    .redline-line.detail {
+        font-size: 12px;
     }
     .image-modal-content {
         max-width: 95vw;
