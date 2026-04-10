@@ -130,13 +130,13 @@ body {
     position: fixed;
     top: 50%;
     right: 24px;
-    transform: translateY(-50%) translateX(calc(100% - 28px));
+    transform: translateY(-50%) translateX(calc(100% - 14px));
     z-index: 130;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 10px;
-    width: 240px;
+    gap: 8px;
+    width: 216px;
     transition: transform 0.25s ease;
 }
 
@@ -146,10 +146,9 @@ body {
 }
 
 .floating-directory {
-    padding: 10px;
-    padding-right: 14px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.82);
+    padding: 8px 8px 8px 10px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.86);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(62, 43, 47, 0.08);
     box-shadow: 0 14px 34px rgba(62, 43, 47, 0.08);
@@ -162,25 +161,25 @@ body {
     background: transparent;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 10px;
+    gap: 6px;
+    font-size: 9px;
     font-weight: 600;
     color: var(--arose-black-60);
-    letter-spacing: 3px;
-    margin-bottom: 8px;
-    padding: 2px 4px 6px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    padding: 1px 4px 4px;
     cursor: pointer;
 }
 
 .floating-directory-badge {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     display: inline-grid;
     place-items: center;
     border-radius: 999px;
     background: rgba(62, 43, 47, 0.08);
     color: var(--arose-black-60);
-    font-size: 11px;
+    font-size: 9px;
     line-height: 1;
 }
 
@@ -191,11 +190,11 @@ body {
     background: transparent;
     color: var(--arose-black-80);
     text-align: left;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.4;
-    letter-spacing: 0.5px;
-    padding: 8px 8px;
-    border-radius: 10px;
+    letter-spacing: 0.25px;
+    padding: 7px 6px;
+    border-radius: 9px;
     cursor: pointer;
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
@@ -1371,34 +1370,34 @@ body {
     .floating-rail {
         top: auto;
         bottom: 60px;
-        right: 8px;
+        right: 4px;
         transform: none;
-        width: min(230px, calc(100vw - 20px));
-        gap: 8px;
+        width: min(208px, calc(100vw - 12px));
+        gap: 6px;
     }
     .floating-directory {
-        padding: 10px;
+        padding: 8px 7px 8px 8px;
     }
     .floating-directory-button {
-        font-size: 11px;
-        padding: 8px 6px;
+        font-size: 10px;
+        padding: 6px 5px;
     }
     .floating-directory-header {
-        font-size: 9px;
+        font-size: 8px;
     }
     .floating-directory-badge {
-        width: 16px;
-        height: 16px;
-        font-size: 10px;
+        width: 13px;
+        height: 13px;
+        font-size: 8px;
     }
 }
 
 @media (hover: none) and (pointer: coarse) {
     .floating-rail {
         transform: none;
-        right: 8px;
+        right: 4px;
         top: auto;
         bottom: 60px;
-        width: min(230px, calc(100vw - 20px));
+        width: min(208px, calc(100vw - 12px));
     }
 }
