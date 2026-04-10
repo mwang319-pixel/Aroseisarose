@@ -38,6 +38,79 @@ body {
     background: var(--arose-pink);
 }
 
+.mvv-wrapper,
+.content-wrapper,
+.philosophy-hero,
+.philosophy-card,
+.redlines-hero,
+.redline-item,
+.final-mvv {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+}
+
+.slide.is-visible .mvv-wrapper,
+.slide.is-visible .content-wrapper,
+.slide.is-visible .philosophy-hero,
+.slide.is-visible .philosophy-card,
+.slide.is-visible .redlines-hero,
+.slide.is-visible .redline-item,
+.slide.is-visible .final-mvv {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.philosophy-icon,
+.redlines-icon {
+    animation: soft-breathe 5.8s ease-in-out infinite;
+}
+
+.philosophy-card,
+.redline-item {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.philosophy-card:hover,
+.redline-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 34px rgba(62, 43, 47, 0.08);
+}
+
+@keyframes soft-breathe {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-2px) scale(1.03);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mvv-wrapper,
+    .content-wrapper,
+    .philosophy-hero,
+    .philosophy-card,
+    .redlines-hero,
+    .redline-item,
+    .final-mvv,
+    .philosophy-icon,
+    .redlines-icon {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
 /* Logo Footer - 每页底部 */
 .logo-footer {
     position: absolute;

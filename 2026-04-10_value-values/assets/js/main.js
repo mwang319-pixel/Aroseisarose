@@ -38,11 +38,44 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             currentSlide = Array.from(slides).indexOf(entry.target);
+            revealSlide(entry.target);
         }
     });
 }, { threshold: 0.5 });
 
 slides.forEach(slide => observer.observe(slide));
+
+window.addEventListener('load', () => {
+    slides.forEach((slide) => {
+        const rect = slide.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < window.innerHeight * 0.9) {
+            revealSlide(slide);
+        }
+    });
+});
+
+function revealSlide(slide) {
+    if (slide.classList.contains('is-visible')) return;
+
+    slide.classList.add('is-visible');
+
+    const revealGroups = [
+        '.mvv-wrapper',
+        '.content-wrapper',
+        '.philosophy-hero',
+        '.philosophy-card',
+        '.redlines-hero',
+        '.redline-item',
+        '.final-mvv'
+    ];
+
+    revealGroups.forEach((selector) => {
+        const elements = slide.querySelectorAll(selector);
+        elements.forEach((element, index) => {
+            element.style.setProperty('--reveal-delay', `${index * 90}ms`);
+        });
+    });
+}
 
 let modalOverlay = null;
 
