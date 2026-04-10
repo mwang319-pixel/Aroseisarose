@@ -692,7 +692,7 @@ body {
 }
 
 .slide-extreme-detail .philosophy-card {
-    padding: 22px 22px 22px 46px;
+    padding: 22px 22px 22px 70px;
     min-height: 104px;
 }
 
@@ -836,27 +836,43 @@ body {
 
 .philosophy-card {
     background: var(--white);
-    padding: 26px 24px;
-    border-left: 4px solid var(--arose-black);
+    padding: 26px 24px 26px 84px;
+    border-left: none;
     min-height: 120px;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.philosophy-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 56px;
+    background: var(--arose-black);
+}
+
 .philosophy-number {
-    display: inline-flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: rgba(62, 43, 47, 0.07);
-    color: var(--arose-black);
-    font-size: 12px;
+    border-radius: 0;
+    background: transparent;
+    color: var(--white);
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-bottom: 14px;
+    margin: 0;
+    z-index: 1;
 }
 
 .philosophy-text {
@@ -1206,6 +1222,17 @@ body {
     }
     .slide-extreme-detail .pillars-grid {
         margin-bottom: 18px;
+    }
+    .slide-extreme-detail .philosophy-card {
+        padding: 20px 18px 18px 62px;
+        min-height: 92px;
+    }
+    .slide-extreme-detail .philosophy-card::before,
+    .slide-extreme-detail .philosophy-number {
+        width: 48px;
+    }
+    .slide-extreme-detail .philosophy-number {
+        font-size: 14px;
     }
     .pillar-item {
         padding: 22px 18px 18px 46px;
