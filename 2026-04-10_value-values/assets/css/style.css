@@ -641,11 +641,31 @@ body {
 }
 
 .philosophy-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     font-size: 22px;
     font-weight: 600;
     color: var(--arose-black);
     line-height: 1.55;
     letter-spacing: 0.5px;
+}
+
+.philosophy-text > * {
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        filter 0.45s ease;
+    transition-delay: calc(var(--reveal-delay, 0ms) + var(--part-delay, 0ms));
+    filter: blur(2px);
+}
+
+.slide.is-visible .philosophy-card.is-visible .philosophy-text > * {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
 }
 
 .philosophy-flow-prefix,
@@ -669,6 +689,7 @@ body {
     font-size: 14px;
     font-weight: 700;
     vertical-align: middle;
+    animation: flow-pulse 2.8s ease-in-out infinite;
 }
 
 .philosophy-em {
@@ -693,6 +714,50 @@ body {
     background: rgba(62, 43, 47, 0.08);
     color: var(--arose-black);
     box-shadow: inset 0 0 0 1px rgba(62, 43, 47, 0.12);
+}
+
+.slide.is-visible .philosophy-card.is-visible .philosophy-em-source {
+    animation: emphasize-source 2.8s ease-in-out infinite;
+}
+
+.slide.is-visible .philosophy-card.is-visible .philosophy-em-target {
+    animation: emphasize-target 2.8s ease-in-out infinite;
+}
+
+@keyframes flow-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        background: rgba(62, 43, 47, 0.08);
+    }
+    50% {
+        transform: scale(1.06);
+        background: rgba(62, 43, 47, 0.14);
+    }
+}
+
+@keyframes emphasize-source {
+    0%,
+    100% {
+        box-shadow: inset 0 0 0 1px rgba(201, 76, 76, 0.18);
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        box-shadow: inset 0 0 0 1px rgba(201, 76, 76, 0.34);
+        transform: translateY(-1px) scale(1.02);
+    }
+}
+
+@keyframes emphasize-target {
+    0%,
+    100% {
+        box-shadow: inset 0 0 0 1px rgba(62, 43, 47, 0.12);
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        box-shadow: inset 0 0 0 1px rgba(62, 43, 47, 0.22);
+        transform: translateY(-1px) scale(1.02);
+    }
 }
 
 .redlines-hero {
@@ -896,5 +961,8 @@ body {
     }
     .philosophy-text {
         font-size: 20px;
+    }
+    .philosophy-em {
+        font-size: 24px;
     }
 }

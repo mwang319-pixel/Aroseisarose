@@ -59,6 +59,21 @@ function revealSlide(slide) {
 
     slide.classList.add('is-visible');
 
+    if (slide.querySelector('.philosophy-grid')) {
+        const cards = Array.from(slide.querySelectorAll('.philosophy-card'));
+        const sequenceDelays = [0, 120, 240, 360, 480, 600, 720, 840, 960];
+
+        cards.forEach((card, cardIndex) => {
+            card.style.setProperty('--reveal-delay', `${cardIndex * 120}ms`);
+            card.classList.add('is-visible');
+
+            const phraseParts = Array.from(card.querySelectorAll('.philosophy-text > *'));
+            phraseParts.forEach((part, partIndex) => {
+                part.style.setProperty('--part-delay', `${sequenceDelays[partIndex] || 0}ms`);
+            });
+        });
+    }
+
     const revealGroups = [
         '.mvv-wrapper',
         '.content-wrapper',
