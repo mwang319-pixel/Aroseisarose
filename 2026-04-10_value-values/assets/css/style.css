@@ -225,6 +225,11 @@ body {
     text-align: center;
 }
 
+.slide-content-top {
+    justify-content: flex-start;
+    padding-top: 34px;
+}
+
 .cover-content {
     max-width: 800px;
 }
@@ -647,6 +652,19 @@ body {
     margin-top: 30px;
 }
 
+.slide-extreme-detail .content-wrapper {
+    max-width: 1080px;
+}
+
+.slide-extreme-detail .pillars-grid {
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+
+.slide-extreme-detail .content-header {
+    margin-bottom: 28px;
+}
+
 .pillar-item {
     background: var(--white);
     padding: 30px;
@@ -1052,6 +1070,9 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .slide-content-top {
+        padding-top: 26px;
+    }
     .philosophy-title {
         font-size: 34px;
         letter-spacing: 6px;
@@ -1075,6 +1096,9 @@ body {
     }
     .philosophy-em {
         font-size: 24px;
+    }
+    .slide-extreme-detail .pillars-grid {
+        margin-bottom: 18px;
     }
     .pager-controls {
         gap: 10px;
