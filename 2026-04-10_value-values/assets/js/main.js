@@ -1,12 +1,58 @@
 // Keyboard navigation
 let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const pagerIndicator = document.querySelector('.pager-indicator');
+const prevButton = document.querySelector('[data-nav="prev"]');
+const nextButton = document.querySelector('[data-nav="next"]');
 
 function goToSlide(index) {
-    if (index >= 0 && index < slides.length) {
-        slides[index].scrollIntoView({ behavior: 'smooth' });
-        currentSlide = index;
+    showSlide(index);
+}
+
+function updatePager() {
+    if (pagerIndicator) {
+        pagerIndicator.textContent = `${String(currentSlide + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
     }
+
+    if (prevButton) {
+        prevButton.disabled = currentSlide === 0;
+    }
+
+    if (nextButton) {
+        nextButton.disabled = currentSlide === slides.length - 1;
+    }
+}
+
+function showSlide(index) {
+    if (index < 0 || index >= slides.length || index === currentSlide) {
+        updatePager();
+        return;
+    }
+
+    const previousSlide = slides[currentSlide];
+    const nextSlide = slides[index];
+
+    if (previousSlide) {
+        previousSlide.classList.remove('is-active');
+    }
+
+    currentSlide = index;
+
+    if (nextSlide) {
+        nextSlide.classList.add('is-active');
+        nextSlide.scrollTop = 0;
+        revealSlide(nextSlide);
+    }
+
+    updatePager();
+}
+
+if (prevButton) {
+    prevButton.addEventListener('click', () => goToSlide(currentSlide - 1));
+}
+
+if (nextButton) {
+    nextButton.addEventListener('click', () => goToSlide(currentSlide + 1));
 }
 
 document.addEventListener('keydown', (e) => {
@@ -19,10 +65,10 @@ document.addEventListener('keydown', (e) => {
         return;
     }
     
-    if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
         e.preventDefault();
         goToSlide(currentSlide + 1);
-    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
         e.preventDefault();
         goToSlide(currentSlide - 1);
     } else if (e.key === 'Home') {
@@ -34,24 +80,16 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            currentSlide = Array.from(slides).indexOf(entry.target);
-            revealSlide(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-slides.forEach(slide => observer.observe(slide));
-
 window.addEventListener('load', () => {
-    slides.forEach((slide) => {
-        const rect = slide.getBoundingClientRect();
-        if (rect.bottom > 0 && rect.top < window.innerHeight * 0.9) {
-            revealSlide(slide);
-        }
+    const initialIndex = Math.max(0, Math.min(currentSlide, slides.length - 1));
+    currentSlide = initialIndex;
+    slides.forEach((slide, index) => {
+        slide.classList.toggle('is-active', index === initialIndex);
     });
+    if (slides[initialIndex]) {
+        revealSlide(slides[initialIndex]);
+    }
+    updatePager();
 });
 
 function revealSlide(slide) {

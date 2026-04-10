@@ -21,21 +21,49 @@ body {
     font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--arose-pink);
     color: var(--arose-black);
-    overflow-x: hidden;
+    overflow: hidden;
     font-weight: 400;
 }
 
 .slide {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 60px 80px 100px;
     position: relative;
-    page-break-after: always;
+    position: fixed;
+    inset: 0;
     background: var(--arose-pink);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(18px);
+    pointer-events: none;
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        visibility 0s linear 0.35s;
+}
+
+.slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+.slide:first-of-type {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
 }
 
 .mvv-wrapper,
@@ -84,6 +112,69 @@ body {
     box-shadow: 0 16px 34px rgba(62, 43, 47, 0.08);
 }
 
+.pager-controls {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 120;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 30px rgba(62, 43, 47, 0.08);
+    border: 1px solid rgba(62, 43, 47, 0.08);
+}
+
+.pager-button {
+    appearance: none;
+    border: none;
+    background: var(--arose-black);
+    color: var(--white);
+    border-radius: 999px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.pager-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    background: #2f2023;
+}
+
+.pager-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.pager-indicator {
+    min-width: 84px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--arose-black-60);
+    letter-spacing: 2px;
+}
+
+.nav-hint {
+    position: fixed;
+    right: 26px;
+    bottom: 28px;
+    font-size: 11px;
+    color: var(--arose-black-60);
+    background: rgba(250, 235, 239, 0.95);
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    z-index: 100;
+    letter-spacing: 1px;
+}
+
 @keyframes soft-breathe {
     0%,
     100% {
@@ -108,6 +199,10 @@ body {
         transition: none !important;
         opacity: 1 !important;
         transform: none !important;
+    }
+
+    .slide {
+        transition: none !important;
     }
 }
 
@@ -886,29 +981,22 @@ body {
     border: 2px solid var(--arose-black);
 }
 
-/* Navigation */
-.nav-hint {
-    position: fixed;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 11px;
-    color: var(--arose-black-60);
-    background: rgba(250, 235, 239, 0.95);
-    padding: 8px 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    z-index: 100;
-    letter-spacing: 1px;
-}
-
 /* Print styles */
 @media print {
     .slide {
         page-break-after: always;
         height: 100vh;
+        position: static;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        overflow: visible;
     }
     .nav-hint {
+        display: none;
+    }
+    .pager-controls {
         display: none;
     }
 }
@@ -964,5 +1052,22 @@ body {
     }
     .philosophy-em {
         font-size: 24px;
+    }
+    .pager-controls {
+        gap: 10px;
+        padding: 8px 10px;
+    }
+    .pager-button {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    .pager-indicator {
+        min-width: 70px;
+        font-size: 12px;
+    }
+    .nav-hint {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 76px;
     }
 }
