@@ -529,6 +529,21 @@ body {
     display: block;
 }
 
+.redline-line.lead {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--arose-black);
+    line-height: 1.55;
+    margin-bottom: 4px;
+}
+
+.redline-line.detail {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--arose-black-60);
+    line-height: 1.8;
+}
+
 /* Final Slide */
 .slide-final {
     text-align: center;
