@@ -665,6 +665,22 @@ body {
     margin-bottom: 28px;
 }
 
+.slide-love-detail .content-wrapper {
+    max-width: 1080px;
+}
+
+.slide-love-detail .content-header {
+    margin-bottom: 24px;
+}
+
+.slide-love-detail .core-text {
+    margin-bottom: 22px;
+}
+
+.slide-love-detail .keypoint-card {
+    margin-bottom: 20px;
+}
+
 .pillar-item {
     background: var(--white);
     padding: 30px;
@@ -1105,6 +1121,15 @@ body {
     }
     .slide-extreme-detail .pillars-grid {
         margin-bottom: 18px;
+    }
+    .slide-love-detail .content-header {
+        margin-bottom: 18px;
+    }
+    .slide-love-detail .core-text {
+        margin-bottom: 18px;
+    }
+    .slide-love-detail .keypoint-card {
+        margin-bottom: 16px;
     }
     .pager-controls {
         gap: 10px;
