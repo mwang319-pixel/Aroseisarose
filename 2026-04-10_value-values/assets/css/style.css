@@ -113,7 +113,10 @@ body {
 }
 
 .pager-controls {
-    position: static;
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
     display: inline-flex;
     align-items: center;
     gap: 14px;
@@ -1399,5 +1402,10 @@ body {
         top: auto;
         bottom: 60px;
         width: min(208px, calc(100vw - 12px));
+    }
+    .pager-controls {
+        left: 50%;
+        bottom: 14px;
+        transform: translateX(-50%);
     }
 }
