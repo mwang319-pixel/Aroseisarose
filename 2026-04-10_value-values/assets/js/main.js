@@ -4,6 +4,7 @@ const slides = Array.from(document.querySelectorAll('.slide'));
 const pagerIndicator = document.querySelector('.pager-indicator');
 const prevButton = document.querySelector('[data-nav="prev"]');
 const nextButton = document.querySelector('[data-nav="next"]');
+const directoryButtons = Array.from(document.querySelectorAll('.floating-directory-button'));
 
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
@@ -25,6 +26,8 @@ function updatePager() {
     if (nextButton) {
         nextButton.disabled = currentSlide === slides.length - 1;
     }
+
+    updateDirectory();
 }
 
 function showSlide(index) {
@@ -60,6 +63,15 @@ if (prevButton) {
 if (nextButton) {
     nextButton.addEventListener('click', () => goToSlide(currentSlide + 1));
 }
+
+directoryButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const target = Number(button.dataset.slide);
+        if (!Number.isNaN(target)) {
+            goToSlide(target);
+        }
+    });
+});
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -135,6 +147,22 @@ function revealSlide(slide) {
         elements.forEach((element, index) => {
             element.style.setProperty('--reveal-delay', `${index * 90}ms`);
         });
+    });
+}
+
+function updateDirectory() {
+    if (!directoryButtons.length) return;
+
+    let activeIndex = 0;
+    directoryButtons.forEach((button, index) => {
+        const slideIndex = Number(button.dataset.slide);
+        if (!Number.isNaN(slideIndex) && currentSlide >= slideIndex) {
+            activeIndex = index;
+        }
+    });
+
+    directoryButtons.forEach((button, index) => {
+        button.classList.toggle('is-active', index === activeIndex);
     });
 }
 
