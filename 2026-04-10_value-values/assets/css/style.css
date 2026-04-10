@@ -30,7 +30,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 60px 80px 100px;
     position: relative;
@@ -59,16 +59,6 @@ body {
         transform 0.35s ease;
 }
 
-.slide-cover,
-.slide-section,
-.slide-final {
-    justify-content: center;
-}
-
-.slide-toc {
-    justify-content: flex-start;
-}
-
 .slide:first-of-type {
     opacity: 1;
     visibility: visible;
@@ -78,7 +68,6 @@ body {
 
 .mvv-wrapper,
 .content-wrapper,
-.toc-wrapper,
 .philosophy-hero,
 .philosophy-card,
 .redlines-hero,
@@ -95,7 +84,6 @@ body {
 
 .slide.is-visible .mvv-wrapper,
 .slide.is-visible .content-wrapper,
-.slide.is-visible .toc-wrapper,
 .slide.is-visible .philosophy-hero,
 .slide.is-visible .philosophy-card,
 .slide.is-visible .redlines-hero,
@@ -279,122 +267,6 @@ body {
     width: 100%;
     max-width: 1000px;
     text-align: center;
-}
-
-/* Toc Slide */
-.toc-wrapper {
-    width: 100%;
-    max-width: 1120px;
-    padding-top: 10px;
-}
-
-.toc-hero {
-    text-align: center;
-    margin-bottom: 22px;
-}
-
-.toc-label {
-    font-size: 11px;
-    color: var(--arose-black-60);
-    letter-spacing: 6px;
-    margin-bottom: 12px;
-    font-weight: 400;
-}
-
-.toc-title {
-    font-size: 44px;
-    font-weight: 500;
-    color: var(--arose-black);
-    letter-spacing: 10px;
-    margin: 0 0 14px;
-}
-
-.toc-subtitle {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--arose-black-80);
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-.toc-badges {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-bottom: 22px;
-}
-
-.toc-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 16px;
-    border-radius: 999px;
-    font-size: 13px;
-    letter-spacing: 1px;
-    border: 1px solid var(--arose-black-20);
-    background: rgba(255, 255, 255, 0.72);
-    color: var(--arose-black-80);
-}
-
-.toc-badge-start {
-    background: rgba(62, 43, 47, 0.06);
-}
-
-.toc-badge-end {
-    background: rgba(201, 76, 76, 0.08);
-    border-color: rgba(201, 76, 76, 0.18);
-}
-
-.toc-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.toc-card {
-    appearance: none;
-    border: 1px solid rgba(62, 43, 47, 0.12);
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 235, 239, 0.9));
-    border-left: 4px solid var(--arose-black);
-    padding: 22px 24px;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    min-height: 126px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.toc-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 34px rgba(62, 43, 47, 0.08);
-}
-
-.toc-card-index {
-    width: fit-content;
-    padding: 6px 11px;
-    border-radius: 999px;
-    background: rgba(62, 43, 47, 0.08);
-    color: var(--arose-black);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.toc-card-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--arose-black);
-    letter-spacing: 1px;
-}
-
-.toc-card-desc {
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--arose-black-60);
 }
 
 .mvv-item {
@@ -1157,13 +1029,6 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    .toc-title {
-        font-size: 36px;
-        letter-spacing: 6px;
-    }
-    .toc-grid {
-        grid-template-columns: 1fr;
-    }
     .philosophy-title {
         font-size: 34px;
         letter-spacing: 6px;
@@ -1187,9 +1052,6 @@ body {
     }
     .philosophy-em {
         font-size: 24px;
-    }
-    .toc-card-title {
-        font-size: 18px;
     }
     .pager-controls {
         gap: 10px;
