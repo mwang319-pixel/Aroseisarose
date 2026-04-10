@@ -568,11 +568,58 @@ body {
 }
 
 .philosophy-text {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--arose-black);
     line-height: 1.55;
+    letter-spacing: 0.5px;
+}
+
+.philosophy-flow-prefix,
+.philosophy-flow-mid {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--arose-black-60);
+    vertical-align: middle;
+}
+
+.philosophy-flow-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: rgba(62, 43, 47, 0.08);
+    color: var(--arose-black);
+    font-size: 14px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.philosophy-em {
+    display: inline-block;
+    padding: 2px 10px 4px;
+    margin: 0 4px;
+    border-radius: 999px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.1;
     letter-spacing: 1px;
+    vertical-align: middle;
+}
+
+.philosophy-em-source {
+    background: rgba(201, 76, 76, 0.10);
+    color: #B33C3C;
+    box-shadow: inset 0 0 0 1px rgba(201, 76, 76, 0.18);
+}
+
+.philosophy-em-target {
+    background: rgba(62, 43, 47, 0.08);
+    color: var(--arose-black);
+    box-shadow: inset 0 0 0 1px rgba(62, 43, 47, 0.12);
 }
 
 .redlines-hero {
@@ -760,6 +807,9 @@ body {
         font-size: 34px;
         letter-spacing: 6px;
     }
+    .philosophy-em {
+        font-size: 26px;
+    }
     .image-modal-content {
         max-width: 95vw;
         max-height: 95vh;
@@ -770,5 +820,8 @@ body {
     }
     .philosophy-grid {
         grid-template-columns: 1fr;
+    }
+    .philosophy-text {
+        font-size: 20px;
     }
 }
