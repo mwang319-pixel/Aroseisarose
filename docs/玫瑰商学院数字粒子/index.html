@@ -293,12 +293,15 @@
                 return trimmed.split('#')[0].replace(/\/+$/, '');
             };
 
-            const savedUrl = normalize(localStorage.getItem('rose_mobile_share_base_url'));
-            if (savedUrl) {
-                return `${savedUrl}#mobile`;
+            const loc = window.location;
+            const isManualSetup = loc.protocol === 'file:' || !loc.hostname;
+            if (isManualSetup) {
+                const savedUrl = normalize(localStorage.getItem('rose_mobile_share_base_url'));
+                if (savedUrl) {
+                    return `${savedUrl}#mobile`;
+                }
             }
 
-            const loc = window.location;
             if (loc.protocol === 'http:' || loc.protocol === 'https:') {
                 return `${loc.origin}${loc.pathname}${loc.search}#mobile`;
             }
