@@ -294,7 +294,8 @@
             };
 
             const loc = window.location;
-            const isManualSetup = loc.protocol === 'file:' || !loc.hostname;
+            const isLoopbackHost = loc.hostname === 'localhost' || loc.hostname === '127.0.0.1' || loc.hostname === '::1';
+            const isManualSetup = loc.protocol === 'file:' || !loc.hostname || isLoopbackHost;
             if (isManualSetup) {
                 const savedUrl = normalize(localStorage.getItem('rose_mobile_share_base_url'));
                 if (savedUrl) {
@@ -303,6 +304,9 @@
             }
 
             if (loc.protocol === 'http:' || loc.protocol === 'https:') {
+                if (isLoopbackHost) {
+                    return '';
+                }
                 return `${loc.origin}${loc.pathname}${loc.search}#mobile`;
             }
 
@@ -349,7 +353,7 @@
             const tip = document.getElementById('share-url-tip');
             if (!shareConfig || !shareInput || !saveBtn || !tip) return;
 
-            const needsManualUrl = window.location.protocol === 'file:' || !window.location.hostname;
+            const needsManualUrl = window.location.protocol === 'file:' || !window.location.hostname || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname === '::1';
             shareConfig.style.display = needsManualUrl ? 'grid' : 'none';
 
             if (needsManualUrl) {
