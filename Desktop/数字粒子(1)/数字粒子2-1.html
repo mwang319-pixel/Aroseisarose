@@ -448,10 +448,10 @@
             stage2SettleDuration: 1200,
             stage2GlowDelay: 1350,
             stage2GlowRampDuration: 850,
-            initialParticles: 12,
-            autoSpawnBatch: 2,
-            autoSpawnInterval: 320,
-            autoSpawnCapRatio: 0.16
+            initialParticles: 120,
+            autoSpawnBatch: 12,
+            autoSpawnInterval: 180,
+            autoSpawnCapRatio: 0.42
         };
 
         // ==========================================
@@ -966,8 +966,8 @@
                 bc = new BroadcastChannel('rose_business_school');
                 bc.onmessage = (event) => {
                     if (event.data === 'spawn_particles' && state === 0) {
-                        // 每收到一次手机请求，激活100个粒子飞向中心
-                        activeParticles = Math.min(activeParticles + 100, CONFIG.totalParticles);
+                        // 每收到一次手机请求，激活更多粒子飞向中心，强化递增观感
+                        activeParticles = Math.min(activeParticles + 220, CONFIG.totalParticles);
                     }
                 };
             } catch (err) {
@@ -983,7 +983,7 @@
         window.addEventListener('keydown', (e) => {
             if (e.code === 'Space' && state === 0) {
                 // 空格键模拟员工扫码发送
-                activeParticles = Math.min(activeParticles + 300, CONFIG.totalParticles);
+                activeParticles = Math.min(activeParticles + 600, CONFIG.totalParticles);
             }
             if (e.code === 'Enter' && state === 1) {
                 // 回车键可强行跳过手势直接启动
