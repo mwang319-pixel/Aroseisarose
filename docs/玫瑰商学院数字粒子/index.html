@@ -431,9 +431,9 @@
         const CONFIG = {
             particlePalette: [0xfdfdff, 0xfff3fb, 0xffd9ea, 0xffc4de, 0xcfe7ff, 0xb8fff1],
             logoNebulaPalette: [0xffffff, 0xfff1f8, 0xffd4e9, 0xffb8d7, 0xd8cfff, 0xc8ebff],
-            particleSize: 10.2,
-            launchParticleSize: 11.0,
-            totalParticles: 28000,
+            particleSize: 9.2,
+            launchParticleSize: 8.0,
+            totalParticles: 36000,
             gatherTime: 30000,            // 第一阶段汇聚时间(毫秒)，当前设为30秒
             logoText: '玫瑰商学院',        // 最终展示的品牌文字
             logoImagePath: '',
@@ -442,8 +442,8 @@
             particleSpeedMultiplier: 3,
             orbitRadiusMin: 120,
             orbitRadiusMax: 1650,
-            logoScale: 0.86,
-            logoOffsetY: 118,
+            logoScale: 0.6,
+            logoOffsetY: 56,
             textLaunchDelay: 2380,
             stage2CenterPullDuration: 1400,
             stage2LogoRevealDuration: 1250,
@@ -853,6 +853,15 @@
             const imgData = ctx.getImageData(0, 0, w, h).data;
             const brightPoints = [];
             const darkPoints = [];
+            const edgePoints = [];
+            const isDarkPixel = (x, y) => {
+                if (x < 0 || x >= w || y < 0 || y >= h) return false;
+                const idx = (y * w + x) * 4;
+                const a = imgData[idx + 3];
+                if (a < 24) return false;
+                const luma = 0.299 * imgData[idx] + 0.587 * imgData[idx + 1] + 0.114 * imgData[idx + 2];
+                return luma < 140;
+            };
             for (let y = 0; y < h; y += 1) {
                 for (let x = 0; x < w; x += 1) {
                     const idx = (y * w + x) * 4;
@@ -869,11 +878,20 @@
                             z: (Math.random() - 0.5) * 20 // 赋予一点厚度
                         });
                     } else if (luma < 140) { // 白底上的深色 logo
-                        darkPoints.push({
+                        const point = {
                             x: x - w / 2,
                             y: -(y - h / 2),
                             z: (Math.random() - 0.5) * 20
-                        });
+                        };
+                        darkPoints.push(point);
+                        if (
+                            !isDarkPixel(x - 1, y) ||
+                            !isDarkPixel(x + 1, y) ||
+                            !isDarkPixel(x, y - 1) ||
+                            !isDarkPixel(x, y + 1)
+                        ) {
+                            edgePoints.push(point);
+                        }
                     }
                 }
             }
@@ -890,15 +908,22 @@
             // 将提取的点按总量缩放适配
             finalPositions = new Float32Array(CONFIG.totalParticles * 3);
             finalColors = new Float32Array(CONFIG.totalParticles * 3);
+            const prefersEdgeSampling = edgePoints.length > 0 && darkPoints.length > edgePoints.length;
+            const edgeSampleRatio = 0.58;
             for (let i = 0; i < CONFIG.totalParticles; i++) {
-                const sourcePoint = tempPoints[Math.floor(i * tempPoints.length / CONFIG.totalParticles)];
-                const thickness = (Math.sin(i * 0.23) + Math.cos(i * 0.11)) * 8.5;
+                const useEdgePoint = prefersEdgeSampling && (i / CONFIG.totalParticles) < edgeSampleRatio;
+                const sourceSet = useEdgePoint ? edgePoints : tempPoints;
+                const sourceProgress = useEdgePoint
+                    ? (i / Math.max(1, CONFIG.totalParticles * edgeSampleRatio))
+                    : ((i - CONFIG.totalParticles * edgeSampleRatio) / Math.max(1, CONFIG.totalParticles * (1 - edgeSampleRatio)));
+                const sourcePoint = sourceSet[Math.floor(clamp01(sourceProgress) * Math.max(0, sourceSet.length - 1))];
+                const thickness = (Math.sin(i * 0.23) + Math.cos(i * 0.11)) * 2.2;
                 const nebulaColor = getLogoNebulaColor(sourcePoint, i, w, h);
-                const spreadX = Math.sin(i * 0.73) * 0.45;
-                const spreadY = Math.cos(i * 0.51) * 0.45;
-                const spreadZ = Math.sin(i * 0.37) * 0.35;
+                const spreadX = Math.sin(i * 0.73) * 0.12;
+                const spreadY = Math.cos(i * 0.51) * 0.12;
+                const spreadZ = Math.sin(i * 0.37) * 0.08;
                 finalPositions[i*3] = sourcePoint.x * CONFIG.logoScale + spreadX;
-                finalPositions[i*3+1] = sourcePoint.y * CONFIG.logoScale + CONFIG.logoOffsetY + Math.sin(sourcePoint.x * 0.015) * 6 + spreadY;
+                finalPositions[i*3+1] = sourcePoint.y * CONFIG.logoScale + CONFIG.logoOffsetY + Math.sin(sourcePoint.x * 0.015) * 1.8 + spreadY;
                 finalPositions[i*3+2] = sourcePoint.z + thickness + spreadZ;
                 finalColors[i*3] = nebulaColor.r;
                 finalColors[i*3+1] = nebulaColor.g;
