@@ -332,6 +332,15 @@ body {
     font-weight: 300;
 }
 
+.cover-year {
+    position: absolute;
+    bottom: 85px;
+    left: clamp(24px, 5vw, 50px);
+    font-size: 12px;
+    color: var(--arose-black-60);
+    letter-spacing: 2px;
+}
+
 /* MVV Slide */
 .mvv-wrapper {
     width: 100%;
@@ -1099,6 +1108,7 @@ body {
     }
     .cover-title {
         font-size: 40px;
+        letter-spacing: 6px;
     }
     .mvv-extensions {
         margin-top: 28px;
