@@ -70,8 +70,6 @@ body {
 .content-wrapper,
 .philosophy-hero,
 .philosophy-card,
-.redlines-hero,
-.redline-item,
 .final-mvv {
     opacity: 0;
     transform: translateY(22px);
@@ -86,28 +84,23 @@ body {
 .slide.is-visible .content-wrapper,
 .slide.is-visible .philosophy-hero,
 .slide.is-visible .philosophy-card,
-.slide.is-visible .redlines-hero,
-.slide.is-visible .redline-item,
 .slide.is-visible .final-mvv {
     opacity: 1;
     transform: translateY(0);
 }
 
-.philosophy-icon,
-.redlines-icon {
+.philosophy-icon {
     animation: soft-breathe 5.8s ease-in-out infinite;
 }
 
-.philosophy-card,
-.redline-item {
+.philosophy-card {
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
         border-color 0.25s ease;
 }
 
-.philosophy-card:hover,
-.redline-item:hover {
+.philosophy-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 34px rgba(62, 43, 47, 0.08);
 }
@@ -274,11 +267,8 @@ body {
     .content-wrapper,
     .philosophy-hero,
     .philosophy-card,
-    .redlines-hero,
-    .redline-item,
     .final-mvv,
-    .philosophy-icon,
-    .redlines-icon {
+    .philosophy-icon {
         animation: none !important;
         transition: none !important;
         opacity: 1 !important;
@@ -340,15 +330,6 @@ body {
     color: var(--arose-black-80);
     letter-spacing: 5px;
     font-weight: 300;
-}
-
-.cover-version {
-    position: absolute;
-    bottom: 85px;
-    left: 50px;
-    font-size: 12px;
-    color: var(--arose-black-60);
-    letter-spacing: 2px;
 }
 
 /* MVV Slide */
@@ -859,12 +840,6 @@ body {
     z-index: 1;
 }
 
-/* Red Lines */
-.redlines-wrapper {
-    width: 100%;
-    max-width: 1200px;
-}
-
 /* Work Philosophy */
 .philosophy-wrapper {
     width: 100%;
@@ -1079,86 +1054,6 @@ body {
     }
 }
 
-.redlines-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 28px;
-}
-
-.redlines-icon {
-    width: 68px;
-    height: 68px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: rgba(201, 76, 76, 0.08);
-    color: #C94C4C;
-    box-shadow: inset 0 0 0 1px rgba(201, 76, 76, 0.15);
-}
-
-.redlines-icon svg {
-    width: 34px;
-    height: 34px;
-}
-
-.redlines-title {
-    font-size: 42px;
-    font-weight: 500;
-    color: var(--arose-black);
-    text-align: center;
-    margin: 0;
-    letter-spacing: 8px;
-}
-
-.redlines-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.redline-item {
-    background: var(--white);
-    padding: 28px;
-    border-left: 4px solid #C94C4C;
-}
-
-.redline-title {
-    font-size: 18px;
-    font-weight: 500;
-    color: #C94C4C;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-}
-
-.redline-desc {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-size: 13px;
-    color: var(--arose-black-60);
-    line-height: 1.6;
-}
-
-.redline-line {
-    display: block;
-}
-
-.redline-line.lead {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--arose-black);
-    line-height: 1.45;
-}
-
-.redline-line.detail {
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--arose-black-60);
-    line-height: 1.55;
-}
-
 /* Print styles */
 @media print {
     .slide {
@@ -1187,9 +1082,6 @@ body {
     .keypoint-content {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-    .redlines-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
     .philosophy-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1229,16 +1121,6 @@ body {
     }
     .philosophy-em {
         font-size: 26px;
-    }
-    .redline-desc {
-        gap: 3px;
-        font-size: 12px;
-    }
-    .redline-line.lead {
-        font-size: 13px;
-    }
-    .redline-line.detail {
-        font-size: 12px;
     }
     .image-modal-content {
         max-width: 95vw;

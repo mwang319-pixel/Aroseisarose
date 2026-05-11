@@ -137,8 +137,6 @@ function revealSlide(slide) {
         '.content-wrapper',
         '.philosophy-hero',
         '.philosophy-card',
-        '.redlines-hero',
-        '.redline-item',
         '.final-mvv'
     ];
 
